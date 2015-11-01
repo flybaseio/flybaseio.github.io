@@ -1,0 +1,19 @@
+# Site settings
+title: The Flybase Blog
+email: roger@flybase.io
+description: > # this means to ignore newlines until "baseurl:"
+  The Flybase Blog is the official online publication written by the founders and developers of Flybase about their real-time app p latform, related technologies, and whatever else may fit their fancy — like robots.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://flybaseio.github.io" # the base hostname & protocol for your site
+twitter_username: flybaseio
+github_username:  flybaseio
+
+# Build settings
+permalink: pretty
+markdown: redcarpet
+redcarpet:
+  extensions: ["smart", "tables", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
+paginate:         5
+
+gems:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
