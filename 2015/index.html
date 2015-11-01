@@ -1,0 +1,13 @@
+---
+layout: page
+title: 2015 Posts
+permalink: /2015/
+year: 2015
+---
+
+{% for post in site.posts %}
+	{% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
+	{% if year == "2015" %}
+		<p>{{ post.date | date:"%b %-d" }} <a href="{{ post.url }}">{{ post.title }}</a></p>
+	{% endif %}
+{% endfor %}
