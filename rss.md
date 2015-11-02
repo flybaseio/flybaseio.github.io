@@ -17,7 +17,11 @@ permalink: /rss/
         <title>{{ post.title | xml_escape }}</title>
         <description>{{ post.content | xml_escape }}</description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+		{% if post.link %}
+        <link>{{ post.link }}</link>
+		{% else %}
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
+		{% endif %}
         <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
         {% for tag in post.tags %}
         <category>{{ tag | xml_escape }}</category>
