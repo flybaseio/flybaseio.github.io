@@ -1,43 +1,16 @@
 ---
 layout: default
 ---
+<h2>Articles by "{{ page.tag }}"</h2>
 
-<header id="post-header">
-    <h1 id="post-title">{{ page.tag }}</h1>
-    <h4 id="post-subtitle">Articles by tag</h4>
-</header>
-
-<div id="post-content">
-    {% if site.tags[page.tag] %}
-		<ol class="list-group">
-        {% for post in site.tags[page.tag] %}
-{% comment %}
-            {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
-            {% if forloop.first %}
-                <h3>{{ post_year }}</h3><ol class="list-group">
-            {% endif %}
-			
-            {% if forloop.first == false %}
-                {% assign previous_index = forloop.index0 | minus: 1 %}
-                {% capture previous_post_year %}{{ site.tags[page.tag][previous_index].date | date: '%Y' }}{% endcapture %}
-                {% if post_year != previous_post_year %}
-                    </ol><h3>{{ post_year }}</h3><ol class="list-group">
-                {% endif %}
-            {% endif %}
-{% endcomment %}			
-            <li>
-	            <a href="{{ post.url }}" class="list-group-item">
-	                <h4 class="list-group-item-heading">{{ post.title }}</h4>
-	            </a>
-            </li>
-{% comment %}
-            {% if forloop.last %}
-                </ol>
-            {% endif %}
-{% endcomment %}
-        {% endfor %}
-		</ol>
-    {% else %}
-        <p>There are no posts for this tag.</p>
-    {% endif %}
-</div>
+{% if site.tags[page.tag] %}
+	<ul>
+    {% for post in site.tags[page.tag] %}
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+	</ul>
+{% else %}
+    <p>There are no posts for this tag.</p>
+{% endif %}
