@@ -22,8 +22,8 @@ ayear: "2014"
 			{% endif %}
 		{% endunless %}
 		<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-		{% if forloop.last %}</ul>{% endif %}
 	{% endif %}
 {% endfor %}
+</ul>
 {% endcapture %}
 {{ cache | strip_newlines }}
