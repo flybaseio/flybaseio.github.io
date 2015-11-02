@@ -6,21 +6,20 @@ layout: default
 {% for post in site.posts %}
 	{% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
 	{% capture month %}{{post.date | date: "%m"}}{% endcapture %}
-	{% if year == page.ayear %}
-		{% if month == page.amonth %}
-			{% unless post.next %}
+	{% if year == page.ayear %}{% if month == page.amonth %}
+		{% unless post.next %}
+			<h3>{{ post.date | date: "%A, %B %-d" }}</h3>
+			<ul>
+		{% else %}
+			{% capture day %}{{post.date | date: "%d"}}{% endcapture %}
+			{% capture nday %}{{ post.next.date | date: '%d' }}{% endcapture %}
+			{% if day != nday %}
+				</ul>
 				<h3>{{ post.date | date: "%A, %B %-d" }}</h3>
 				<ul>
-			{% else %}
-				{% capture day %}{{post.date | date: "%d"}}{% endcapture %}
-				{% capture nday %}{{ post.next.date | date: '%d' }}{% endcapture %}
-				{% if day != nday %}
-					</ul>
-					<h3>{{ post.date | date: "%A, %B %-d" }}</h3>
-					<ul>
-				{% endif %}
-			{% endunless %}
-			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-		{% endif %}
-	{% endif %}
+			{% endif %}
+		{% endunless %}
+		<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+		{% if forloop.last %}</ul>{% endif %}
+	{% endif %}{% endif %}
 {% endfor %}
