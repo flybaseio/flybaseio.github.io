@@ -4,6 +4,8 @@ title: 2014 Posts
 permalink: /2014/
 ayear: "2014"
 ---
+
+{% capture cache %}
 {% for post in site.posts %}
 	{% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
 	{% if year == page.ayear %}
@@ -20,5 +22,8 @@ ayear: "2014"
 			{% endif %}
 		{% endunless %}
 		<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+		{% if forloop.last %}</ul>{% endif %}
 	{% endif %}
 {% endfor %}
+{% endcapture %}
+{{ cache | strip_newlines }}

@@ -3,6 +3,7 @@ layout: default
 ---
 <h2>Articles by "{{ page.tag }}"</h2>
 
+{% capture cache %}
 {% if site.tags[page.tag] %}
 	<ul>
     {% for post in site.tags[page.tag] %}
@@ -14,3 +15,5 @@ layout: default
 {% else %}
     <p>There are no posts for this tag.</p>
 {% endif %}
+{% endcapture %}
+{{ cache | strip_newlines }}
