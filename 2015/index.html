@@ -5,6 +5,11 @@ permalink: /2015/
 ayear: "2015"
 ---
 
+<article>
+	<header>
+		<h2>Posts for "2015"</h2>
+	</header>
+	<div class="entry">
 {% capture cache %}
 {% for post in site.posts %}
 	{% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
@@ -28,3 +33,5 @@ ayear: "2015"
 </ul>
 {% endcapture %}
 {{ cache | strip_newlines }}
+	</div>
+</article>

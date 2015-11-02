@@ -4,6 +4,11 @@ title: 'Tags'
 permalink: /tags/
 ---
 
+<article>
+	<header>
+		<h2>Tagged Posts</h2>
+	</header>
+	<div class="entry">
 {% assign tags_max = 0 %}
 {% for tag in site.tags %}
 	{% if tag[1].size > tags_max %}
@@ -22,3 +27,5 @@ permalink: /tags/
 		{% endif %}
 	{% endfor %}
 {% endfor %}
+	</div>
+</article>
