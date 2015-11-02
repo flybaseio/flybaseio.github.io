@@ -8,9 +8,10 @@ layout: default
 </header>
 
 <div id="post-content">
-	<ol>
     {% if site.tags[page.tag] %}
+		<ol class="list-group">
         {% for post in site.tags[page.tag] %}
+{% comment %}
             {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
             {% if forloop.first %}
                 <h3>{{ post_year }}</h3><ol class="list-group">
@@ -23,17 +24,19 @@ layout: default
                     </ol><h3>{{ post_year }}</h3><ol class="list-group">
                 {% endif %}
             {% endif %}
-			
+{% endcomment %}			
             <li>
 	            <a href="{{ post.url }}" class="list-group-item">
 	                <h4 class="list-group-item-heading">{{ post.title }}</h4>
 	            </a>
             </li>
-
+{% comment %}
             {% if forloop.last %}
                 </ol>
             {% endif %}
+{% endcomment %}
         {% endfor %}
+		</ol>
     {% else %}
         <p>There are no posts for this tag.</p>
     {% endif %}

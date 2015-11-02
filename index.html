@@ -1,45 +1,51 @@
 ---
 layout: default
+bodyclass: homepage
+title: Home
 ---
 
-<div class="home">
+<div class="day">
+	<div class="articles">
+{% for post in paginator.posts %}
+	<article>
+		<header>
+			<h2>
+			{% if post.link %}
+			<a href="{{ post.link }}" class="post-title linked">{{ post.title }} <span class="link-arrow">&rarr;</span></a>
+			{% else %}
+			<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+			{% endif %}
+			</h2>
+			<div class="meta">
+				<span class="postDate">
+					<i class="fa fa-calendar"></i> <time class="time" dateTime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+				</span>
+				{% if post.tags.size > 0 %}
+				<span class="tag">
+					<i class="fa fa-tag"></i> 
+					{% for tag in post.tags %}
+					<a href="/tags/{{ tag | downcase | replace:' ','-'}}" class="tag">{{ tag }}</a>
+					{% if forloop.last %}{% else %}, {% endif %}
+					{% endfor %}
+				</span>
+				{% endif %}
+				<a class="permalink" title="Permalink to {{post.title}}" href="{{ post.url }}"><i class="fa fa-anchor"></i></a>
+			</div>
+		</header>
+		<div class="entry">
+			{{ post.content }}
+		</div>
+	</article>
+	<hr class="daybreak" />
+{% endfor %}
+	</div>
+</div>
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-  {% for post in paginator.posts %}
-      <li>
-        <h2>
-{% if post.link %}
-		<a href="{{ post.link }}" class="link">{{ post.title }} <span class="link-arrow">&rarr;</span></a>
-{% else %}
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-{% endif %}
-        </h2>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}  / <a href="{{ post.url }}">permalink</a></span>
-        <hr />
-		{{ post.content }}
-      </li>
-    {% endfor %}
-  </ul>
-
-<div class="pagination">
+<nav id="pagination">
 	{% if paginator.next_page %}
-		<a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
-	{% else %}
-		<span class="pagination-item older">Older</span>
+		<span class="next"><a href="/page{{paginator.next_page}}">← Older</a></span>
 	{% endif %}
 	{% if paginator.previous_page %}
-		{% if paginator.page == 2 %}
-			<a class="pagination-item newer" href="/">Newer</a>
-		{% else %}
-			<a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
-		{% endif %}
-	{% else %}
-		<span class="pagination-item newer">Newer</span>
+		<span class="prev"><a href="/page{{paginator.previous_page}}">Newer →</a></span>
 	{% endif %}
-</div>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+</nav>

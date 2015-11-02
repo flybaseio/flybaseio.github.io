@@ -1,0 +1,420 @@
+@import url(//fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+body
+{
+    background-color: #ffffff; /*#f6f6f6;*/
+    color: #303030;
+    line-height: 1.6;	/*dd*/
+    font-size: 14pt;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 400;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(0, 131, 255);
+}
+
+time {
+	color: rgb(171, 171, 171);
+}
+.super {
+    vertical-align: super;
+    font-size: 50%;
+}
+
+.content
+{
+    text-align: left;
+    max-width: 775px;
+    margin: 0  auto 2em auto;
+/*
+	background: #fff;	
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	padding: 20px;
+*/
+}
+
+.content ul {
+	padding-left: 2.5em;
+    /*list-style: circle;*/
+}
+
+.content ol {
+    padding-left: 2.5em;
+}
+
+.container
+{
+    margin-bottom: 3em;
+    margin-left:1em;
+    margin-right:1em;
+}
+
+.content .header
+{
+    text-align: center;
+    border-bottom-style: solid;
+	border-bottom-color: rgb(228, 228, 228);
+	border-bottom-width: 0.3em;
+}
+
+.content .header .siteTitle
+{
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 0.1em;
+    margin-top: -0.25em;
+}
+
+.content .header .siteTitle a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.content .header .siteTitle a:visited
+{
+    color: black;
+}
+
+.content .header nav
+{
+    text-transform: uppercase;
+	font-size: 0.85em;
+    color: rgb(228, 228, 228);
+    margin-bottom: 1em;
+}
+
+@media all and (max-width: 568px) {
+
+    .container {
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+	.content {
+	    max-width:90%;
+	}
+
+    .content .main {
+        font-size: 18px;
+    }
+
+    .content .header .siteTitle {
+        font-size: 40px;
+    }
+    .content .header nav {
+        font-size: 14px;
+    }
+
+   .content .header {
+        margin-bottom:1em;
+    }
+
+   .content .header nav {
+        margin-bottom: 1em;
+    }
+
+   .content .header nav a {
+        margin: 0 .2em;
+        font-size: 12px;
+    }
+
+    .content ol {
+        margin-left: 0.25em;
+    }
+
+    .homepage a.postTitle {
+        font-size: 2em !important;
+    }
+
+}
+
+.content code
+{
+    font-size: 0.9em;
+    background-color: #F0F0F0;
+}
+
+.copyright
+{
+    font-size: 0.6em;
+    text-align: center;
+}
+
+.center
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.center img.left
+{
+    margin-right: 2em;
+}
+
+.center img.right
+{
+    margin-left: 2em;
+}
+
+img
+{
+    max-width: 100%;
+}
+
+.header .dot
+{
+    font-weight: bold;
+    margin-left: 0.25em;
+}
+
+table.sortable thead {
+    cursor: default;
+}
+
+blockquote {
+    border-left: 4px solid rgb(228, 228, 228);
+    margin-left: 1em;
+    padding-left: 1em;
+}
+
+/* INDEX */
+
+.homepage .day .daybreak
+{
+    margin-top: 3em;
+    border: 0;
+    color: rgb(228, 228, 228);
+	background-color: rgb(228, 228, 228);
+	height: 0.15em;
+}
+
+.homepage .postHeader
+{
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.homepage .postHeader .postTitle
+{
+    font-size: 2.2em;
+    font-weight: 500;
+    display: block;
+    line-height: 1.2;
+}
+
+.homepage .postHeader .postDate
+{
+    font-size: 0.9em;
+    display: block;
+}
+
+.homepage .day .article
+{
+    margin-bottom: 4em;
+}
+
+.homepage .copyright
+{
+    margin-top: -2em;
+}
+
+.homepage .article hr
+{
+    width: 35%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.homepage .article th
+{
+    padding: 0 0.5em 0 0.5em
+}
+
+.homepage .article td
+{
+    padding: 0 0.5em 0 0.5em;
+}
+
+.homepage .paginationFooter
+{
+    width: 100%;
+    margin-top: 1em;
+}
+
+.homepage .paginationFooterPrevious
+{
+    display: inline;
+}
+
+.homepage .paginationFooterNext
+{
+    display: inline;
+    float: right;
+}
+
+/* POSTS */
+
+.post .postHeader
+{
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.post .postHeader .postTitle
+{
+    margin-top: 1em;
+    font-size: 2em;
+    display: block;
+    text-decoration: none;
+}
+
+.post .postHeader .postDate
+{
+    display: block;
+    font-size: 0.9em;
+}
+
+figure
+{
+    display: inline;
+    float: right;
+}
+
+figure figcaption
+{
+    text-align: center;
+    font-style: italic;
+}
+
+.post .postHeader .postTitle:visited
+{
+    color: black;
+}
+
+.post hr
+{
+    width: 50%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.post th
+{
+    padding: 0 0.5em 0 0.5em;
+}
+
+.post td
+{
+    padding: 0 0.5em 0 0.5em;
+}
+
+/* ABOUT */
+.headshot
+{
+    float: left;
+    display: inline;
+	width: 250px;
+    margin-right: 1em;
+}
+
+/* SHOWBOT */
+.showbot table
+{
+    /*text-align: center; Because Siracusa said I wasn't allowed. */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.showbot h2
+{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.showbot .tables
+{
+    display: none;
+}
+
+.homepage a.postTitle  .fa,
+.homepage .postHeader .postTitle .fa{
+	font-size: 26px;
+	color: gray;
+}
+
+code {
+	background: #EEE;
+	color: #111;
+	font-family: Monaco, monospace;
+	font-size: 12px;
+	padding: 2px 7px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+    }
+
+pre {
+	background: #EEE;
+	color: #111;
+	font-family: Monaco, monospace;
+	padding: 10px 10px 20px 10px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	overflow-x: auto;
+	margin: 0 0 1em 0;
+	-webkit-box-shadow: inset 0 1px 0 #CCC, inset 0 0 3px #CCC;
+	-moz-box-shadow: inset 0 1px 0 #CCC, inset 0 0 3px #CCC;
+    }
+
+pre code {
+	background: transparent;
+	font-size: 11px;
+	padding: 0;
+}
+
+#archives {
+    color: #5a6b77;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid rgba(176, 184, 191, 0.3);
+    border-bottom-color: rgba(176, 184, 191, 0.7);
+    width: 1100px;
+    padding: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-top: 10px;
+    float: right;
+    margin-top: 33px;
+    margin-bottom: 40px;
+}
+#archives h4 {
+    margin: 0px;
+    color: #5a6b77;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+#archives ul,li {
+	list-style: none;	
+}
+#archives li {
+    float: left;
+    margin-right: 10px;
+}
+#archives li a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #5a6b77;
+    line-height: 22px;
+}
+#archives li a:hover {
+    color: #5298fc;
+}

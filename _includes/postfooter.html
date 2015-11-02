@@ -1,0 +1,56 @@
+<div class="content-break">
+	<i class="fa fa-rocket"></i>
+</div>
+
+<div class="opt-in">
+	<form role="form" action="//datamcfly.us9.list-manage.com/subscribe/post?u=3b954fafb0dae072610469e35&amp;id=a35eea690c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+		<div class="copy">
+			<h4>Get Notified of New Posts</h4>
+			<p>
+				New posts will be delivered straight to your inbox. Plus, it gives us warm fuzzies to know people read the things we write. So thanks in advance.
+			</p>
+		</div>
+		<div class="form-group">
+			<input type="email" class="form-control" id="email" autocapitalize="off" autocorrect="off" name="EMAIL" placeholder="Email your email address" required="required">
+		</div>	
+		<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+		<div style="position: absolute; left: -5000px;"><input type="text" name="b_3b954fafb0dae072610469e35_a35eea690c" tabindex="-1" value=""></div>
+		<button type="submit" name="submit" class="btn primary">Get Notified</button>
+	</form>
+</div>
+<br />
+<div class="post-sharing">
+	<a href="http://www.facebook.com/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" class="facebook">
+		<span class="fa-stack">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+	<a href="http://twitter.com/share?text={{page.title}}&amp;url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}&amp;via=datamcfly&hashtags={{hashtags}}" class="twitter">
+		<span class="fa-stack">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+	<a href="https://plus.google.com/share?url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" class="orange">
+		<span class="fa-stack">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+	<a href="http://www.linkedin.com/shareArticle?mini=true&url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}&title={{page.title}}" class="facebook">
+		<span class="fa-stack">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+
+<div class="well leadbox">
+	<p>The <a href="http://blog.flybase.io">Flybase Blog</a> is the official online publication written by the founders and developers of <a href="http://flybase.io">Flybase</a> about their real-time app platform, related technologies, and whatever else may fit their fancy — <em>like robots</em>.</p>
+</div>
+<script type='text/javascript'>
+$(function(){
+	var popular = new mostPopular().updatePage("{{ page.url }}", "{{page.title}}");
+});	
+</script>
