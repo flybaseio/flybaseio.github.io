@@ -5,12 +5,6 @@ permalink: /about/
 hideheader: true
 ---
 
-### Welcome To The Flybase Blog... Way To Go!!!
-
-We are working hard to build our awesome new service, so stay tuned and watch us grow.
-
-<hr class="soften" />
-
 ### What Is Flybase?
 
 <img src="/images/datasm.png" class="logo" alt="Data McFly - Your Real-Time Superhero" style="width:30%;height: auto;float:left;"/>
