@@ -1,11 +1,13 @@
 ---
 layout: post 
-published: false 
+published: true 
 title:  "Write Like You Talk" 
 date:   2015-11-03T07:27:41.581Z 
-link:   http://www.paulgraham.com/talk.html 
 tags:
-- links
+  - links
+link:   http://www.paulgraham.com/talk.html 
+ogtype: article
+bodyclass: post
 ---
 
 Paul Graham:

@@ -18,7 +18,7 @@ layout: default
 			<span class="tag">
 				<i class="fa fa-tag"></i> 
 				{% for tag in page.tags %}
-				<a href="/tags/{{ tag | downcase | replace:' ','-'}}" class="tag">{{ tag }}</a>
+				<a href="/tags/{{ tag | downcase | replace:' ','-'}}" class="tag">{{ tag | capitalize }}</a>
 				{% if forloop.last %}{% else %}, {% endif %}
 				{% endfor %}
 			</span>
