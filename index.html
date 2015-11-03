@@ -6,17 +6,15 @@ title: Home
 <div class="day">
 	<div class="articles">
 {% for post in paginator.posts %}
-	{% unless post.next %}
-{% comment %}	<div class="day"><div class="articles"> {% endcomment %}
-	{% else %}
-		{% capture day %}{{post.date | date: "%d"}}{% endcapture %}
-		{% capture nday %}{{ post.next.date | date: '%d' }}{% endcapture %}
-		{% if day != nday %}
-			<hr class="daybreak" />
-			</div></div>
-			<div class="day"><div class="articles">
-		{% endif %}
-	{% endunless %}
+{% comment %}
+	{% capture day %}{{post.date | date: "%d"}}{% endcapture %}
+	{% capture nday %}{{ post.next.date | date: '%d' }}{% endcapture %}
+	{% if day != nday %}
+		<hr class="daybreak" />
+		</div></div>
+		<div class="day"><div class="articles">
+	{% endif %}
+{% endcomment %}
 	<article>
 		<header>
 			<h2>
@@ -46,8 +44,8 @@ title: Home
 			{{ post.content }}
 		</div>
 	</article>
+	<hr class="daybreak" />
 {% endfor %}
-		<hr class="daybreak" />
 	</div>
 </div>
 
