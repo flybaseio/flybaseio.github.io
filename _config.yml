@@ -15,5 +15,9 @@ redcarpet:
   extensions: ["smart", "tables", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
 paginate: 10
 
+github:
+  repo: flybaseio/flybaseio.github.io
+  branch: master
+
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
