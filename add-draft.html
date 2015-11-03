@@ -121,10 +121,10 @@ permalink: /add-draft.html
 			p_body = p_body + 'published: false \n';
 			p_body = p_body + 'title: "' + title +'" \n';
 			p_body = p_body + 'date: '+ post_date() +' \n' ;
-			p_body = p_body + 'tags:\n  - links\n';
 			if( link !== '' ){
 				p_body = p_body + 'link: '+ link +' \n' ;
 			}
+			p_body = p_body + 'tags:\n  - links\n';
 			p_body = p_body + 'ogtype: article \n';
 			p_body = p_body + 'bodyclass: post \n';
 			p_body = p_body + '---\n';

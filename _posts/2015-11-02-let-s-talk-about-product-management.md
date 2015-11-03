@@ -1,8 +1,9 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Let’s talk about Product Management" 
 date: 2015-11-03T07:39:11.383Z 
+link: https://medium.com/greylock-perspectives/let-s-talk-about-product-management-d7bc5606e0c4
 tags:
   - links
 ogtype: article 
