@@ -20,4 +20,5 @@ github:
   branch: master
 
 gems:
+  - jekyll-paginate
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem

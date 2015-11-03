@@ -3,10 +3,11 @@ layout: default
 bodyclass: homepage
 title: Home
 ---
-
+<div class="day">
+	<div class="articles">
 {% for post in paginator.posts %}
 	{% unless post.next %}
-		<div class="day"><div class="articles">
+{% comment %}	<div class="day"><div class="articles"> {% endcomment %}
 	{% else %}
 		{% capture day %}{{post.date | date: "%d"}}{% endcapture %}
 		{% capture nday %}{{ post.next.date | date: '%d' }}{% endcapture %}
