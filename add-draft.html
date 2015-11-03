@@ -64,7 +64,7 @@ sitemap: false
 		selection = document.selection.createRange().text;
 		}
 		selection = encodeURIComponent(selection);
-		new_window=window.open('{{ "/adddraft.html" | prepend: site.baseurl | prepend: site.url }}?title='+title+'&amp;selection='+selection+'&amp;url='+encodeURIComponent(document.location.href),'JekyllPopup','resizable,scrollbars,status=0,toolbar=0,menubar=0,titlebar=0,width=640,height=600,location=0');
+		new_window=window.open('{{ "/add-draft.html" | prepend: site.baseurl | prepend: site.url }}?title='+title+'&amp;selection='+selection+'&amp;url='+encodeURIComponent(document.location.href),'JekyllPopup','resizable,scrollbars,status=0,toolbar=0,menubar=0,titlebar=0,width=640,height=600,location=0');
 		})();">post to GitHub</a></p>
 	</div>
 	<script>
@@ -153,7 +153,7 @@ sitemap: false
 					$('#messages').append($('<div class="alert alert-danger alert-dismissible" role="alert">')
 					.append('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>')
 					.append('<strong>' + request.status + '</strong>: ' + responseText.message )
-					.append('<br>If you are using two-factor-auth, you will ahve to create ')
+					.append('<br>If you are using two-factor-auth, you will have to create ')
 					.append('<a href="https://github.com/settings/tokens">a personal access token</a> with "repo" permissions and use this instead of your password.')
 					.append('</div>'));
 				},
