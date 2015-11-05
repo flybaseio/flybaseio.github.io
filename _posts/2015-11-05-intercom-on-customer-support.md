@@ -1,11 +1,12 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Intercom on Customer Support" 
 date: 2015-11-05T18:51:07.119Z 
 link: https://www.intercom.io/books/customer-support 
 tags:
   - links
+  - reading
 ogtype: article 
 bodyclass: post 
 ---
