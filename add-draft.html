@@ -95,7 +95,6 @@ permalink: /add-draft.html
 			if (!title) {
 				filename = filename + '-' + +d.getTime() ;
 			} else {
-				var title.trim();
 				var slugified = title.toLowerCase().replace(/\W+/g, '-') ;
 				if (slugified!='-') {
 					filename = filename + '-' + slugified ;
@@ -120,7 +119,7 @@ permalink: /add-draft.html
 			var p_body = '---\n' ;
 			p_body = p_body + 'layout: post \n' ;
 			p_body = p_body + 'published: false \n';
-			p_body = p_body + 'title: "' + title.trim() +'" \n';
+			p_body = p_body + 'title: "' + title +'" \n';
 			p_body = p_body + 'date: '+ post_date() +' \n' ;
 			if( link !== '' ){
 				p_body = p_body + 'link: '+ link +' \n' ;
