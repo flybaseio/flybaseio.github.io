@@ -1,7 +1,7 @@
 ---
 layout: post 
 title: "Getting Started With React" 
-date: 2015-11-11T18:28:55.010Z 
+date: 2015-11-11T18:38:55.010Z 
 link: https://thinkster.io/getting-started-with-react
 image: http://blog.flybase.io/images/posts/react.png
 tags:
@@ -12,7 +12,7 @@ bodyclass: post
 ---
 
 <div class="box-wrap"><div class="box">
-	<img src="/images/posts/reat.png" />
+	<img src="/images/posts/react.png" />
 </div></div>
 
 > When compared to other frontend frameworks available today, React’s existence seems a bit weird. React claims to be the “V” in MVC, but other frameworks like Angular, Backbone, and others already have a view layer that seems to work just fine. So why should we ever need to use React? 
