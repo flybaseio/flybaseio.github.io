@@ -22,6 +22,7 @@ Ryan Holmes:
 > But enough with the history lesson. What I want to know is why are we still stuck on this largely unchanged, archaic business tool? I personally don’t have a business card — and haven’t for years. I discovered early on that in the tech industry it’s rare you’ll ever need one. But looking beyond Silicon Valley, I think it’s time we all ditched business cards for good.
 >
 > [..]
+> 
 > it’s only a matter of time before someone takes a page out of the [Steve Jobs’ book](http://www.businessweek.com/1998/21/b3579165.htm): creating a business card alternative we won’t know we desperately need, until we see it.
 
 Ryan has a few points here, business cards have been around for a long time. A very, very long time, and it's time someone figured out exactly what needs to happen to turn that industry upside down.
