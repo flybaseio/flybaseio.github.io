@@ -1,6 +1,5 @@
 ---
 layout: post 
-published: false 
 title: "Resist and Thrive " 
 date: 2015-11-18T07:34:12.945Z 
 link: https://medium.com/@ystrickler/resist-and-thrive-1d36819853ca 
@@ -12,8 +11,6 @@ bodyclass: post
 
 Yancey Strickler:
 
-> _Last week I gave this talk at Web Summit in Dublin. It’s a first-draft of thoughts that I felt compelled to share in a room of entrepreneurs and VC’s. I’d love to hear any and all thoughts on this topic. Thx for reading — Y_
-> 
 > This is a talk about what happens when a culture is driven by the need for money to make more money.
 > 
 > A simple way to think about this is through real estate. Throughout history it has been advantageous to be a land owner, and today is no different. People make a lot of money buying, developing, and selling land. Even after the crash of 2008, commercial real estate has climbed again.
