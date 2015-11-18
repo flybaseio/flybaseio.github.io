@@ -53,12 +53,12 @@
 	<meta name="twitter:creator" content="flybaseio">
 	<meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
 	<meta name="twitter:description" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
-	<meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}https://blog.flybase.io/images/flybasesm.png.png{% endif %}" />	
+	<meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}https://blog.flybase.io/images/flybasesm.png{% endif %}" />	
 <!-- Facebook Open Graph -->
 	<meta property="og:type" content="{% if page.path contains '_posts' %}article{% else %}website{% endif %}">
 	<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
 	<meta property="og:site_name" content="{{ site.title }}">
-	<meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}https://blog.flybase.io/images/flybasesm.png.png{% endif %}" />	
+	<meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}https://blog.flybase.io/images/flybasesm.png{% endif %}" />	
 	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<meta property="og:description" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
 	<meta property="og:locale" content="en_US">
