@@ -19,4 +19,4 @@ Yancey Strickler:
 > 
 > No matter their importance to their community, they can’t stay if they can’t pay. And few can.
 
-Interesting article...
+Interesting article from the CEO and co-founder of kickstarter.
