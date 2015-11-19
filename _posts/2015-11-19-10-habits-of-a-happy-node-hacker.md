@@ -15,3 +15,5 @@ bodyclass: post
 > Today, it's easy to get lost in our huge ecosystem, so successful teams follow guidelines to make the most of their time and keep their projects healthy.
 > 
 > Here are ten habits for happy Node.js hackers as we enter 2016. They're specifically for app developers, rather than module authors, since those groups have different goals and constraints
+
+We use most of these habits in our own Node development, so it's nice to see others in sync.
