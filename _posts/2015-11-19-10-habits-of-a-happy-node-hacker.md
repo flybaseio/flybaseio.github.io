@@ -1,6 +1,5 @@
 ---
 layout: post 
-published: false 
 title: "10 Habits of a Happy Node Hacker" 
 date: 2015-11-19T16:32:22.511Z 
 link: https://blog.heroku.com/archives/2015/11/10/node-habits-2016 
