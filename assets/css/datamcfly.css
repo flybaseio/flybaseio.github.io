@@ -2663,15 +2663,15 @@ p.byline {
 	margin-bottom: 1em;
 }
 
-.post header{
+#main .post header{
 	text-align: left;
     margin-bottom: 15px;
 }
-.post header h1{
+#main .post header h1{
     margin-bottom: 5px;	
 }
 
-.post header .postDate
+#main .post header .postDate
 {
 /*
 	display: block;
