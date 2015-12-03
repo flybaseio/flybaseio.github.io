@@ -21,6 +21,8 @@ To keep things simple we'll capture the page URL and a couple of browser capabil
 
 This is entirely client-side, and no data will be saved to your Flybase app. In another tutorial, we'll expand our dashboard to store historical data.
 
+You can see the full code [here at the Github Repo](https://github.com/flybaseio/flyalytics).
+
 ### Step 1
 
 To get started, you'll need a [flybase.io](https://app.flybase.io/signup) account, so go grab one if you don't already have one.
