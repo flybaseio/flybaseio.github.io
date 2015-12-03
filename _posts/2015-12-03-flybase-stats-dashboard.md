@@ -4,13 +4,13 @@ title: "Build a real-time stats Dashboard with Flybase"
 date: "2015-12-03 08:30:00"
 tags: 
 - "code"
-image: "http://blog.flybase.io/images/posts/dashboard2.png"
+image: "http://blog.flybase.io/images/posts/dashboard2.png?a1"
 ogtype: "article"
 bodyclass: "post"
 ---
 
 <div class="box-wrap"><div class="box">
-	<img src="/images/posts/dashboard2.png" />
+	<img src="/images/posts/dashboard2.png?a1" />
 </div></div>
 
 Flybase's real-time events systems lets us push all kinds of data to the browser.
