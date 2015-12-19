@@ -1,7 +1,7 @@
 ---
 layout: post 
 published: true 
-title: "Something Different... Something New... Something Familiar... Meet Joined Node" 
+title: "Meet Joined Node: Your microservices platform" 
 date: 2015-12-15T11:47:32.377Z 
 tags:
   - code
