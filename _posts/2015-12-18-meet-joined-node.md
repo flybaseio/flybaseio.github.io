@@ -23,7 +23,7 @@ How do you send email? Or send an SMS message? or handle webhooks from Stripe pa
 
 Normally, you would set up your servers, build your backend apps to handle one or two processes and then deploy it to servers.
 
-**But hold on!** You only needed your backend script to handle one or two things right? The site itself can sit anywhere since it's just HTML with javascript (Github Pages, or Amazon S3 for example), so why build an entire Node.js service and deploy servers to handle those simple tasks?
+**But hold on!** You only needed your backend script to handle one or two things right? The site itself can sit anywhere since it's just HTML with javascript (Github Pages, or Amazon S3 for example), so why build an entire Node.js service and deploy servers to handle those simple recipes?
 
 What if we could set up a quick Node.js snippet of code that can be called when needed via an HTTP call for sending an SMS message or email or recording a payment received from Stripe?
 
@@ -37,9 +37,9 @@ Let's use Joined Node to create a quick script to say hello:
 
 1) Sign up at [Joined Node](https://app.joinednode.com)
 
-2) Create a new `Task`
+2) Create a new `Recipe`
 
-3) Copy the following code into the task:
+3) Copy the following code into the recipe:
 
 ```javascript
 module.exports = function(context, callback) { 
@@ -49,7 +49,7 @@ module.exports = function(context, callback) {
 
 4) Hit `save`
 
-This will create a unique URL, which is based on your unique container and task, so you would see a URL similar to this:
+This will create a unique URL, which is based on your unique container and recipe, so you would see a URL similar to this:
 
 ```javascript
 https://api.joinednode.com/run/black-surf-17638/polished-firefly-55389
@@ -61,17 +61,15 @@ Then, you would call it with: `https://api.joinednode.com/run/black-surf-17638/p
 
 [Joined Node](https://joinednode.com) is a simple, lightweight, and secure way of running isolated microservice backend code that removes or reduces the need for a dedicated backend.
 
-At the heart of [Joined Node](https://joinednode.com) is what we call **Tasks**,  a **Task** is a snippet of code that can be called using a simple HTTP request, either directly in a browser, or from inside your code, regardless of language or platform. 
+At the heart of [Joined Node](https://joinednode.com) is what we call **Recipes**,  a **Recipe** is a snippet of code that can be called using a simple HTTP request, either directly in a browser, or from inside your code, regardless of language or platform. 
 
-These Tasks can be very simple, or they can be extended as much as you wish, depending on what you want them to do.
-
-_I know, why the word *Tasks* to describe what we do? We played with various names: `apps`, `recipes`, `services` and `Tasks` actually wins out, since these scripts all serve a specific task in the end._
+These Recipes can be very simple, or they can be extended as much as you wish, depending on what you want them to do.
 
 We created Joined Node with the purpose of throwing monolithic systems out the door, to give you a new way to build your apps rapidly, quickly and smoothly.
 
-We've actually been using Joined Node internally for a while at Flybase, it's actually a key element of our real-time app backend platform, and we're now making it publicly available. Joined Node Node.js tasks work well with your Flybase-powered apps, but you can also integrate other services as well.
+We've actually been using Joined Node internally for a while at Flybase, it's actually a key element of our real-time app backend platform, and we're now making it publicly available. Joined Node Node.js recipes work well with your Flybase-powered apps, but you can also integrate other services as well.
 
-With Joined Node, all you need to run code is an HTTP call, that’s it, no provisioning. no deployment. Just login to your dashboard, create a new task and add your code:
+With Joined Node, all you need to run code is an HTTP call, that’s it, no provisioning. no deployment. Just login to your dashboard, create a new Recipe and add your code:
 
 ```javascript
 module.exports = function (callback) {
