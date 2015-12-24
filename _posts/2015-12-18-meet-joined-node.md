@@ -92,13 +92,5 @@ HTTP status: 200
 "hello world!"
 ```
 
-You can use Joined Node for…
-
-- **Backendless Applications** Run server-side code for your JavaScript and native applications. Just worry about your code.
-- **Programmable Webhooks** Run code on each Stripe Payment, a GitHub Push, or any webhook, without setting up servers.
-- **Multi Tenant Sandbox** Allow your customers to extend your product using Node.js code instead of creating your own DSL.
-- **Microservices** node.js task serves a singular purpose, giving you true microservices hosting.
-
 With Joined Node as your microservices provider and Flybase as your real-time backend, you have a winning combination that can’t be beat. 
-
 Integrate Joined Node into your static apps, Ionic apps, or any app since all you need is a single HTTP request.
