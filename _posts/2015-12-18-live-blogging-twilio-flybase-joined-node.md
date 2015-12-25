@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: true 
+published: false 
 title: "Build a Plug and Play Live Blogging System with Twilio, Flybase and Joined Node" 
 date: 2015-12-15T14:47:32.377Z 
 tags:
