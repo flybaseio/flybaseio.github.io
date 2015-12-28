@@ -159,7 +159,11 @@ mostPopular.prototype.hasVotes = function(url, title){
 	var deferred = $.Deferred();
 	var _this = this;
 	this.flybaseRef.where({"key": key}).orderBy( {"views":-1} ).on('value',function( data ){
-		deferred.resolve( data.count() !== null);
+		if( data.count() !== null ){
+			deferred.resolve( data.count() );
+		}else{
+			deferred.reject( 0 );
+		}
 	});
 	return deferred.promise();
 };
