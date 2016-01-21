@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Trajectory Matters More Than State" 
 date: 2016-01-21T06:34:56.257Z 
 link: https://blog.intercom.io/trajectory-matters-more-than-state/ 
