@@ -154,61 +154,28 @@ mostPopular.prototype.getPopular = function() {
 }();	
 */
 
-mostPopular.prototype.hasVotes = function(url, title){
-	var key = url.replace(/[\/-]/g,'');
-	var deferred = $.Deferred();
-	var _this = this;
-	this.flybaseRef.where({"key": key}).orderBy( {"views":-1} ).on('value',function( data ){
-		if( data.count() !== null ){
-			deferred.resolve( data.count() );
-		}else{
-			deferred.reject( 0 );
-		}
-	});
-	return deferred.promise();
-};
-
 mostPopular.prototype.updatePage = function(url, title){
 //	create a unique key from the url by stripping out all non-alphanumeric characters...
 	var key = url.replace(/[\/-]/g,'');
 	
 	var _this = this;
-	this.hasVotes(url, title).then(function(hasVoted){
-		if(hasVoted){
-			//	get current count and increment it...
-			var cnt = 0;
-			_this.flybaseRef.where({"key": key}).orderBy( {"views":-1} ).on('value',function( data ){
-				if( data.count() ){
-					var first = true;
-					data.forEach( function(snapshot) {
-						var item = snapshot.value();
-						if( first ){
-							item.views = item.views + 1;
-							_this.flybaseRef.update(item._id,item, function(resp) {
-								console.log( key + " updated" );
-							});
-						}else{
-							// clean up any dupes until we make this better...
-							_this.flybaseRef.deleteDocument(item._id, function(resp) {
-								console.log( item._id + " deleted");
-							});
-						}
-						first = false;
-					});
-				}
-			});
-		}else{
-			// no count, so never added before..
-			_this.flybaseRef.push({
-				"key": key,
-				"url": url,
-				"title": title,
-				"views": 1
-			}, function(resp) {
-				console.log( "URL added" );
-			});
-
-		}
+	var cnt = 0;
+	_this.flybaseRef.where({"key": key}).orderBy( {"views":-1} ).on('value').then( function( data ){
+		var item = data.first().value();
+		item.views = item.views + 1;
+		_this.flybaseRef.update(item._id,item, function(resp) {
+			console.log( key + " updated" );
+		});
+	},function(){
+		// no count, so never added before..
+		_this.flybaseRef.push({
+			"key": key,
+			"url": url,
+			"title": title,
+			"views": 1
+		}, function(resp) {
+			console.log( "URL added" );
+		});
 	});
 	return this;
 };
