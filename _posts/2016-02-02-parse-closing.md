@@ -20,3 +20,43 @@ To help with this, we've made a Flybase adapter for Parse Server so data is stor
 If you are an existing Parse user, [contact us](http://flybase.io/contact/) about migrating from Parse, we can help you get your data moved over, cloud code moved over and set up your Parse hosting on a new web host.
 
 Your code won't even have to change as the Flybase work is handled in the backend of our modified Parse Server code. We can also help you set up a push notification replacement to work with your Parse apps.
+
+### I don't care about cloud code or push, I just want to move my data
+
+If that's you, then we've got you coverage:
+
+#### Step 1 - How to export from Parse
+
+1. First, go to your <a href="http://parse.com">Parse.com</a> dashboard
+2. Click on `« App Settings »`.
+3. Then select `« General »`
+4. Scroll down and click on `« Export data »` button.
+5. If everything goes well, you will receive an email containing a .zip with all your data in a set of JSON files.
+
+### Step 2- Importto Flybase?</h3>
+
+The exported JSON can be imported using our `Parse to Flybase` tool, which parses all your JSON files and imports it into your Flybase app, this is a fork of our usual `Flybase import` tool, as we wanted to make sure it fully supported Parse's exports for you.
+		
+```
+$ npm install parse2flybase
+
+$ parse2flybase --flybase_key API-KEY --flybase-app Test --flybase_collection Stuff --json test.json
+
+All data at Test/Stuff will be overwritten.
+Press &lt;enter> to proceed, Ctrl-C to abort.
+
+Reading /Users/roger/test.json... (may take a minute)
+Preparing JSON for import... (may take a minute)
+Importing [=================================================] 100% (9431/9431)
+Import completed.
+```
+And that's it, you've imported your Parse.com data into Flybase, now it's just a matter of switching your app to use Flybase instead.
+		
+You can try our <a href="http://flybase.io//tutorial/">Tutorial</a> to see how easy it is to get started, check out our <a href="http://docs.flybase.io">Developer Docs</a> for any questions you have, or <a href="/contact/">contact us</a> and we'll be glad to help you migrate your data and code from Parse to Flybase
+
+
+If you are an existing Parse user, [contact us](http://flybase.io/contact/) about migrating from Parse, we can help you get your data moved over, cloud code moved over and set up your Parse hosting on a new web host.
+
+### Need migration support?
+
+Please feel free to <a href="http://flybase.io/contact/">contact us</a> to answer any questions you have about moving your data from Parse to Flybase and how our experts can help facilitate that migration as smoothly as possible.
