@@ -356,7 +356,6 @@ footer {
 /***********************/
 /* SYNTAX HIGHLIGHTING */
 /***********************/
-/*
 .highlight {
   background-color: #222;
   padding: 5px 10px;
@@ -370,7 +369,7 @@ footer {
 code {
   font-family: 'Courier', monospace;
   font-size: 14px;
-  color: #999;
+  color: #fff;
 }
 
 .highlight .c, .highlight .c1 {
@@ -579,13 +578,12 @@ code {
 .highlight .il {
   color: #2AA198;
 }
-*/
 
 .copyright{
     font-size: 16px;
     text-align: center;
 }
-/*
+
 code{
     font-size: 0.9em;
     background-color: #F0F0F0;
@@ -621,7 +619,6 @@ pre code {
 	font-size: 11px;
 	padding: 0;
 }
-*/
 .well {
 	min-height: 20px;
 	padding: 19px;
