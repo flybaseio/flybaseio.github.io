@@ -591,7 +591,7 @@ code{
 
 code {
 	background: #EEE;
-	color: #111;
+	color: #999;
 	font-family: Monaco, monospace;
 	font-size: 12px;
 	padding: 2px 7px;
@@ -602,7 +602,7 @@ code {
 
 pre {
 	background: #EEE;
-	color: #111;
+	color: #999;
 	font-family: Monaco, monospace;
 	padding: 10px 10px 20px 10px;
 	-webkit-border-radius: 4px;
