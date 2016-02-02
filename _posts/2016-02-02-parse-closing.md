@@ -33,7 +33,7 @@ If that's you, then we've got you coverage:
 4. Scroll down and click on `« Export data »` button.
 5. If everything goes well, you will receive an email containing a .zip with all your data in a set of JSON files.
 
-### Step 2- Import to Flybase?
+#### Step 2 - Import to Flybase
 
 The exported JSON can be imported using our `Parse to Flybase` tool, which parses all your JSON files and imports it into your Flybase app, this is a fork of our usual `Flybase import` tool, as we wanted to make sure it fully supported Parse's exports for you.
 		
