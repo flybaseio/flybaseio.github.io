@@ -3,6 +3,8 @@ layout: post
 published: true 
 title: "So Parse is closing, what does that mean?" 
 date: 2016-02-02T06:34:56.257Z 
+tags: 
+- "parse"
 ogtype: article 
 bodyclass: post 
 ---
