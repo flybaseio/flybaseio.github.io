@@ -63,8 +63,8 @@ Let's look at the `getlongestidle()` function above with error handling included
 ```javascript
 function getlongestidle( ){
 	return agentsRef.where({"status": "Ready"}).orderBy( {"readytime":-1} ).on('value').then(function( data ){
-			var agent = data.first().value();
-			return agent.client;
+		var agent = data.first().value();
+		return agent.client;
 	},function(){
 		// no agent was "Ready", let's return false
 		return false;
