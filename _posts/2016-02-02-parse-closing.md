@@ -33,11 +33,11 @@ If that's you, then we've got you coverage:
 4. Scroll down and click on `« Export data »` button.
 5. If everything goes well, you will receive an email containing a .zip with all your data in a set of JSON files.
 
-### Step 2- Importto Flybase?</h3>
+### Step 2- Importto Flybase?
 
 The exported JSON can be imported using our `Parse to Flybase` tool, which parses all your JSON files and imports it into your Flybase app, this is a fork of our usual `Flybase import` tool, as we wanted to make sure it fully supported Parse's exports for you.
 		
-```
+```javascript
 $ npm install parse2flybase
 
 $ parse2flybase --flybase_key API-KEY --flybase-app Test --flybase_collection Stuff --json test.json
@@ -50,6 +50,7 @@ Preparing JSON for import... (may take a minute)
 Importing [=================================================] 100% (9431/9431)
 Import completed.
 ```
+
 And that's it, you've imported your Parse.com data into Flybase, now it's just a matter of switching your app to use Flybase instead.
 		
 You can try our <a href="http://flybase.io//tutorial/">Tutorial</a> to see how easy it is to get started, check out our <a href="http://docs.flybase.io">Developer Docs</a> for any questions you have, or <a href="/contact/">contact us</a> and we'll be glad to help you migrate your data and code from Parse to Flybase
