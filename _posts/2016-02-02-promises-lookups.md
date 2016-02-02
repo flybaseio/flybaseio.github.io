@@ -98,7 +98,7 @@ function updatePage(url, title){
 			console.log( "URL added" );
 		});
 	});
-	```
+```
 	
 In this sample, if we return a match, then we update it with a new view count incremented by 1.
 	
