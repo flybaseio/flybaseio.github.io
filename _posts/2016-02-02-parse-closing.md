@@ -17,13 +17,13 @@ Since the announcement last week, we've had people contact us about importing th
 
 To help with this, we've made a Flybase adapter for Parse Server so data is stored on Flybase and the Parse client code stays the same, which means less work for developers to update their apps.
 
-If you are an existing Parse user, [contact us](http://flybase.io/contact/) about migrating from Parse, we can help you get your data moved over, cloud code moved over and set up your Parse hosting on a new web host.
+Your code won't even have to change as the Flybase work is handled in the backend of our modified Parse Server code. We can also help you set up a push notification replacement to work with your Parse apps now.
 
-Your code won't even have to change as the Flybase work is handled in the backend of our modified Parse Server code. We can also help you set up a push notification replacement to work with your Parse apps.
+<hr />
 
 ### I don't care about cloud code or push, I just want to move my data
 
-If that's you, then we've got you coverage:
+If that's you, then we've got you covered:
 
 #### Step 1 - How to export from Parse
 
@@ -53,8 +53,7 @@ Import completed.
 
 And that's it, you've imported your Parse.com data into Flybase, now it's just a matter of switching your app to use Flybase instead.
 		
-You can try our <a href="http://flybase.io//tutorial/">Tutorial</a> to see how easy it is to get started, check out our <a href="http://docs.flybase.io">Developer Docs</a> for any questions you have, or <a href="/contact/">contact us</a> and we'll be glad to help you migrate your data and code from Parse to Flybase
-
+You can try our <a href="http://flybase.io/tutorial/">Tutorial</a> to see how easy it is to get started, check out our <a href="http://docs.flybase.io">Developer Docs</a> for any questions you have, or <a href="/contact/">contact us</a> and we'll be glad to help you migrate your data and code from Parse to Flybase
 
 If you are an existing Parse user, [contact us](http://flybase.io/contact/) about migrating from Parse, we can help you get your data moved over, cloud code moved over and set up your Parse hosting on a new web host.
 
