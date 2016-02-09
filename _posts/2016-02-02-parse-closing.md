@@ -13,6 +13,8 @@ Last week, Parse.com announced that they were going away in a year, what does th
 
 That means finding somewhere else to store your data.
 
+Flybase isn't going anywhere, and we are continuing our roadmap to help developers build better apps.
+
 Since the announcement last week, we've had people contact us about importing their data from their Parse apps and setting up their Cloud Code.
 
 To help with this, we've made a Flybase adapter for Parse Server so data is stored on Flybase and the Parse client code stays the same, which means less work for developers to update their apps.
