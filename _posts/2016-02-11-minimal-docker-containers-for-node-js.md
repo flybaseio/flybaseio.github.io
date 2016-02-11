@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Minimal Docker Containers for Node.js" 
 date: 2016-02-11T19:51:59.751Z 
 link: https://blog.risingstack.com/minimal-docker-containers-for-node-js/ 
