@@ -19,4 +19,4 @@ bodyclass: post
 > 
 > We are happy to release our [Alpine-based Node.js Docker images](https://hub.docker.com/r/risingstack/alpine/tags/) that tries to solve those pain points. In this article, you will learn about why we went with Alpine, how we version our images and how you can start building applications using them today.
 
-We're big fans of [Docker](http://blog.flybase.io/2015/12/10/docker-intro-for-node-developers/) here at Flybase and Rising Stack's new minimal docker container has a nice small footprint, which should be nice for quick node.js development in Docker.
+We are big fans of [Docker](http://blog.flybase.io/2015/12/10/docker-intro-for-node-developers/) here at Flybase and Rising Stack's new minimal docker container has a nice small footprint, which should be nice for quick node.js development in Docker.
