@@ -15,7 +15,7 @@ bodyclass: "post"
 	<img src="/images/posts/call-center.jpg?20160217" />
 </div></div>
 
-In the world of telephony, an automated call distribution (ACD) system, is a system that distributes incoming calls to a specific group of agents based on the customer's selection, customer's telephone number, selected incoming line to the system, or time of day the call was processed. We also call this a _call center_.
+> In the world of telephony, an automated call distribution (ACD) system, is a system that distributes incoming calls to a specific group of agents based on the customer's selection, customer's telephone number, selected incoming line to the system, or time of day the call was processed. We also call this a _call center_.
 
 A couple years ago, Twilio's [Charles Oppenheimer](https://github.com/choppen5) built a demo of a Salesforce embeddable [ACD](https://github.com/choppen5/client-acd) using Twilio Client and Ruby.  
 
