@@ -16,7 +16,7 @@ In the original workflow, people would go to a form system on a site such as typ
 
 You can find the completed code [here](https://github.com/flybaseio/list-mvp).
 
-In this sample, we have two HTML files, and one javascript file. We're using [YetiCSS](http://yeticss.com) for the CSS rather than bootstrap, you should take a look at that framework as it's nice.
+In this sample, we have two HTML files, and one javascript file. We're using [Yeti.css](http://yeticss.com) for the CSS rather than bootstrap, you should take a look at that framework as it's nice.
 
 First, let's create our `index.html` file:
 
