@@ -1552,8 +1552,12 @@ Now, run the following:
 1. `git init`
 2. `heroku login` to log into Heroku.
 3. `heroku create` to create the application within Heroku.
-4. `git push heroku master` to push your git repository to Heroku.
-5. `heroku open` to open your browser at your new, custom URL.
+4. `git add --all *` to add all of your new files to the repo.
+5. `git commit -am 'first commit'` to store the files inside the repo.
+6. `git push heroku master` to push your git repository to Heroku.
+7. `heroku open` to open your browser at your new, custom URL.
+
+Call center is now working, you can add `?client=ANYNAMEYOUWANT` to the end of the URL and it will set you up as the agent.
 
 ### Configuring Salesforce _(optional)_
 
