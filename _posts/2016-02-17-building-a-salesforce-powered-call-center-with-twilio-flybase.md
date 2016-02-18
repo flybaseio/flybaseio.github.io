@@ -518,20 +518,20 @@ Now, inside `public`, create a file called `index.html`:
 		
 		<div id="agent-status">
 			<p></p>
-		</div><!-- /agent-status -->
+		</div> /agent-status -->
 		
 		<div class="divider"></div>
 		
 		<div id="number-entry">
 			<input placeholder="+1 (555) 555-5555"></input>
 			<div class="incoming-call-status">Incoming Call</div>
-		</div><!-- /number-entry" -->
+		</div><!-- /number-entry -->
 		
 		<div id="dialer">
 			<div id="dialer-container">
 				<div class="numpad-container">
 					<div class="number" value="1">1</div><div class="number" value="2">2</div><div class="number" value="3">3</div><div class="number" value="4">4</div><div class="number" value="5">5</div><div class="number" value="6">6</div><div class="number" value="7">7</div><div class="number" value="8">8</div><div class="number" value="9">9</div><div class="number ast" value="*">&lowast;</div><div class="number" value="0">0</div><div class="number" value="#">#</div>
-				</div><!-- /numpad-container -->
+				</div> /numpad-container -->
 			</div><!-- /dialer-container -->
 		</div><!-- /dialer -->
 		
@@ -554,7 +554,7 @@ Now, inside `public`, create a file called `index.html`:
 		
 		<div id="callerid-entry" style="display:<%= anycallerid %>">
 			<input placeholder="Change your callerid"></input>
-		</div><!-- /number-entry" -->
+		</div><!-- /number-entry -->
 		
 		<div id="team-status">
 			<div class="agents-status"><div class="agents-num">-</div>Agents</div>
