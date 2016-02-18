@@ -161,26 +161,40 @@ mostPopular.prototype.updatePage = function(url, title){
 	//	get current count and increment it...
 	var cnt = 0;
 	var _this = this;
-	this.flybaseRef.where({"key": key}).on('value',function( data ){
-		if( data.count() ){
-			data.forEach( function(snapshot) {
-				var item = snapshot.value();
+	_this.flybaseRef.where({"key": key}).orderBy( {"views":-1} ).on('value').then( function( data ){
+/*
+		var item = data.first().value();
+		item.views = item.views + 1;
+		_this.flybaseRef.update(item._id,item, function(resp) {
+			console.log( key + " updated" );
+		});
+*/
+		var first = true;
+		data.forEach( function(snapshot) {
+			var item = snapshot.value();
+			if( first ){
 				item.views = item.views + 1;
 				_this.flybaseRef.update(item._id,item, function(resp) {
-					console.log( "URL updated" );
+					console.log( key + " updated" );
 				});
-			});			
-		}else{
-			// no count, so never added before..
-			_this.flybaseRef.push({
-				"key": key,
-				"url": url,
-				"title": title,
-				"views": 1
-			}, function(resp) {
-				console.log( "URL added" );
-			});
-		}
+			}else{
+				// clean up any dupes until we make this better...
+				_this.flybaseRef.deleteDocument(item._id, function(resp) {
+					console.log( item._id + " deleted");
+				});
+			}
+			first = false;
+		});
+	},function(){
+		// no count, so never added before..
+		_this.flybaseRef.push({
+			"key": key,
+			"url": url,
+			"title": title,
+			"views": 1
+		}, function(resp) {
+			console.log( "URL added" );
+		});
 	});
 	return this;
 };
