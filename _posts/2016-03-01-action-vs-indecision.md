@@ -2,7 +2,7 @@
 layout: post 
 published: true 
 title: "Action vs Indecision" 
-date: 2016-03-06T06:51:59.751Z 
+date: 2016-03-01T06:51:59.751Z 
 link: https://blog.intercom.io/action-vs-indecision/
 tags:
   - links
