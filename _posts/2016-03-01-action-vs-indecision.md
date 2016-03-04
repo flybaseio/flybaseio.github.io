@@ -12,7 +12,7 @@ bodyclass: "post"
 ---
 
 <div class="box-wrap"><div class="box">
-	<img src="/images/posts/action.png" />
+	<img src="http://blog.flybase.io//images/posts/action.png" />
 </div></div>
 
 > These decisions have a very definite cost – you’re pitting two or more choices against each other; there always has to be a winning and losing proposition. Unfortunately, the path of least resistance can be to make no decision at all.
