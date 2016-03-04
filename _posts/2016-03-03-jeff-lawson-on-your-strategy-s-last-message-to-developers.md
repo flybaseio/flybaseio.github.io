@@ -3,7 +3,6 @@ layout: post
 published: true
 title: "Jeff Lawson: Your strategy’s last message to developers" 
 date: 2016-03-04T07:27:55.002Z 
-link: https://medium.com/@jeffiel/your-strategy-s-last-message-to-developers-ff901cdf4a55#.tg37ir26k 
 tags:
   - links
 ogtype: article 
