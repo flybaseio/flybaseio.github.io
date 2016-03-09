@@ -1,7 +1,7 @@
 ---
 layout: post 
-published: false 
-title: "Software has bugs. This is normal." 
+published: true 
+title: "DHH: Software has bugs. This is normal." 
 date: 2016-03-09T19:26:15.803Z 
 link: https://m.signalvnoise.com/software-has-bugs-this-is-normal-f64761a262ca#.5yo1dasc9 
 tags:
