@@ -1,7 +1,7 @@
 ---
 layout: post 
-published: false 
-title: "How JavaScript bundlers work — Medium" 
+published: true 
+title: "How JavaScript bundlers work" 
 date: 2016-03-16T19:09:48.573Z 
 link: https://medium.com/@gimenete/how-javascript-bundlers-work-1fc0d0caf2da#.cajzmusbr 
 tags:
@@ -9,6 +9,8 @@ tags:
 ogtype: article 
 bodyclass: post 
 ---
+
+Alberto Gimeno: 
 
 > First of all, what is a JavaScript bundler? A JavaScript bundler is a tool that puts your code and all its dependencies together in one JavaScript file. There are many of them out there these days, being the most popular ones [browserify](http://browserify.org/) and [webpack](https://webpack.github.io/).
 > 
