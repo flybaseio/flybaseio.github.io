@@ -161,11 +161,29 @@ mostPopular.prototype.updatePage = function(url, title){
 	var _this = this;
 	var cnt = 0;
 	_this.flybaseRef.where({"key": key}).orderBy( {"views":-1} ).on('value').then( function( data ){
+		var first = true;
+		data.forEach( function(snapshot) {
+			var item = snapshot.value();
+			if( first ){
+				item.views = item.views + 1;
+				_this.flybaseRef.update(item._id,item, function(resp) {
+					console.log( key + " updated" );
+				});
+			}else{
+				// clean up any dupes until we make this better...
+				_this.flybaseRef.deleteDocument(item._id, function(resp) {
+					console.log( item._id + " deleted");
+				});
+			}
+			first = false;
+		});
+/*
 		var item = data.first().value();
 		item.views = item.views + 1;
 		_this.flybaseRef.update(item._id,item, function(resp) {
 			console.log( key + " updated" );
 		});
+*/
 	},function(){
 		// no count, so never added before..
 		_this.flybaseRef.push({
