@@ -1,11 +1,12 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "RICE: Simple prioritization for product managers" 
 date: 2016-03-25T04:44:49.011Z 
 link: https://blog.intercom.io/rice-simple-prioritization-for-product-managers/ 
 tags:
   - links
+  - startups
 ogtype: article 
 bodyclass: post 
 ---
@@ -27,5 +28,7 @@ bodyclass: post
 > It’s easy to discount the additional effort that one project will require over another.
 > 
 > Even if you make it through this mental minefield intact, you’re left with the tough task of consistently combining and comparing these factors across all project ideas. 
+> 
 > Thankfully, you don’t have to do this in your head.
 
+RICE, short for Reach Impact Confidence and Effort is a nice framework to follow for prioritizing your product's roadmap. And Sean does a great job of breaking down how to measure all of these factors so make sure you read the rest of his post.
