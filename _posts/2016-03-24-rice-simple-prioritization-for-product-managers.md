@@ -49,4 +49,4 @@ For a short summary, RICE should be looked at as:
   - Moonshot: 20% or less
 - **Effort**: Estimate the total amount of time a project will require from all members of your team: product, design, and engineering. Estimated as a number of “person-months”, or the work that one team member can do in a month.
 
-Your **RICE Score** is then achieved by multiplying Reach, Impact and Confidence and dividing the result by Effort or (R*I*C/E). This will help you see which items should have a higher priority and which should be left on the backlog for later.
+Your **RICE Score** is then achieved by multiplying Reach, Impact and Confidence and dividing the result by Effort or (`R * I * C / E`). This will help you see which items should have a higher priority and which should be left on the backlog for later.
