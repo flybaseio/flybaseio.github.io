@@ -32,3 +32,21 @@ bodyclass: post
 > Thankfully, you don’t have to do this in your head.
 
 RICE, short for Reach Impact Confidence and Effort is a nice framework to follow for prioritizing your product's roadmap. And Sean does a great job of breaking down how to measure all of these factors so make sure you read the rest of his post.
+
+For a short summary, RICE should be looked at as:
+
+- Reach: How many customers will this project impact over a single quarter?
+- Impact: How much will this project increase conversion rate when a customer encounters it?
+  - Massive: 3x 
+  - High: 2x
+  - Medium: 1x
+  - Low: 0.5x
+  - Minimal — 0.25x
+- Confidence: How confident are we about the optimistic estimates for reach, impact, and effort?
+  - High confidence: 100%
+  - Medium confidence: 80%
+  - Low confidence: 50%
+  - Moonshot: 20% or less
+- Effort: Estimate the total amount of time a project will require from all members of your team: product, design, and engineering. Estimated as a number of “person-months”, or the work that one team member can do in a month.
+
+Your RICE score is then achieved by multiplying Reach, Impact and Confidence and dividing the result by Effort or (R*I*C/E). This will help you see which items should have a higher priority and which should be left on the backlog for later.
