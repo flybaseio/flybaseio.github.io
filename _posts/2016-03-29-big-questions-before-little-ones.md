@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Big questions before little ones" 
 date: 2016-03-29T16:03:02.725Z 
 link: http://sethgodin.typepad.com/seths_blog/2016/03/big-questions-before-little-ones.html 
