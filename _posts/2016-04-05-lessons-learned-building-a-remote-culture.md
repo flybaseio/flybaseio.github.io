@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Lessons Learned Building a Remote Culture" 
 date: 2016-04-05T18:42:02.378Z 
 link: https://www.helpscout.net/blog/remote-culture/ 
