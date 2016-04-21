@@ -11,7 +11,7 @@ bodyclass: "post"
 ---
 
 <div class="box-wrap"><div class="box">
-	<img src="/images/posts/qna.jpg?20160217" />
+  <img src="/images/posts/qna.jpg?20160217" />
 </div></div>
 
 Question pages are handy, for example if you were presenting either at a conference, or online, you could use a real-time questions page to let attendees ask questions and then vote on which ones they liked better.
@@ -39,32 +39,32 @@ Create a file called `index.html`:
 ```javascript
 <!DOCTYPE html >
 <html>
-	<head>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-		<script src="https://cdn.flybase.io/flybase.js"></script>
-		<script src="https://cdn.flybase.io/angularfly.js"></script>
-		<script type="text/javascript" src="app.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-	<body ng-app="questionApp" ng-controller="questionController">
-		<div id="ask-question">
-			<form ng-submit="saveQuestion(newquestion)">
-				<input id="new-question" type="text" ng-model="newquestion" placeholder="Ask a question about Flybase...">
-			</form>
-		</div>
-		<div id="questions">
-			<ul style="height: {{questions.length * 2.5}}em;">
-				<li ng-repeat="q in questions | orderBy:'-points'" class="question question-{{$index}}" style="top: {{$index * 2.5}}em">
-					<a ahref="#" ng-click="upvoteQuestion( q._id )" class="upvote">
-						<span class="upvote-arrow"></span>
-						<span class="points">{{ q.points }}</span>
-					</a>
-					<span class="question">{{ q.question }}</span>
-				</li>
-			</ul>
-		</div>
-    </body>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="https://cdn.flybase.io/flybase.js"></script>
+  <script src="https://cdn.flybase.io/angularfly.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-app="questionApp" ng-controller="questionController">
+  <div id="ask-question">
+    <form ng-submit="saveQuestion(newquestion)">
+      <input id="new-question" type="text" ng-model="newquestion" placeholder="Ask a question about Flybase...">
+    </form>
+  </div>
+  <div id="questions">
+    <ul style="height: {{questions.length * 2.5}}em;">
+      <li ng-repeat="q in questions | orderBy:'-points'" class="question question-{{$index}}" style="top: {{$index * 2.5}}em">
+        <a ahref="#" ng-click="upvoteQuestion( q._id )" class="upvote">
+          <span class="upvote-arrow"></span>
+          <span class="points">{{ q.points }}</span>
+        </a>
+        <span class="question">{{ q.question }}</span>
+      </li>
+    </ul>
+  </div>
+</body>
 </html>
 ```
 
@@ -75,110 +75,21 @@ This is a pretty straight forward page that will display a form to enter a quest
 Now, create a file called `style.css`:
 
 ```javascript
-html, body {
-    font-family: 'Open Sans', sans-serif;
-    height: 100%;
-}
-
-#ask-question input {
-    display: block;
-    margin: 1em 0 0 0;
-    padding-bottom: 0.2em;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid #ececec;
-    background: transparent;
-    color: rgba(0,0,0,0.8);
-    font-size: 1.8em;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1;
-    transition: opacity: 0.3s;
-    -webkit-transition: opacity 0.3s;
-    width: 20em;
-
-}
-#ask-question input::-webkit-input-placeholder { color: #bebebe; }
-#ask-question input::-moz-placeholder { color: #bebebe; }
-#ask-question input:-moz-placeholder { color: #bebebe; }
-#ask-question input:-ms-input-placeholder { color: #bebebe; }
-
-
-#questions {
-    padding: 1em 0.5em;
-}
-
-#questions ul {
-    position: relative;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-#questions li {
-    position: absolute;
-    width: 100%;
-    max-height: 2.5em;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 1.8em;
-    margin: 0 -0.4em;
-    padding: 0.5em 0.4em;
-    transition: background 0.3s, top 0.3s ease-in-out;
-    background: white; 
-    text-overflow: ellipsis;
-    overflow: hidden;
-    border: thin solid transparent;
-    border-radius: 3px;
-    white-space: nowrap;
-    cursor: pointer;
-}
-
-#questions li:hover, #questions li:focus {
-    background: rgba(253, 251, 247, 1)
-}
-
-#questions li.expanded {
-    max-height: 5000em;
-    background: rgba(253,251,247,0.95);
-    overflow: visible;
-    white-space: normal;
-    border: thin solid rgb(224, 216, 216);
-    z-index: 2;
-}
-
-#questions li a.upvote {
-    position: relative;
-    display: inline-block;
-    width: 2em;
-    height: 2.5em;
-    text-align: center;
-    border-radius: 5px;
-    border: thin solid #dcdcdc;
-    font-size: 1.1rem;
-    vertical-align: bottom;
-    text-decoration: none;
-    margin-right: 0.8em;
-    margin-bottom: -0.15em;
-    background: white;
-}
-
-#questions li span.upvote-arrow {
-    position: absolute;
-    top: 0.3em;
-    left: 0.6em;
-    height: 0;
-    border-style: solid;
-    border-width: 0 7px 8px 7px;
-    border-color: transparent;
-    border-bottom-color: #c5c5c5;
-}
-
-#questions li span.points {
-    color: #222222;
-    display: block;
-    margin: 0.9em 0;
-}
+#ask-question input,body,html{font-family:'Open Sans',sans-serif}
+body,html{height:100%}
+#ask-question input{display:block;margin:1em 0 0;padding-bottom:.2em;border:none;outline:0;border-bottom:2px solid #ececec;background:0 0;color:rgba(0,0,0,.8);font-size:1.8em;line-height:1;transition:opacity: .3s;-webkit-transition:opacity .3s;width:20em}
+#ask-question input::-webkit-input-placeholder{color:#bebebe}
+#ask-question input::-moz-placeholder{color:#bebebe}
+#ask-question input:-moz-placeholder{color:#bebebe}
+#ask-question input:-ms-input-placeholder{color:#bebebe}
+#questions{padding:1em .5em}
+#questions ul{position:relative;list-style-type:none;margin:0;padding:0}
+#questions li{position:absolute;width:100%;max-height:2.5em;box-sizing:border-box;font-size:1.8em;margin:0 -.4em;padding:.5em .4em;transition:background .3s,top .3s ease-in-out;background:#fff;text-overflow:ellipsis;overflow:hidden;border:thin solid transparent;border-radius:3px;white-space:nowrap;cursor:pointer}
+#questions li:focus,#questions li:hover{background:rgba(253,251,247,1)}
+#questions li.expanded{max-height:5000em;background:rgba(253,251,247,.95);overflow:visible;white-space:normal;border:thin solid #e0d8d8;z-index:2}
+#questions li a.upvote{position:relative;display:inline-block;width:2em;height:2.5em;text-align:center;border-radius:5px;border:thin solid #dcdcdc;font-size:1.1rem;vertical-align:bottom;text-decoration:none;margin-right:.8em;margin-bottom:-.15em;background:#fff}
+#questions li span.upvote-arrow{position:absolute;top:.3em;left:.6em;height:0;border-style:solid;border-width:0 7px 8px;border-color:transparent transparent #c5c5c5}
+#questions li span.points{color:#222;display:block;margin:.9em 0}
 ```
 
 #### Now for the brains of your app
@@ -187,71 +98,71 @@ Let's create `app.js` now, this will handle all the processing:
 
 ```javascript
 (function() {
-	'use strict';
-	var app = angular.module('questionApp', [ 'flybaseResourceHttp' ])
-		.constant('FLYBASE_CONFIG',{
-			API_KEY:"YOUR-API-KEY",
-			DB_NAME:'questions'
-		})
-		.factory('Question', function ($flybaseResourceHttp) {
-			return $flybaseResourceHttp('questions');
-		})		
-		.controller('questionController', function($scope, Question, $timeout) {
-			$scope.newquestion = '';
-			$scope.questions = [];
-			
-			$scope.init = function(){
-				Question.all().then(function(questions){
-					$timeout(function() {
-						$scope.questions = questions;
-					});
-				});
-			}
-			$scope.init();
+  'use strict';
+  var app = angular.module('questionApp', [ 'flybaseResourceHttp' ])
+    .constant('FLYBASE_CONFIG',{
+      API_KEY:"YOUR-API-KEY",
+      DB_NAME:'questions'
+    })
+    .factory('Question', function ($flybaseResourceHttp) {
+      return $flybaseResourceHttp('questions');
+    })    
+    .controller('questionController', function($scope, Question, $timeout) {
+      $scope.newquestion = '';
+      $scope.questions = [];
+      
+      $scope.init = function(){
+        Question.all().then(function(questions){
+          $timeout(function() {
+            $scope.questions = questions;
+          });
+        });
+      }
+      $scope.init();
 
-			$scope.saveQuestion = function( questionText ){
-				var question = new Question();
-				question.question = questionText;
-				question.points = 1;
-				question.$save();
-				$scope.newquestion = '';
-			};
+      $scope.saveQuestion = function( questionText ){
+        var question = new Question();
+        question.question = questionText;
+        question.points = 1;
+        question.$save();
+        $scope.newquestion = '';
+      };
 
-			$scope.upvoteQuestion = function( questionId ){
-				Question.flybase().where({"_id": questionId}).once('value').then(function( rec ){
-					var question = rec.first().value();
-					question.points += 1;
-					Question.flybase().push(question, function(resp) {});
-				}, function(err){
-				});
-			};
+      $scope.upvoteQuestion = function( questionId ){
+        Question.flybase().where({"_id": questionId}).once('value').then(function( rec ){
+          var question = rec.first().value();
+          question.points += 1;
+          Question.flybase().push(question, function(resp) {});
+        }, function(err){
+        });
+      };
 
-			Question.flybase().on('added', function( data ){
-				$timeout(function() {
-					$scope.questions.push( data.value() );
-				});
-			});
-			Question.flybase().on('changed', function( data ){
-				$timeout(function() {
-					var snapshot = data.value();
-					angular.forEach($scope.questions, function(question,i) {
-						if( question._id == snapshot._id ){
-							$scope.questions[ i ] = snapshot;
-						}
-					});
-				});
-			});
-			Question.flybase().on('removed', function( data ){
-				$timeout(function() {
-					var snapshot = data.value();
-					angular.forEach($scope.questions, function(question,i) {
-						if( question._id == snapshot._id ){
-							$scope.questions.splice(i, 1);
-						}
-					});
-				});
-			});
-		});
+      Question.flybase().on('added', function( data ){
+        $timeout(function() {
+          $scope.questions.push( data.value() );
+        });
+      });
+      Question.flybase().on('changed', function( data ){
+        $timeout(function() {
+          var snapshot = data.value();
+          angular.forEach($scope.questions, function(question,i) {
+            if( question._id == snapshot._id ){
+              $scope.questions[ i ] = snapshot;
+            }
+          });
+        });
+      });
+      Question.flybase().on('removed', function( data ){
+        $timeout(function() {
+          var snapshot = data.value();
+          angular.forEach($scope.questions, function(question,i) {
+            if( question._id == snapshot._id ){
+              $scope.questions.splice(i, 1);
+            }
+          });
+        });
+      });
+    });
 })();
 ```
 
@@ -270,27 +181,27 @@ Now, create a file called `index.html`:
 ```javascript
 <!DOCTYPE html >
 <html>
-	<head>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-		<script src="https://cdn.flybase.io/flybase.js"></script>
-		<script src="https://cdn.flybase.io/angularfly.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/epoch/0.8.4/js/epoch.min.js"></script>
-		<script src="app.js"></script>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="https://cdn.flybase.io/flybase.js"></script>
+  <script src="https://cdn.flybase.io/angularfly.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/epoch/0.8.4/js/epoch.min.js"></script>
+  <script src="app.js"></script>
 
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/epoch/0.8.4/css/epoch.min.css">
-		<style>
-body {
-    font-family: 'Open Sans', sans-serif;
-}		
-		</style>
-	</head>
-	<body ng-app="dashboardApp" ng-controller="dashboardController" class="epoch-theme-default">
-		<h1>Most popular questions</h1>
-		<div id="chart" class="epoch category10" style="height: 200px"></div> 
-	</body>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/epoch/0.8.4/css/epoch.min.css">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }    
+  </style>
+</head>
+<body ng-app="dashboardApp" ng-controller="dashboardController" class="epoch-theme-default">
+  <h1>Most popular questions</h1>
+  <div id="chart" class="epoch category10" style="height: 200px"></div> 
+</body>
 </html>
 ```
 
@@ -303,80 +214,80 @@ Now let's create our `app.js` file:
 ```javascript
 
 (function() {
-	'use strict';
-	var app = angular.module('dashboardApp', [ 'flybaseResourceHttp' ])
-		.constant('FLYBASE_CONFIG',{
-			API_KEY:"YOUR-API-KEY",
-			DB_NAME:'questions'
-		})
-		.factory('Question', function ($flybaseResourceHttp) {
-			return $flybaseResourceHttp('questions');
-		})
-		.controller('dashboardController', function($scope, Question, $timeout) {
-			$scope.questions = [];
-			$scope.epoch = undefined;
-			$scope.init = function(){
-				Question.all().then(function(questions){
-					$timeout(function() {
-						$scope.questions = questions;
-						$timeout(function() {
-							$scope.init_epoch();
-						});
-					});
-				});
-			};
-			$scope.init();
+  'use strict';
+  var app = angular.module('dashboardApp', [ 'flybaseResourceHttp' ])
+    .constant('FLYBASE_CONFIG',{
+      API_KEY:"YOUR-API-KEY",
+      DB_NAME:'questions'
+    })
+    .factory('Question', function ($flybaseResourceHttp) {
+      return $flybaseResourceHttp('questions');
+    })
+    .controller('dashboardController', function($scope, Question, $timeout) {
+      $scope.questions = [];
+      $scope.epoch = undefined;
+      $scope.init = function(){
+        Question.all().then(function(questions){
+          $timeout(function() {
+            $scope.questions = questions;
+            $timeout(function() {
+              $scope.init_epoch();
+            });
+          });
+        });
+      };
+      $scope.init();
 
-			$scope.init_epoch = function( ){
-				$scope.epoch =  jQuery('#chart').epoch({
-					type: 'bar',
-					data: []
-				});
-				$scope.update_epoch();
-			};
+      $scope.init_epoch = function( ){
+        $scope.epoch =  jQuery('#chart').epoch({
+          type: 'bar',
+          data: []
+        });
+        $scope.update_epoch();
+      };
 
-			$scope.update_epoch = function(){
-				var new_data = jQuery.map($scope.questions, function(question, i) {
-		            return {
-		                x: question.question,
-		                y: question.points
-		            }
-		        });
-		        
-		        $scope.epoch.update([{
-		            label: 'series',
-		            values: new_data
-		        }]);
-			};
-			Question.flybase().on('added', function( data ){
-				$timeout(function() {
-					$scope.questions.push( data.value() );
-					$scope.update_epoch();
-				});
-			});
-			Question.flybase().on('changed', function( data ){
-				$timeout(function() {
-					var snapshot = data.value();
-					angular.forEach($scope.questions, function(question,i) {
-						if( question._id == snapshot._id ){
-							$scope.questions[ i ] = snapshot;
-						}
-					});
-					$scope.update_epoch();
-				});
-			});
-			Question.flybase().on('removed', function( data ){
-				$timeout(function() {
-					var snapshot = data.value();
-					angular.forEach($scope.questions, function(question,i) {
-						if( question._id == snapshot._id ){
-							$scope.questions.splice(i, 1);
-						}
-					});
-					$scope.update_epoch();
-				});
-			});	
-		});
+      $scope.update_epoch = function(){
+        var new_data = jQuery.map($scope.questions, function(question, i) {
+                return {
+                    x: question.question,
+                    y: question.points
+                }
+            });
+            
+            $scope.epoch.update([{
+                label: 'series',
+                values: new_data
+            }]);
+      };
+      Question.flybase().on('added', function( data ){
+        $timeout(function() {
+          $scope.questions.push( data.value() );
+          $scope.update_epoch();
+        });
+      });
+      Question.flybase().on('changed', function( data ){
+        $timeout(function() {
+          var snapshot = data.value();
+          angular.forEach($scope.questions, function(question,i) {
+            if( question._id == snapshot._id ){
+              $scope.questions[ i ] = snapshot;
+            }
+          });
+          $scope.update_epoch();
+        });
+      });
+      Question.flybase().on('removed', function( data ){
+        $timeout(function() {
+          var snapshot = data.value();
+          angular.forEach($scope.questions, function(question,i) {
+            if( question._id == snapshot._id ){
+              $scope.questions.splice(i, 1);
+            }
+          });
+          $scope.update_epoch();
+        });
+      });  
+    });
 })();
 ```
 
