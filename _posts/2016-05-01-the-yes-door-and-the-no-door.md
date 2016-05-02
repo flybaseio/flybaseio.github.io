@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "The ‘yes’ door and the ‘no’ door" 
 date: 2016-05-02T03:39:55.918Z 
 link: https://medium.com/@sjtanton/the-yes-door-and-the-no-door-4cad8eac5494#.80n2fqf4i 
