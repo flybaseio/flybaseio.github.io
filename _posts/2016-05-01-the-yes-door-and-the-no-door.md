@@ -15,3 +15,5 @@ bodyclass: post
 > We’ve come to realize through many years of getting it not quite right, that a lot of it comes down to making better decisions. Say ‘yes’ to something, and you open the door to whole stream of demands. Say ‘no’ and you have the time to do something else.
 > 
 > Some doors are easy to open — fantastic new client when you have the capacity to do a great job — yes please, come on in. Work that brings out the best in you — yes. Opportunities that lead to other doors you’re keen to open — yes, those too. You know the extra work will be worthwhile, and you’re happy to do it. Choose happiness.
+
+I came across this post in my medium feed recently, and wanted to share it.
