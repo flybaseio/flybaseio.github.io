@@ -10,6 +10,8 @@ ogtype: article
 bodyclass: post 
 ---
 
+Jon Phenow: 
+
 > I mentioned in my [last post](https://m.signalvnoise.com/failure-as-progress-2596a1bb067) that I would talk about my opinions on TDD, so here it is. Kicking it off, I will explain what TDD is, how it’s meant to work. Then I’ll explain what some people have said about it and talk about what I believe the real benefits of TDD are. Finally, I’ll walk through whether I think it’s worth using and explain my use of the practice. Oh, and I’ll also provide a disclaimer as to what the heck possessed me to pile onto this already well-discussed topic.
 > 
 > TDD stands for “Test Driven Development.” At its core, it’s a development practice; a way to approach writing code. The rules of how to practice TDD are fairly simple at their surface. Say you have a new function that you need in order to accomplish a task: write the smallest test you can imagine, run the test, watch it respond with a failure, write the smallest possible amount of code to make that test pass, repeat until the necessary functionality is complete. 
@@ -26,4 +28,4 @@ bodyclass: post
 > 
 > These are fundamentally different mindsets.
 
-Jon makes some great points about TDD and how it helps build a balance. We follow a balanced routine for all our development here at Flybase so that you're never in a `¯\_(ツ)_/¯` state as John puts it.
+Jon makes some great points about TDD and how it helps build a balance. We follow a balanced routine for all our development here at Flybase so that we are never in a `¯\_(ツ)_/¯` state as Jon puts it.
