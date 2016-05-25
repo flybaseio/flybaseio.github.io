@@ -18,7 +18,7 @@ bodyclass: post
 > 
 > The main benefit I see TDD-promoters reference is test coverage. Since, with TDD, testing is part of how you write code, you just get more tests that are very well tied to the logic inside your functions. That test coverage paired with ongoing use of the practice tends to make new development less frightening because you have pretty high confidence that your code is covered and will alert you to unexpected behavior changes.
 > 
-> One counter-argument to the test coverage benefit is that the immense depth at which you’re covering your code in this type of practice results in brittle tests. Growing the test code at a rate faster than your app code can increasingly make it difficult to make changes to your app without spending many more hours rejiggering your tests. So, while you maybe have higher confidence in your app at one point, by the time you’ve redone much of your testing, due to feature additions, you’re in kind of a ¯\_(ツ)_/¯ state. So much so that by the time you’re done getting the tests green, you can’t tell if you’ve fixed the tests properly or if you just made them look green.
+> One counter-argument to the test coverage benefit is that the immense depth at which you’re covering your code in this type of practice results in brittle tests. Growing the test code at a rate faster than your app code can increasingly make it difficult to make changes to your app without spending many more hours rejiggering your tests. So, while you maybe have higher confidence in your app at one point, by the time you’ve redone much of your testing, due to feature additions, you’re in kind of a `¯\_(ツ)_/¯` state. So much so that by the time you’re done getting the tests green, you can’t tell if you’ve fixed the tests properly or if you just made them look green.
 > 
 > As Software Engineers we like to find processes and tools that allow us to remove blame and responsibility from the human. We want the computer and process to protect us and keep us in a safe zone. I think both of the above arguments are trying to achieve that same end of some kind of safe zone. TDD, in terms of the testing benefit that’s often referenced, would like to keep us in a zone of constant “yes it works.” The anti-TDD position explains a world where the process potentially slows down our ability to progress and potentially hurts our confidence in new functionality due to lots of changing tests.
 > 
@@ -26,4 +26,4 @@ bodyclass: post
 > 
 > These are fundamentally different mindsets.
 
-Jon makes some great points about TDD and how it helps build a balance. We follow a balanced routine for all our development here at Flybase so that you're never in a ¯\_(ツ)_/¯ state as John puts it.
+Jon makes some great points about TDD and how it helps build a balance. We follow a balanced routine for all our development here at Flybase so that you're never in a `¯\_(ツ)_/¯` state as John puts it.
