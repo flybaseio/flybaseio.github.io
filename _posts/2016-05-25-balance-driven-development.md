@@ -28,4 +28,4 @@ Jon Phenow:
 > 
 > These are fundamentally different mindsets.
 
-Jon makes some great points about TDD and how it helps build a balance. We follow a balanced routine for all our development here at Flybase so that we are never in a `¯\_(ツ)_/¯` state as Jon puts it.
+Jon makes some great points about test driven development and how it helps you find a mindset to build a balance. We follow a balanced routine for all our development here at Flybase so that we are never in a `¯\_(ツ)_/¯` state as Jon puts it.
