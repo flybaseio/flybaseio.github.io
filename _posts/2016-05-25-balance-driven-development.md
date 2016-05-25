@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Balance Driven Development" 
 date: 2016-05-25T15:39:06.351Z 
 link: https://m.signalvnoise.com/balance-driven-development-a06f4c972970#.mg45pgmna 
