@@ -7,13 +7,13 @@ date: 2016-05-27T17:25:11.506Z
 tags:
   - links
   - startups
-image: "http://blog.flybase.io/images/posts/make-things.jpg?20160217"
+image: "http://blog.flybase.io/images/posts/make-things.png?20160217"
 ogtype: "article"
 bodyclass: "post"
 ---
 
 <div class="box-wrap"><div class="box">
-  <img src="/images/posts/make-things.jpg?20160217" />
+  <img src="/images/posts/make-things.png?20160217" />
 </div></div>
 
 > So you’re making something that you think people will like. That’s excellent. But understanding exactly how and where your product fits into someone’s life — what real problems it will solve for them — can be a murky process.
