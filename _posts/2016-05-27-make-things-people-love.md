@@ -2,6 +2,7 @@
 layout: post 
 published: true 
 title: "Make things people love"
+link: "https://slackhq.com/make-things-people-love-513cc4e6344c#.b5wdb15p8"
 date: 2016-05-27T17:25:11.506Z 
 tags:
   - links
