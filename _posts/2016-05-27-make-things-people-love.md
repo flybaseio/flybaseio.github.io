@@ -1,7 +1,7 @@
 ---
 layout: post 
 published: true 
-title: "Make things people love — Several People Are Typing — The Official Slack Blog" 
+title: "Make things people love"
 date: 2016-05-27T17:25:11.506Z 
 tags:
   - links
