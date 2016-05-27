@@ -1,10 +1,11 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Make things people love — Several People Are Typing — The Official Slack Blog" 
 date: 2016-05-27T17:25:11.506Z 
 tags:
   - links
+  - startups
 ogtype: article 
 bodyclass: post 
 ---
