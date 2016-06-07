@@ -1,11 +1,12 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "How to write a README that rocks" 
 date: 2016-06-07T16:07:39.818Z 
 link: https://dotdev.co/how-to-write-a-readme-that-rocks-bc29f279611a#.51ggcck4l 
 tags:
   - links
+  - code
 ogtype: article 
 bodyclass: post 
 ---
