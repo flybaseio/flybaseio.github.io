@@ -32,3 +32,15 @@ Eric L. Barnes
 > By working through these common questions let’s look at how to build a readme that instills trust, answers objections, and shows the readers why your code is worthy of being included in their project.
 
 We've been restructuring the READMEs on our various projects in github along these lines so I wanted to share this excellent guide on READMEs.
+
+Eric's recommend structure (and which can be found here with his [README generator](http://michaeldyrynda.github.io/readme-generator/)) is:
+
+1. Project Title
+2. Introduction
+  - An introduction or lead on what problem you're solving. Answer the question, "Why does someone need this?"
+3. Highlighted Code Samples (if any)
+  - You've gotten their attention in the introduction, now show a few code examples. So they get a visualization and as a bonus, make them copy/paste friendly.
+4. Installation / setup
+  - The installation instructions are low priority in the readme and should come at the bottom. The first part answers all their objections and now that they want to use it, show them how.
+
+I would also recommend a 5th one for support, with a link for email or to the issues section of the Repo.
