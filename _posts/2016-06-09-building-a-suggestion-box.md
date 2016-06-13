@@ -310,8 +310,10 @@ suggestionsApp.prototype.save = function( form_name ){
 The `save` function reads the submitted form, grabs the `data-label` and `data-order` fields to store as a `_meta` record and then saves the submitted data as a new document inside the `people` table.
 
 
-### Finishing Up
+### Finishing Up and Taking it Further
 
 This is a really simple app, you can take it and expand on it how ever you want, it was designed for the sole purpose of being fast to work with.
 
 You can add form fields, do whatever you want and have it all work nicely.
+
+You can also extend this app with tools such as zapier to send notifications when people enter new suggestions, which helps make it that much more nice to use.
