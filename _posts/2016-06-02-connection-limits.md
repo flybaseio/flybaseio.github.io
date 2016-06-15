@@ -24,8 +24,8 @@ We've got lots of new things rolling out over the next few weeks, but I wanted t
 
 First, this was easy to kill since paid plans were always `burstable` and didn't actually have any hard limits on connections. So it was really not a difficult choice at all.
 
-We still have a limit of 100 simultaneous devices on our free `starter` plan, but we're happy to say there are no limits at all for simultaneous device connections on our paid plans.
+We still have a limit of 50 simultaneous devices on our free `starter` plan, but we're happy to say there are no limits at all for simultaneous device connections on our paid plans.
 
-With this, we've also changed our prices, with the Lander plan starting at $9.99 a month (from $14.99 a month), and all our other plans reflecting our pricing change as well. I think you'll lke our new prices.
+With this, we've also changed our prices, with the Saturn plan starting at $24.99 a month, and all our other plans reflecting our pricing change as well. I think you'll like our new prices.
 
 Stay tuned to see what we've got coming this month, I promise it'll be fun.
