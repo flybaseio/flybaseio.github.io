@@ -26,6 +26,6 @@ First, this was easy to kill since paid plans were always `burstable` and didn't
 
 We still have a limit of 100 simultaneous devices on our free `starter` plan, but we're happy to say there are no limits at all for simultaneous device connections on our paid plans.
 
-With this, we've also changed our prices, with the Saturn plan starting at $24.99 a month, and all our other plans reflecting our pricing change as well. I think you'll like our new prices.
+With this, we've also changed our prices, with the Saturn plan starting at $19.99 a month, and all our other plans reflecting our pricing change as well. I think you'll like our new prices.
 
 Stay tuned to see what we've got coming this month, I promise it'll be fun.
