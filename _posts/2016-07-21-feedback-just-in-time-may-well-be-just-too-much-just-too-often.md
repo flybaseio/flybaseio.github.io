@@ -1,0 +1,23 @@
+---
+layout: post 
+published: false 
+title: "Feedback: Just-in-time may well be just-too-much, just-too-often" 
+date: 2016-07-21T17:08:28.382Z 
+link: https://m.signalvnoise.com/feedback-just-in-time-may-well-be-just-too-much-just-too-often-2f69ab3970c9#.78mit8oib 
+tags:
+  - links
+ogtype: article 
+bodyclass: post 
+---
+
+DHH: 
+
+> Few management techniques have fallen further from grace than the yearly or bi-yearly employee reviews. The new way is just-in-time feedback. Don’t hold anything back, let it all out, and the sooner the better. The more transparency, the greater frequency, the better!
+> 
+> So drip, drip, drip comes the feedback. Every interaction, every project, every presentation a test to be judged and graded. Did I do well? Does hearing nothing this time when I heard something last time mean it was better or worse?
+> 
+> [...]
+> 
+> We’re all noisy data points. Very few individual incidents matter so much that they single-handedly alter the trajectory of the trend. That’s not a bug, but a feature.
+
+I like this post, we value feedback from our users and it plays a big piece in where we takes things in next steps, and it's got a heavy factor in our upcoming nextgen release which will bring several new features to it and which we are more and more excited about each day as we commit new code to it.
