@@ -2060,7 +2060,7 @@ input:focus, textarea:focus {
 	margin-bottom: 15px;
 }
 .post-sharing:before {
-	content: 'Share This Post:';
+	content: 'Share:';
 	display: inline;
 	margin-bottom: 4.5px;
 }
