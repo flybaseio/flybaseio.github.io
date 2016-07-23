@@ -75,36 +75,18 @@ layout: default
 {% endif %}
 			</div>
 		</div>
-{% comment %}
-		{% assign hasSimilar = '' %}
-		{% for post in site.related_posts %}
-			{% assign postHasSimilar = false %}
-			{% for tag in page.tags %}
-				{% for thisTag in page.tags %}
-					{% if postHasSimilar == false and hasSimilar.size < 6 and post != page and tag == thisTag %}
-						{% if hasSimilar.size == 0 %}
-							<div class="well leadbox related">
-							<h4>Related Posts</h4>
-							<ul class="related-posts">
-						{% endif %}
-						<li class="relatedPost">
-						    <a href="{{ post.url }}">{{ post.title }}
-						    {% if post.series %}
-						        (Series: {{ post.series }})
-						    {% endif %}
-						    </a>
-						</li>
-						{% capture hasSimilar %}{{ hasSimilar }}*{% endcapture %}
-						{% assign postHasSimilar = true %}
-					{% endif %}
-				{% endfor %}
-			{% endfor %}
-		{% endfor %}
-		{% if hasSimilar.size > 0 %}
-				</ul>
-			</div>
-		{% endif %}
-{% endcomment %}
 	</div>
-	{% include postfooter.html %}
+{% comment %}
+	<div class="content-break">
+		<i class="fa fa-rocket"></i>
+	</div>
+	<div class="well leadbox">
+		<p>The <a href="http://blog.flybase.io">Flybase Blog</a> is the official online publication written by the founders and developers of <a href="http://flybase.io">Flybase</a> about their real-time app platform, related technologies, and whatever else may fit their fancy — <em>like robots</em>.</p>
+	</div>
+{% endcomment %}
 </article>
+<script type='text/javascript'>
+$(function(){
+	var popular = new mostPopular().updatePage("{{ page.url }}", "{{page.title}}");
+});	
+</script>

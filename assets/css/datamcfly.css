@@ -2038,13 +2038,14 @@ input:focus, textarea:focus {
 }
 
 .post-sharing{
-	text-align: center;
+	text-align: left;
 }
 .post-sharing, .post-sharing:before {
-	color: #666666; /*#999691;*/
+	color: #CF3621;
+	/*#666666;*/ /*#999691;*/
 	/*#bebcb9; // #D2D4E7*/
-	font-size: 18px;
-	line-height: 20px;
+	font-size: 14px;
+	line-height: 18px;
 	font-family: 'Gotham A','Gotham B',proxima-nova,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
 	font-weight: 200;
 	font-style: normal;
@@ -2067,13 +2068,13 @@ input:focus, textarea:focus {
 	position: relative;
 	top: -2px;
 	display: inline-block;
-	width: 30px;
+	width: 20px;
 	margin-left: 10px;
 	margin-right: 10px;
 	padding: 6px 0 4px;
 	border-radius: 2px;
 	color: #666666; /*	#bebcb9;	*/
-	font-size: 20px;
+	font-size: 16px;
 	text-align: center;
 	-webkit-transition: .2s all ease-in-out;
 	transition: .2s all ease-in-out;
