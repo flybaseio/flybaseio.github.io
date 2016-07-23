@@ -2044,7 +2044,7 @@ input:focus, textarea:focus {
 	color: #CF3621;
 	/*#666666;*/ /*#999691;*/
 	/*#bebcb9; // #D2D4E7*/
-	font-size: 16px;
+	font-size: 100%;
 	line-height: 18px;
     font-family: 'Whitney SSm SmallCaps A','Whitney SSm SmallCaps B',Avenir Next,Avenir,Helvetica Neue,Helvetica,Arial,sans-serif;
 	font-weight: 400;
