@@ -2044,11 +2044,11 @@ input:focus, textarea:focus {
 	color: #CF3621;
 	/*#666666;*/ /*#999691;*/
 	/*#bebcb9; // #D2D4E7*/
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 18px;
-	font-family: 'Gotham A','Gotham B',proxima-nova,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
-	font-weight: 200;
-	font-style: normal;
+    font-family: 'Whitney SSm SmallCaps A','Whitney SSm SmallCaps B',Avenir Next,Avenir,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-weight: 400;
+    font-style: normal;
 }
 .fb-like {
 	width: 90px;
