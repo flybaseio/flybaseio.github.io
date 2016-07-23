@@ -28,6 +28,22 @@ layout: default
 	</header>
 	<div class="entry">
 		{{ content }}
+		<br />
+		<div class="nav-links">
+{% if page.previous.url %}
+			<div class="nav-previous">
+				<span class="meta-nav">Previously:</span>
+				<a href="{{page.previous.url}}" rel="prev"> {{page.previous.title}}</a>
+			</div>
+{% endif %}
+{% if page.next.url %}
+			<div class="nav-next">
+				<span class="meta-nav">Next:</span> 
+				<a href="{{page.next.url}}" rel="next">{{page.next.title}} </a>
+			</div>
+{% endif %}
+		</div>
+{% comment %}
 		{% assign hasSimilar = '' %}
 		{% for post in site.related_posts %}
 			{% assign postHasSimilar = false %}
@@ -56,6 +72,7 @@ layout: default
 				</ul>
 			</div>
 		{% endif %}
+{% endcomment %}
 	</div>
 	{% include postfooter.html %}
 </article>

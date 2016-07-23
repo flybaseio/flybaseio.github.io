@@ -2541,3 +2541,41 @@ p.byline {
     font-size: 0.9em;
     margin-bottom: 5px;	
 }
+
+
+PageNavigation {
+	font-size: 14px;
+	display: block;
+	width: auto;
+	overflow: hidden;
+}
+
+.PageNavigation a {
+	display: block;
+	width: 50%;
+	float: left;
+	margin: 1em 0;
+}
+
+.PageNavigation .next {
+	text-align: right;
+}
+.meta-nav {
+    color: #CF3621;
+}
+
+.nav-links {
+    margin: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2;
+    font-family: 'Whitney SSm SmallCaps A','Whitney SSm SmallCaps B',Avenir Next,Avenir,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-style: normal;
+}
+
+.nav-links a{
+    color: #333 !important;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc !important;
+    padding-bottom: 2px !important;	
+}
