@@ -2057,7 +2057,7 @@ input:focus, textarea:focus {
 	vertical-align: top!important;
 }
 .post-sharing {
-	margin-bottom: 15px;
+	margin-bottom: 1px;
 }
 .post-sharing:before {
 	content: 'Share:';
@@ -2074,7 +2074,7 @@ input:focus, textarea:focus {
 	padding: 6px 0 4px;
 	border-radius: 2px;
 	color: #666666; /*	#bebcb9;	*/
-	font-size: 16px;
+	font-size: 100%;
 	text-align: center;
 	-webkit-transition: .2s all ease-in-out;
 	transition: .2s all ease-in-out;
