@@ -584,7 +584,7 @@ code {
     text-align: center;
 }
 
-/*
+
 code{
     font-size: 0.9em;
     background-color: #F0F0F0;
@@ -620,7 +620,6 @@ pre code {
 	font-size: 11px;
 	padding: 0;
 }
-*/
 .well {
 	min-height: 20px;
 	padding: 19px;
