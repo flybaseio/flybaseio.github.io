@@ -1,7 +1,7 @@
 ---
 layout: post 
 published: true 
-title: "From the mountaintop to everyday life: how I embraced work / life integration" 
+title: "Embracing work / life integration" 
 date: 2016-08-15T18:06:36.198Z 
 link: https://m.signalvnoise.com/from-the-mountaintop-to-everyday-life-how-i-embraced-work-life-integration-577fd7347c86#.kpk1zjw6t 
 tags:
