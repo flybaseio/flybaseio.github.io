@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Design how you design" 
 date: 2016-08-20T14:46:34.425Z 
 link: https://blog.intercom.io/design-how-you-design/ 
