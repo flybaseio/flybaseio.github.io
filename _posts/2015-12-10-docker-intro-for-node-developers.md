@@ -421,23 +421,10 @@ $ docker rm demo
 
 ### Recommended Reading:
 
-Docker Machine reference  
-https://docs.docker.com/machine/
-
-Docker Machine basics  
-http://blog.codefresh.io/docker-machine-basics/
-
-Machine presentation (Nathan LeClaire)  
-https://www.youtube.com/watch?v=xwj44dAvdYo&feature=youtu.be
-
-Docker Machine Drivers  
-https://docs.docker.com/machine/drivers/
-
-Linking Containers  
-https://docs.docker.com/userguide/dockerlinks/
-
-Best practices for writing Dockerfiles  
-https://docs.docker.com/articles/dockerfile_best-practices/
-
-Node, Docker, and Microservices  
-http://blog.codefresh.io/node-docker-and-microservices/
+- [Docker Machine reference](https://docs.docker.com/machine/)
+- [Docker Machine basics](http://blog.codefresh.io/docker-machine-basics/)
+- [Machine presentation](https://www.youtube.com/watch?v=xwj44dAvdYo&feature=youtu.be)
+- [Docker Machine Drivers](https://docs.docker.com/machine/drivers/)
+- [Linking Containers](https://docs.docker.com/userguide/dockerlinks/)
+- [Best practices for writing Dockerfiles](https://docs.docker.com/articles/dockerfile_best-practices/)
+- [Node, Docker, and Microservices](http://blog.codefresh.io/node-docker-and-microservices/)
