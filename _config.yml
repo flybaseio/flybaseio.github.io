@@ -2,11 +2,27 @@
 title: The Flybase Blog
 email: roger@flybase.io
 description: > # this means to ignore newlines until "baseurl:"
-  The Flybase Blog is the official online publication written by the founders and developers of Flybase about their real-time app p latform, related technologies, and whatever else may fit their fancy — like robots.
+  Flybase is a real-time backend as a service that allows you to create incredible apps. Save, Store and Update Data in real-time directly from the browser or mobile client using only javascript, REST API, or native iOS or Android code. 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://blog.flybase.io" # the base hostname & protocol for your site
 twitter_username: flybaseio
 github_username:  flybaseio
+
+twitter:
+  username: "@flybaseio"
+
+facebook:
+  app_id: "474703915878478"
+  publisher: "1416546778590314"
+  admins: "604781976"
+
+
+social:
+  name: Roger Stringer
+  links:
+    - https://twitter.com/flybaseio
+    - https://www.facebook.com/flybaseio
+    - https://github.com/flybaseio
 
 # Build settings
 permalink: pretty
@@ -22,4 +38,5 @@ github:
 
 gems:
   - jekyll-paginate
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-sitemap
+  - jekyll-seo-tag

@@ -4,10 +4,12 @@
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+{% comment %}
 	<title>{% if page.title %}{{ page.title }}{% endif %} - {{ site.title }}</title>
 	<meta name="author" content="Roger Stringer">
 	<meta name="description" content="Flybase is a real-time backend as a service that allows you to create incredible apps. Save, Store and Update Data in real-time directly from the browser or mobile client using only javascript, REST API, or native iOS or Android code. {% if page.title %}{{ page.title }}{% endif %}">
 	<meta name="keywords" content="real-time, backend as a service, websockets, instant API, mobile database, Angular Bindings, Backbone Bindings, Ember Bindings, iOS plugins, Android plugins, javascript API, real-time sync, browser, mobile, no servers, build apps fast, servers optional, completely real-time, build collaborative apps, real-time, JSON data, First-class Security, Automatic Scaling, Real-time Synchronization, Data Accessibility, Free Sign Up, REST API, PHP, Python, Ruby, {% if page.title %}{{ page.title }}{% endif %}">
+{% endcomment %}
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="/assets/css/datamcfly.css?v=20160728.2b">
@@ -53,7 +55,8 @@
 		ga('create', 'UA-56159710-2', 'auto');
 		ga('send', 'pageview');
 	</script>
-
+	
+{% comment %}
 	<meta property="article:author" content="604781976">
 <!-- Twitter Cards -->	
 	<meta name="twitter:card" content="summary">
@@ -70,8 +73,9 @@
 	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<meta property="og:description" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
 	<meta property="og:locale" content="en_US">
-
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+{% endcomment %}
+	{% seo %}
 	<script src="//load.sumome.com/" data-sumo-site-id="387251f3b10d8c30b11dadea392b440e83342bd9a812326547d494290355f13e" async="async"></script>
 </head>
 <body class="{% if page.bodyclass %}{{ page.bodyclass }}{% endif %}">
