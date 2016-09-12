@@ -5,4 +5,4 @@ User-agent: BSpider/1.0 libwww-perl/0.40
 Disallow:  /
 
 User-agent: *
-Sitemap: http://rogerstringer.com/sitemap.xml
+Sitemap: http://blog.flybase.io/sitemap.xml
