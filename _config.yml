@@ -4,7 +4,7 @@ email: roger@flybase.io
 description: > # this means to ignore newlines until "baseurl:"
   Flybase is a real-time backend as a service that allows you to create incredible apps. Save, Store and Update Data in real-time directly from the browser or mobile client using only javascript, REST API, or native iOS or Android code. 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://blog.flybase.io" # the base hostname & protocol for your site
+url: "https://blog.flybase.io" # the base hostname & protocol for your site
 twitter_username: flybaseio
 github_username:  flybaseio
 
