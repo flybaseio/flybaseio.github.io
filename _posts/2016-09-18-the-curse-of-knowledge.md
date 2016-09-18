@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "The Curse of Knowledge" 
 date: 2016-09-18T19:01:52.415Z 
 link: https://m.signalvnoise.com/the-curse-of-knowledge-993d0ff2b0dd#.imyrpti55 
