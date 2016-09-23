@@ -331,9 +331,9 @@ This is the brains of our dashboard, it processes all calls and displays them in
 
 #### Step 4
 
-Finally, let's add some CSS:
+Finally, let's add some CSS to `dashboard.css`:
 
-```dashboard.css
+```javascript
 
 body {
   font: 400 0.95em/1 "Proxima Nova", Helvetica,sans-serif;
