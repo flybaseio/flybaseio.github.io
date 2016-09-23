@@ -356,6 +356,10 @@ footer {
 /***********************/
 /* SYNTAX HIGHLIGHTING */
 /***********************/
+code {
+  font-size: 14px !important;
+}
+
 /*
 .highlight {
   background-color: #222;
