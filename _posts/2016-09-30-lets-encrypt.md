@@ -25,7 +25,7 @@ The first step to using Let's Encrypt to obtain an SSL certificate is to install
 
 We can download the `certbot-auto` Let’s Encrypt client to the `/usr/local/sbin` directory by typing:
 
-```
+```javascript
 cd /usr/local/sbin
 sudo wget https://dl.eff.org/certbot-auto
 ```
@@ -34,7 +34,7 @@ You should now have a copy of `certbot-auto` in the /usr/local/sbin directory.
 
 Make the script executable by typing:
 
-```
+```javascript
 sudo chmod a+x /usr/local/sbin/certbot-auto
 ```
 
@@ -46,7 +46,7 @@ The Webroot plugin works by placing a special file in the `/.well-known director
 
 I'm going to assume you're using NGINX as your web server, if you haven't installed it yet, do so with this command:
 
-```
+```javascript
 sudo apt-get update
 sudo apt-get install nginx
 ```
@@ -55,14 +55,13 @@ To ensure that the directory is accessible to `certbot-auto` for validation, we'
 
 By default, it's located at `/etc/nginx/sites-available/default`:
 
-```
+```javascript
 sudo nano /etc/nginx/sites-available/default
 ```
 
 Inside the server block, add this location block:
 
-```
-# Add to SSL server block
+```javascript
 server {
         . . .
 
@@ -80,19 +79,19 @@ Save and exit.
 
 Check the configuration file for syntax errors:
 
-```
+```javascript
 sudo nginx -t
 ```
 
 If all is well, restart Nginx:
 
-```
+```javascript
 sudo service nginx restart
 ```
 
 Now that we know our webroot-path, we can use the Webroot plugin to request an SSL certificate with these commands. Here, we are also specifying our domain names with the -d option. If you want a single cert to work with multiple domain names (e.g. example.com and www.example.com), be sure to include all of them, starting with the most high level domain (e.g. example.com). Also, make sure that you replace the highlighted parts with the appropriate webroot path and domain name(s):
 
-```
+```javascript
 certbot-auto certonly -a webroot --webroot-path=/usr/share/nginx/html -d example.com -d www.example.com
 ```
 
@@ -108,7 +107,7 @@ Then you must agree to the Let's Encrypt Subscribe Agreement. Select `Agree`.
 
 If everything was successful, you should see an output message that looks something like this:
 
-```
+```javascript
 IMPORTANT NOTES:
  - Congratulations! Your certificate and chain have been saved at
    /etc/letsencrypt/live/example.com/fullchain.pem. Your
@@ -140,7 +139,7 @@ It's important that you are aware of the location of the certificate files that 
 
 You can check that the files exist by running this command (substituting in your domain name):
 
-```
+```javascript
 sudo ls -l /etc/letsencrypt/live/your_domain_name
 ```
 
@@ -150,7 +149,7 @@ The output should be the four previously mentioned certificate files. In a momen
 
 To further increase security, you should also generate a strong Diffie-Hellman group. To generate a 2048-bit group, use this command:
 
-```
+```javascript
 sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 ```
 
@@ -162,20 +161,20 @@ Now that you have an SSL certificate, you need to configure your Nginx web serve
 
 Edit the Nginx configuration that contains your server block. Again, it's at /etc/nginx/sites-available/default by default:
 
-```
+```javascript
 sudo nano /etc/nginx/sites-available/default
 ```
 
 Find the server block. Comment out or delete the lines that configure this server block to listen on port 80. In the default configuration, these two lines should be deleted:
 
-```
+```javascript
         listen 80 default_server;
         listen [::]:80 default_server ipv6only=on;
 ```
 
 We are going to configure this server block to listen on port 443 with SSL enabled instead. Within your server { block, add the following lines but replace all of the instances of example.com with your own domain:
 
-```
+```javascript
         listen 443 ssl;
 
         server_name example.com www.example.com;
@@ -188,7 +187,7 @@ This enables your server to use SSL, and tells it to use the Let's Encrypt SSL c
 
 To allow only the most secure SSL protocols and ciphers, and use the strong Diffie-Hellman group we generated, add the following lines to the same server block:
 
-```
+```javascript
         ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
         ssl_prefer_server_ciphers on;
         ssl_dhparam /etc/ssl/certs/dhparam.pem;
@@ -202,7 +201,7 @@ To allow only the most secure SSL protocols and ciphers, and use the strong Diff
 
 Lastly, outside of the original server block (that is listening on HTTPS, port 443), add this server block to redirect HTTP (port 80) to HTTPS. Be sure to replace the highlighted part with your own domain name:
 
-```
+```javascript
 server {
     listen 80;
     server_name example.com www.example.com;
@@ -214,13 +213,13 @@ Save and exit.
 
 Test the configuration file for syntax errors by typing:
 
-```
+```javascript
 sudo nginx -t
 ```
 
 Once you have verified that there are no syntax errors, put the changes into effect by restarting Nginx:
 
-```
+```javascript
 sudo service nginx restart
 ```
 
@@ -228,7 +227,7 @@ The Let's Encrypt TLS/SSL certificate is now in place. At this point, you should
 
 If you want to see how your server configuration scores, then you can use the Qualys SSL Labs Report to see how your server configuration scores:
 
-```
+```javascript
 https://www.ssllabs.com/ssltest/analyze.html?d=example.com
 ```
 
@@ -240,7 +239,7 @@ Let’s Encrypt certificates are valid for 90 days, but it’s recommended that 
 
 To trigger the renewal process for all installed domains, run this command:
 
-```
+```javascript
 certbot-auto renew
 ```
 
@@ -248,7 +247,7 @@ Because we recently installed the certificate, the command will only check for t
 
 Output:
 
-```
+```javascript
 Checking for new version...
 Requesting root privileges to run letsencrypt...
    /home/roger/.local/share/letsencrypt/bin/letsencrypt renew
@@ -265,13 +264,13 @@ A practical way to ensure your certificates won’t get outdated is to create a 
 
 Let's edit the crontab to create a new job that will run the renewal command every week. To edit the crontab for the root user, run:
 
-```
+```javascript
 sudo crontab -e
 ```
 
 Add the following lines:
 
-```
+```javascript
 30 2 * * 1 /usr/local/sbin/certbot-auto renew >> /var/log/certbot.log
 35 2 * * 1 /etc/init.d/nginx reload
 ```
