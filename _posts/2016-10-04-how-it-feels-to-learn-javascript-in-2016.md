@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "How it feels to learn JavaScript in 2016" 
 date: 2016-10-04T19:34:27.015Z 
 link: https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.srewgk2hg 
