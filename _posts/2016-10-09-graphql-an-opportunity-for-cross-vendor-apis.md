@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "GraphQL: an opportunity for cross-vendor APIs" 
 date: 2016-10-09T22:13:58.688Z 
 link: https://medium.com/@gimenete/graphql-an-opportunity-for-cross-vendor-apis-c9dac846fa69#.de3taaer6 
