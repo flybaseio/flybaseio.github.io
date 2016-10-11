@@ -328,3 +328,5 @@ Now, let's create `test.html`:
 ### Closing Arguments
 
 As we get further and further into the client-side of things, and less into server-side, being able to add auth to your apps becomes important. We've got a few projects in the works right now that use the `Flybase-auth` library to handle user registration and logging in, and it lets you manage how you want users handled on your end as well.
+
+As for why we decided to fork the `Hello.js` library, we love the library ourselves, but we wanted to make it easier to integrate into your Flybase apps, hence the fork so that you can dive into it quickly, especially when it comes to using it with Angular web apps.
