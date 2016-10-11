@@ -157,7 +157,8 @@ Ok, we've covered using `Flybase-auth` with regular HTML, now let's use it with 
 
 We're only going to create three files, first let's create `index.html`:
 
-```javascript<!DOCTYPE html>
+```javascript
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
