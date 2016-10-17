@@ -1,11 +1,12 @@
 ---
 layout: post 
-published: false 
-title: "The GOLEAN Framework for Growth" 
+published: true
+title: "Ash Maurya on the GOLEAN Framework for Growth" 
 date: 2016-10-17T19:46:04.976Z 
 link: https://blog.leanstack.com/the-golean-framework-for-growth-72440c612f20?inf_contact_key=af05e86355dbe285dc73849ab6d536f8560b65f50f2c52065e2bffb5f8e8e4a4#.jerioc3p9 
 tags:
   - links
+  - startups
 ogtype: article 
 bodyclass: post 
 ---
