@@ -15,11 +15,11 @@ Ash Maurya:
 
 > GOLEAN? No this isn’t some blatant battlecry for going lean. It’s a mnemonic for a growth framework I created for my last book: Scaling Lean — one that draws heavily on lean startup principles and systems thinking:
 > 
-> Goal 
-> Observe and Orient 
-> Leverage 
-> Experiment 
-> Analyze 
-> Next Action
+> - Goal 
+> - Observe and Orient 
+> - Leverage 
+> - Experiment 
+> - Analyze 
+> - Next Action
 
 Ash has an interesting take on the usual Build-Measure-Learn loop which is actually pretty close to how we do everything here at Flybase. 
