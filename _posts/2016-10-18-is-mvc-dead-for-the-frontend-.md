@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Is MVC dead for the frontend?" 
 date: 2016-10-18T14:31:48.428Z 
 link: https://medium.com/@alexnm/is-mvc-dead-for-the-frontend-35b4d1fe39ec#.8grf9o81p 
