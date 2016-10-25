@@ -18,3 +18,5 @@ bodyclass: post
 > This is meant for people new to the world of startups. Most of this will not be new to people who have read a lot of what YC partners have written—the goal is to get it into one place.
 
 Whether you like Y Combinator or not, this playbook has some good advice for startups, hence worth sharing.
+
+If you want an abbreviated edition, Techcrunch has put together a slideshow of the [62 top take aways](https://techcrunch.com/gallery/y-combinator-startup-playbook/)
