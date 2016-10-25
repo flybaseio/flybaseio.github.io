@@ -1,11 +1,12 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "The Y Combinator Startup Playbook " 
 date: 2016-10-25T16:51:38.284Z 
 link: http://playbook.samaltman.com/ 
 tags:
   - links
+  - startups
 ogtype: article 
 bodyclass: post 
 ---
