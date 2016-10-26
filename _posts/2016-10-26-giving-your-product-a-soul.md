@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Giving Your Product A Soul" 
 date: 2016-10-26T18:06:42.642Z 
 link: https://www.smashingmagazine.com/2016/10/giving-your-product-a-soul/ 
