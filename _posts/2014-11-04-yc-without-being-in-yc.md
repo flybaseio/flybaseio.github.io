@@ -3,7 +3,8 @@ layout: "post"
 title: "YC without being in YC"
 date: "2014-11-04 18:00"
 tags: 
-- "links"
+  - "links"
+  - startups
 link: "http://blog.42floors.com/yc-without-being-in-yc/"
 ogtype: "article"
 bodyclass: "post"
