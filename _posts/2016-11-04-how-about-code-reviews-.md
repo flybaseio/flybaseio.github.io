@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "How About Code Reviews?" 
 date: 2016-11-04T20:40:13.418Z 
 link: https://slack.engineering/how-about-code-reviews-2695fb10d034#.1fvdbnefm 
@@ -26,4 +26,4 @@ bodyclass: post
 > 
 > Each of those reasons is different, but the same strategies are important for all of them.
 
-This post was from February but I wanted to share it now as code reviews are a handy thing to do from time to time. You'd be surprised what you can learn from your code when you have other people review it.
+This post from the Slack Engineering blog was from February but I wanted to share it now as code reviews are a handy thing to do from time to time. You'd be surprised what you can learn from your code when you have other people review it.
