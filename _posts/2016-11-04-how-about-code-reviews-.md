@@ -6,6 +6,7 @@ date: 2016-11-04T20:40:13.418Z
 link: https://slack.engineering/how-about-code-reviews-2695fb10d034#.1fvdbnefm 
 tags:
   - links
+  - code
 ogtype: article 
 bodyclass: post 
 ---
