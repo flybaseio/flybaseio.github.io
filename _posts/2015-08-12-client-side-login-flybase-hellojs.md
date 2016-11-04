@@ -9,7 +9,7 @@ bodyclass: "post"
 ---
 
 <div class="well">
-This has been deprecated for our <a href="/2016/10/10/client-side-auth/">Flybase Auth</a> library which combines the code featured in this post into a single javascript file for easier setup.
+This post has been deprecated in favour of our <a href="/2016/10/10/client-side-auth/">Flybase Auth</a> library which combines the code featured in this post into a single javascript file for easier setup.
 </div>
 
 I recently finished a pretty large tutorial that I'll be publishing shortly that uses client-side login via Facebook and a few other social sites.
