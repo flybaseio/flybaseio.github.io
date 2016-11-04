@@ -8,6 +8,10 @@ ogtype: "article"
 bodyclass: "post"
 ---
 
+<div class="well">
+This has been deprecated for our [Flybase Auth](https://blog.flybase.io/2016/10/10/client-side-auth/) library which combines the code featured in this post into a single javascript file for easier setup.
+</div>
+
 I recently finished a pretty large tutorial that I'll be publishing shortly that uses client-side login via Facebook and a few other social sites.
 
 Rather than building something from scratch, I decided to integrate the fantastic [Hello.js](http://adodson.com/hello.js/#hellojs) library and it worked nicely.
