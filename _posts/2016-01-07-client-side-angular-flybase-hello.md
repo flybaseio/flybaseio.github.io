@@ -9,6 +9,10 @@ ogtype: article
 bodyclass: post 
 ---
 
+<div class="well">
+This post has been deprecated in favour of our <a href="/2016/10/10/client-side-auth/">Flybase Auth</a> library which combines the code featured in this post into a single javascript file for easier setup.
+</div>
+
 I posted [earlier](http://blog.flybase.io/2015/08/12/client-side-login-flybase-hellojs/) about using the [Hello.js](http://adodson.com/hello.js/#hellojs) library to add Facebook login to your client-side HTML / Javascript site.
 
 The tutorial I originally wrote to use that with actually got converted to Angular, and we'll be posting it shortly, but I wanted to show you quickly how to use Flybase, Hello.js and Angular.js to give your sites the ability to use social logins.
