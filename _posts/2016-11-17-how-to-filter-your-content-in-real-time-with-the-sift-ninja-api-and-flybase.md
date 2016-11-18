@@ -1,11 +1,10 @@
 ---
 layout: post 
-published: false 
+published: code
 title: "How to filter your content in real-time with the Sift Ninja API and Flybase" 
 date: 2016-11-18T03:18:36.490Z 
-link: https://rogerstringer.com/2016/11/17/globe-making-in-1955/ 
 tags:
-  - links
+  - code
 ogtype: article 
 bodyclass: post 
 ---
@@ -13,8 +12,6 @@ bodyclass: post
 If you have an app that involves letting users enter content of any kind, regardless if it's chat, discussion boards, or a social site, you want to have the ability to filter content to make sure it is appropriate.
 
 [Sift Ninja](https://www.siftninja.com) provides a handy API that does just that, and combined with Flybase, you can offer real-time content checking before posting it anywhere.
-
-Sift Ninja is actually a new offering by the [guys](https://www.twohat.com) behind [communitySift](http://communitysift.com),  who have been fine tuning their system for several years to analyze and filter text and images for various online platforms. 
 
 ---
 
