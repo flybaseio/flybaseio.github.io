@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Six Steps for Startups to Master the Corporate Minefield" 
 date: 2016-12-09T16:33:50.549Z 
 link: https://www.startupgrind.com/blog/six-steps-for-startups-to-master-the-corporate-minefield/ 
