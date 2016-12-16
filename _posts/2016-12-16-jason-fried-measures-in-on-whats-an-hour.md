@@ -1,7 +1,7 @@
 ---
 layout: post 
-published: false 
-title: "Jason Fried Measures in on what’s an hour" 
+published: true 
+title: "Jason Fried Measures in on what's in an hour" 
 date: 2016-12-16T16:03:22.802Z 
 link: https://m.signalvnoise.com/whats-an-hour-d5966ee5ad7d#.394y1t35o 
 tags:
