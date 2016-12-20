@@ -9,12 +9,14 @@ title: Archives
 	{% assign currentDate = post.date | date: "%Y" %}
 	{% assign currentMonth = post.date | date: "%m" %}
 	{% if currentDate != myDate %}
-		<div class="center"><h1>{{ currentDate }}</h1></div>
+		<div style="text-align:center;">
+			<h1>{{ currentDate }}</h1>
+		</div>
 		{% assign myDate = currentDate %}
 	{% endif %}
 	{% if currentMonth != myMonth %}
 		{% unless forloop.first %}</ul>{% endunless %}
-		<h2><a href="{{currentDate}}/{{currentMonth}}">{{ post.date | date: "%B" }}</a></h2>
+		<h2><a href="/{{currentDate}}/{{currentMonth}}">{{ post.date | date: "%B" }}</a></h2>
 		<ul>
 		{% assign myMonth = currentMonth %}
 	{% endif %}
