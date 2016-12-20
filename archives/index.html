@@ -10,6 +10,7 @@ title: Archives
 	{% assign currentMonth = post.date | date: "%B" %}
 	{% if currentDate != myDate %}
 		<h2>{{ currentDate }}</h2>
+		{% assign myDate = currentDate %}		
 	{% endif %}
 	{% if currentMonth != myMonth %}
 		{% unless forloop.first %}</ul>{% endunless %}
