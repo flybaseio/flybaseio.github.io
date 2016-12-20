@@ -7,13 +7,17 @@ title: Archives
 <section class="archive-post-list">
 {% for post in site.posts %}
 	{% assign currentDate = post.date | date: "%Y" %}
+	{% assign currentMonth = post.date | date: "%B" %}
 	{% if currentDate != myDate %}
-		{% unless forloop.first %}</ul>{% endunless %}
-		<h1>{{ currentDate }}</h1>
-		<ul>
-		{% assign myDate = currentDate %}
+		<h2>{{ currentDate }}</h2>
 	{% endif %}
-	<li><span>{{ post.date | date: "%B %-d, %Y" }}</span> - <a href="{{ post.url }}">{{ post.title }}</a></li>
+	{% if currentMonth != myMonth %}
+		{% unless forloop.first %}</ul>{% endunless %}
+		<h3>{{ currentMonth }}</h3>
+		<ul>
+		{% assign myMonth = currentMonth %}
+	{% endif %}
+	<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 	{% if forloop.last %}</ul>{% endif %}
 {% endfor %}
 </section>
