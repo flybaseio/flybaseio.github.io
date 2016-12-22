@@ -330,15 +330,15 @@ blockquote {
 /* Link posts */
 a.linked{
 /*
-	font-size: 1.25em; 
+	font-size: 1.25em;
 */
 }
 
 a.linked,
 a.linked:active,
-a.linked:visited { 
+a.linked:visited {
     color: #b5190e;
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 .wrapper-footer {
@@ -750,13 +750,13 @@ pre code {
 
   .footer-col-3 {
     width: -webkit-calc(100% - (30px / 2));
-    width: calc(100% - (30px / 2)); } 
+    width: calc(100% - (30px / 2)); }
 }
 @media screen and (max-width: 600px) {
   .footer-col {
     float: none;
     width: -webkit-calc(100% - (30px / 2));
-    width: calc(100% - (30px / 2)); } 
+    width: calc(100% - (30px / 2)); }
 }
 
 p.text{
@@ -1955,47 +1955,47 @@ hr.harden {
 	border: 0;
 }
 
-input, textarea { 
-	padding: 9px; 
-	border: solid 1px #E5E5E5; 
-	outline: 0; 
-	font: normal 13px/100% Verdana, Tahoma, sans-serif; 
-	width: 200px; 
-	background: #FFFFFF left top repeat-x; 
-	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF)); 
-	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px); 
-	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
-	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
-	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
-} 
-   
+input, textarea {
+	padding: 9px;
+	border: solid 1px #E5E5E5;
+	outline: 0;
+	font: normal 13px/100% Verdana, Tahoma, sans-serif;
+	width: 200px;
+	background: #FFFFFF left top repeat-x;
+	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+}
+
 textarea {
-	width: 400px; 
-	max-width: 400px; 
-	height: 150px; 
-	line-height: 150%; 
-} 
-   
-input:hover, textarea:hover, 
-input:focus, textarea:focus { 
-	border-color: #C9C9C9; 
-	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px; 
-} 
-   
-.form label { 
-	margin-left: 10px; 
-	color: #999999; 
-} 
-   
-.submit { 
-	width: auto; 
-	padding: 9px 15px; 
-	background: #617798; 
-	border: 0; 
-	font-size: 14px; 
-	color: #FFFFFF; 
-	-moz-border-radius: 5px; 
-	-webkit-border-radius: 5px; 
+	width: 400px;
+	max-width: 400px;
+	height: 150px;
+	line-height: 150%;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	border-color: #C9C9C9;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+}
+
+.form label {
+	margin-left: 10px;
+	color: #999999;
+}
+
+.submit {
+	width: auto;
+	padding: 9px 15px;
+	background: #617798;
+	border: 0;
+	font-size: 14px;
+	color: #FFFFFF;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
 }
 
 .opt-in {
@@ -2033,7 +2033,7 @@ input:focus, textarea:focus {
 	min-height: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
-	padding: 9px 15px; 
+	padding: 9px 15px;
 	height: 35px;
 	color: #fff;
 	background: #0a58cc;
@@ -2241,7 +2241,7 @@ p.taggedIn a{
     margin-top: 10px;
 }
 #archives ul, #archives li {
-	list-style: none;	
+	list-style: none;
 }
 #archives li {
     float: left;
@@ -2317,7 +2317,7 @@ p.taggedIn a{
     margin: 0;
     padding: 2px;
     width: 91%;
-	color: #0689a6;	
+	color: #0689a6;
     height: 1.5em;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2343,7 +2343,7 @@ p.taggedIn a{
 	background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.7), rgba(0,0,0,0));
 	background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.7), rgba(0,0,0,0));
 	background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.7), rgba(0,0,0,0));
-	border: 0;	
+	border: 0;
 */
 }
 
@@ -2383,8 +2383,8 @@ p.taggedIn a{
 */
 }
 
-hr.fancy-line { 
-	border: 0; 
+hr.fancy-line {
+	border: 0;
 	height: 1px;
 	position: relative;
 	margin: 0.5em 0; /* Keep other elements away from pseudo elements*/
@@ -2545,7 +2545,7 @@ p.byline {
     margin-bottom: 15px;
 }
 #main .post header h1{
-    margin-bottom: 5px;	
+    margin-bottom: 5px;
 }
 
 #main .post header .postDate
@@ -2554,7 +2554,7 @@ p.byline {
 	display: block;
  */
     font-size: 0.9em;
-    margin-bottom: 5px;	
+    margin-bottom: 5px;
 }
 
 
@@ -2592,5 +2592,55 @@ PageNavigation {
     color: #333 !important;
     text-decoration: none;
     border-bottom: 1px solid #ccc !important;
-    padding-bottom: 2px !important;	
+    padding-bottom: 2px !important;
+}
+
+#sidebar {
+	text-align: left;
+	padding: 10px;
+	float: left;
+}
+
+#ads-container {
+    min-height: 200px
+}
+
+#carbonads {
+    display: block;
+    overflow: hidden;
+    margin-top: 1em;
+    font-size: 12px;
+    line-height: 1.5
+}
+
+#carbonads>span {
+    padding: 1em;
+    max-width: 150px;
+    border: solid 1px #eddede;
+    border-radius: 3px;
+    background-color: #fbf9f9
+}
+
+#carbonads span {
+    display: block;
+    overflow: hidden
+}
+
+#carbonads .carbon-img {
+    display: block;
+    margin: 0 auto 1em;
+    text-align: center
+}
+
+#carbonads .carbon-text {
+    display: block;
+    margin-bottom: 1em;
+    text-align: left
+}
+
+#carbonads .carbon-poweredby {
+    display: block;
+    color: #333333 !important;
+    text-align: right;
+    font-size: 10px
 }

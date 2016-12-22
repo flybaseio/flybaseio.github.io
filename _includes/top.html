@@ -12,7 +12,7 @@
 {% endcomment %}
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="/assets/css/datamcfly.css?v=20161118.3b">
+	<link rel="stylesheet" type="text/css" href="/assets/css/datamcfly.css?v=20161221.5b">
 
 	<link rel="stylesheet" href="/assets/css/prism.css">
 	<script src="/assets/js/prism.js"></script>
@@ -33,7 +33,7 @@
 {% endcomment %}
 	<link rel="icon" type="image/png" href="https://blog.flybase.io/images/favicon.ico">
 	<link rel="apple-touch-icon" href="https://blog.flybase.io/images/favicon.ico"/>
-<!--	
+<!--
 	<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 -->
 	<style type="text/css">
@@ -51,25 +51,25 @@
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		
+
 		ga('create', 'UA-56159710-2', 'auto');
 		ga('send', 'pageview');
 	</script>
-	
+
 {% comment %}
 	<meta property="article:author" content="604781976">
-<!-- Twitter Cards -->	
+<!-- Twitter Cards -->
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="flybaseio">
 	<meta name="twitter:creator" content="flybaseio">
 	<meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
 	<meta name="twitter:description" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
-	<meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}https://blog.flybase.io/images/flybasesm.png{% endif %}" />	
+	<meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}https://blog.flybase.io/images/flybasesm.png{% endif %}" />
 <!-- Facebook Open Graph -->
 	<meta property="og:type" content="{% if page.path contains '_posts' %}article{% else %}website{% endif %}">
 	<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
 	<meta property="og:site_name" content="{{ site.title }}">
-	<meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}https://blog.flybase.io/images/flybasesm.png{% endif %}" />	
+	<meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}https://blog.flybase.io/images/flybasesm.png{% endif %}" />
 	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<meta property="og:description" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
 	<meta property="og:locale" content="en_US">
@@ -85,9 +85,9 @@
 			<a href="/" class="site-avatar"><img src="/images/flybasesm.png" /></a>
 			<div class="site-info">
 				<h1 class="site-name"><a href="/">The Flybase Blog</a></h1>
-<!--
+{% comment %}
 				<p class="site-description">@@SiteAbout@@</p>
--->
+{% endcomment %}
 			</div>
 			<nav>
 				<a href="https://twitter.com/flybaseio" class="twitter">
@@ -128,4 +128,14 @@
 		</header>
 		</div>
 	</div>
+	<div id="sidebar">
+		<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1698&serve=CVYD42E&placement=blogflybaseio" id="_carbonads_js"></script>
+	</div>
 	<div id="main" role="main" class="container">
+		<table>
+		<tr>
+			<td valign=top>
+				<div id="placeholder"></div>
+			</td>
+		</tr>
+		</table>
