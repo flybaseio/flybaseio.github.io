@@ -7,13 +7,13 @@ link: https://blog.intercom.com/launch-mode-vs-iterate-mode/
 tags:
   - links
   - startups
-image: "http://blog.flybase.io/images/posts/launchmode.png"
+image: "https://blog.flybase.io/images/posts/launchmode.png"
 ogtype: "article"
 bodyclass: "post"
 ---
 
 <div class="box-wrap"><div class="box">
-	<img src="/images/posts/launchmode.png" />
+	<img src="https://blog.flybase.io/images/posts/launchmode.png" />
 </div></div>
 
 Paul Adams:
