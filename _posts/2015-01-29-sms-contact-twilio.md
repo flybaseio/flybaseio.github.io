@@ -12,7 +12,7 @@ bodyclass: "post"
 
 *This is the first of a planned series of posts demonstrating how to build a call center-type system with Twilio and Data McFly*
 
-<div class="box-wrap"><div class="box">
+<div><div class="image splash">
 	<img src="/images/posts/call-center.jpg" />
 </div></div>
 

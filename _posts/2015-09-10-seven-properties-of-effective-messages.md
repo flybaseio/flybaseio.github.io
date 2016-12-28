@@ -11,7 +11,7 @@ bodyclass: "post"
 ---
 
 <a href="https://blog.intercom.io/seven-properties-of-effective-messages/">
-<div class="box-wrap"><div class="box">
+<div><div class="image splash">
 	<img src="/images/posts/effective-messages.png" />
 </div></div>
 </a>

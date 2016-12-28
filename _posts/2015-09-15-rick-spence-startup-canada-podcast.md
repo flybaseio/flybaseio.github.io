@@ -10,7 +10,7 @@ ogtype: "article"
 bodyclass: "post"
 ---
 
-<div class="box-wrap"><div class="box">
+<div><div class="image splash">
 	<img src="/images/posts/bk_podcast_sept15_15.jpg" />
 </div></div>
 

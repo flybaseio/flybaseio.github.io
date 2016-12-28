@@ -11,7 +11,7 @@ bodyclass: "post"
 ---
 
 <a href="https://signalvnoise.com/posts/3945-how-we-lost-and-found-millions-by-not-ab-testing">
-<div class="box-wrap"><div class="box">
+<div><div class="image splash">
 	<img src="/images/posts/abtesting.png" />
 </div></div>
 </a>

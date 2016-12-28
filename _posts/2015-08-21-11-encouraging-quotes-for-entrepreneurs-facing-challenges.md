@@ -11,7 +11,7 @@ ogtype: "article"
 bodyclass: "post"
 ---
 
-<div class="box-wrap"><div class="box">
+<div><div class="image splash">
 	<img src="http://blog.flybase.io/images/posts/11quotes.jpg" />
 </div></div>
 

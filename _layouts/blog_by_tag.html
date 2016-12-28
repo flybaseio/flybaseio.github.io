@@ -1,11 +1,10 @@
 ---
 layout: default
 ---
-<article>
-	<header>
+<section>
+	<header class="main">
 		<h2>Articles by "{{ page.tag }}"</h2>
 	</header>
-	<div class="entry">
 {% capture cache %}
 {% if site.tags[page.tag] %}
 	<ul>
@@ -20,5 +19,4 @@ layout: default
 {% endif %}
 {% endcapture %}
 {{ cache | strip_newlines }}
-	</div>
-</article>
+</section>

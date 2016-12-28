@@ -1,11 +1,10 @@
 ---
 layout: default
 ---
-<article>
-	<header>
+<section>
+	<header class="main">
 		<h2>{{ page.title }}</h2>
 	</header>
-	<div class="entry">
 {% capture cache %}
 {% for post in site.posts %}
 	{% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
@@ -29,5 +28,4 @@ layout: default
 </ul>
 {% endcapture %}
 {{ cache | strip_newlines }}
-	</div>
-</article>
+</section>

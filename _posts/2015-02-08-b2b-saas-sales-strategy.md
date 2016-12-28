@@ -10,7 +10,7 @@ ogtype: "article"
 bodyclass: "post"
 ---
 
-<div class="box-wrap"><div class="box">
+<div><div class="image splash">
 	<img src="http://blog.datamcfly.com/images/posts/B2B-SaaS-sales.png" />
 </div></div>
 

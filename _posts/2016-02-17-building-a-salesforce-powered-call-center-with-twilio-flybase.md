@@ -11,7 +11,7 @@ ogtype: "article"
 bodyclass: "post"
 ---
 
-<div class="box-wrap"><div class="box">
+<div><div class="image splash">
 	<img src="/images/posts/call-center.jpg?20160217" />
 </div></div>
 

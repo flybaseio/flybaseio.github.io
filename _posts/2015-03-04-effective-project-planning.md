@@ -13,7 +13,7 @@ bodyclass: "post"
 ---
 
 <a href="http://lengstorf.com/effective-project-planning/">
-<div class="box-wrap"><div class="box">
+<div><div class="image splash">
 	<img src="http://blog.datamcfly.com/images/posts/avoid-failure-planning.jpg" />
 </div></div>
 </a>

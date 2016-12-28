@@ -1,22 +1,25 @@
 ---
 layout: default
 ---
-<article>
-	<header>
-		<h2>
+<article itemscope itemtype="http://schema.org/BlogPosting">
+	<header class="main">
+		<h2 itemprop="headline">
 		{% if page.link %}
 		<a href="{{ page.link }}" class="post-title linked">{{ page.title }} <span class="link-arrow">&rarr;</span></a>
 		{% else %}
-		<a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+		{{ page.title }}
 		{% endif %}
 		</h2>
 		<div class="meta">
 			<span class="postDate">
-				<i class="fa fa-calendar"></i> <time class="time" dateTime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+				<i class="fa fa-calendar"></i>
+				<time class="time" dateTime="{{ page.date | date: "%Y-%m-%d" }}" itemprop="datePublished">
+					{{ page.date | date: "%b %-d, %Y" }}
+				</time>
 			</span>
 			{% if page.tags.size > 0 %}
 			<span class="tag">
-				<i class="fa fa-tag"></i> 
+				<i class="fa fa-tag"></i>
 				{% for tag in page.tags %}
 				<a href="/tags/{{ tag | downcase | replace:' ','-'}}" class="tag">{{ tag | capitalize }}</a>
 				{% if forloop.last %}{% else %}, {% endif %}
@@ -26,57 +29,52 @@ layout: default
 			<a class="permalink" title="Permalink to {{page.title}}" href="{{ page.url }}"><i class="fa fa-anchor"></i></a>
 		</div>
 	</header>
-	<div class="entry">
+	<div itemprop="articleBody">
 		{{ content }}
-		<br />
-		<div class="content-break">
-			<i class="fa fa-rocket"></i>
+	</div>
+	<br />
+	<div class="content-break">
+		<i class="fa fa-rocket"></i>
+	</div>
+	<div class="post-sharing">
+		<a href="http://www.facebook.com/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" class="facebook">
+			<span class="fa-stack">
+				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+			</span>
+		</a>
+		<a href="http://twitter.com/share?text={{page.title}}&amp;url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}&amp;via=flybaseio&hashtags={{hashtags}}" class="twitter">
+			<span class="fa-stack">
+				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+			</span>
+		</a>
+		<a href="https://plus.google.com/share?url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" class="orange">
+			<span class="fa-stack">
+				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+			</span>
+		</a>
+		<a href="http://www.linkedin.com/shareArticle?mini=true&url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}&title={{page.title}}" class="facebook">
+			<span class="fa-stack">
+				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+			</span>
+		</a>
+	</div>
+	<div class="nav-links">
+	{% if page.previous.url %}
+		<div class="nav-previous">
+			<span class="meta-nav">Previously:</span>
+			<a href="{{page.previous.url}}" rel="prev"> {{page.previous.title}}</a>
 		</div>
-		<div class="post-sharing">
-			<a href="http://www.facebook.com/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" class="facebook">
-				<span class="fa-stack">
-					<i class="fa fa-circle fa-stack-2x"></i>
-					<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-				</span>
-			</a>
-			<a href="http://twitter.com/share?text={{page.title}}&amp;url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}&amp;via=flybaseio&hashtags={{hashtags}}" class="twitter">
-				<span class="fa-stack">
-					<i class="fa fa-circle fa-stack-2x"></i>
-					<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-				</span>
-			</a>
-			<a href="https://plus.google.com/share?url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" class="orange">
-				<span class="fa-stack">
-					<i class="fa fa-circle fa-stack-2x"></i>
-					<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-				</span>
-			</a>
-			<a href="http://www.linkedin.com/shareArticle?mini=true&url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}&title={{page.title}}" class="facebook">
-				<span class="fa-stack">
-					<i class="fa fa-circle fa-stack-2x"></i>
-					<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-				</span>
-			</a>
+	{% endif %}
+	{% if page.next.url %}
+		<div class="nav-next">
+			<span class="meta-nav">Next:</span>
+			<a href="{{page.next.url}}" rel="next">{{page.next.title}} </a>
 		</div>
-{% comment %}
-		<br />
-		<div class="well leadbox related">
-		</div>
-{% endcomment %}
-		<div class="nav-links">
-{% if page.previous.url %}
-			<div class="nav-previous">
-				<span class="meta-nav">Previously:</span>
-				<a href="{{page.previous.url}}" rel="prev"> {{page.previous.title}}</a>
-			</div>
-{% endif %}
-{% if page.next.url %}
-			<div class="nav-next">
-				<span class="meta-nav">Next:</span> 
-				<a href="{{page.next.url}}" rel="next">{{page.next.title}} </a>
-			</div>
-{% endif %}
-		</div>
+	{% endif %}
 	</div>
 {% comment %}
 	<div class="content-break">
@@ -85,10 +83,11 @@ layout: default
 	<div class="well leadbox">
 		<p>The <a href="http://blog.flybase.io">Flybase Blog</a> is the official online publication written by the founders and developers of <a href="http://flybase.io">Flybase</a> about their real-time app platform, related technologies, and whatever else may fit their fancy — <em>like robots</em>.</p>
 	</div>
+	<hr class="daybreak" />
 {% endcomment %}
 </article>
 <script type='text/javascript'>
 $(function(){
-	var popular = new mostPopular().updatePage("{{ page.url }}", "{{page.title}}");
-});	
+	new mostPopular().updatePage("{{ page.url }}", "{{page.title}}");
+});
 </script>

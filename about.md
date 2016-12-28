@@ -3,6 +3,7 @@ layout: page
 title: About Page
 permalink: /about/
 hideheader: true
+sitemap: false
 ---
 
 ### What Is Flybase?
@@ -11,9 +12,9 @@ hideheader: true
 
 [Flybase](http://flybase.io) is a real-time application platform. It allows developers to build real-time, collaborative apps using only client-side code, with the Flybase cloud servers acting as the app's backend.
 
-Flybase provides an API that lets developers store application data in a data structure that is automatically synchronized to the Flybase cloud servers and to any other clients that are listening to changes on that data. 
+Flybase provides an API that lets developers store application data in a data structure that is automatically synchronized to the Flybase cloud servers and to any other clients that are listening to changes on that data.
 
-This allows for writing data-driven single-page apps that update in real-time in response to other users' actions. 
+This allows for writing data-driven single-page apps that update in real-time in response to other users' actions.
 
 We are excited to be building a platform that helps developers rapidly build applications of all types faster than ever before.
 

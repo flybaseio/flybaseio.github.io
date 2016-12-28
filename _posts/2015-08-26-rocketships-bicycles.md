@@ -12,7 +12,7 @@ bodyclass: "post"
 ---
 
 <a href="http://lengstorf.com/rocketships-bicycles/">
-<div class="box-wrap"><div class="box">
+<div><div class="image splash">
 	<img src="/images/posts/rocketship-goal-setting-lg.jpg" />
 </div></div>
 </a>
