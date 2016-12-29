@@ -1,0 +1,99 @@
+body {
+/*
+	padding-top: 50px;
+*/
+}
+.sub-header {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eee;
+}
+.navbar-fixed-top {
+	border: 0;
+}
+.navbar-default {
+  background: none;
+  border: 0px;
+  border-bottom: 1px #000 solid;
+  border-radius: 0px;
+}
+.navbar-default a.btn-primary {
+	color: #fff !important;
+	padding: 7px;
+}
+.navbar-default a.btn-primary:hover {
+	color: #777 !important;
+}
+/*
+.sidebar {
+	display: none;
+}
+*/
+.sidebar h3, .sidebar h4{
+	color: #000 !important;
+}
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	display: block;
+	padding: 20px;
+	overflow-x: hidden;
+	overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+	background-color: #f8f8f8;
+	border-right: 1px solid #ddd;
+}
+.nav-sidebar {
+	margin-right: -21px; /* 20px padding + 1px border */
+	margin-bottom: 20px;
+	margin-left: -20px;
+}
+.nav-sidebar > li > a {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+	color: #fff;
+	background-color: #428bca;
+}
+.main {
+	padding: 20px;
+}
+@media (min-width: 768px) {
+	.main {
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+}
+.main .page-header {
+	margin-top: 0;
+}
+.placeholders {
+	margin-bottom: 30px;
+	text-align: center;
+}
+.placeholders h4 {
+	margin-bottom: 0;
+}
+.placeholder {
+	margin-bottom: 20px;
+}
+.placeholder img {
+	display: inline-block;
+	border-radius: 50%;
+}
+ul.inline > li, ol.inline > li {
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+#carbonads{display:block;background:#fdfdfd;background-image:-moz-linear-gradient(top,#f8f8f8,#fdfdfd);background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#f8f8f8),color-stop(1,#fdfdfd));border:1px solid #d5d5d5;font-family:Lucida Grande,Arial,Helvetica,sans-serif;font-size:11px;height:118px;line-height:15px;overflow:hidden;width:100%;}
+.carbon-wrap{}
+.carbon-img{border:none;display:inline;float:left;height:100px;margin:9px;width:130px;}
+.carbon-text{display:inline;float:left;width:122px;padding-top:13px;color:#000;}
+.carbon-text a{color:#000;text-decoration:none;text-transform:none;}
+.carbon-poweredby{float:left;margin-top:9px;text-align:center;width:122px;color:#999;}
+.carbon-poweredby a{color:#999;text-decoration:none;}
