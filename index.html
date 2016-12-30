@@ -17,13 +17,13 @@ title: Home
 {% endcomment %}
 	<article>
 		<header>
-			<h2>
+			<h1>
 			{% if post.link %}
 			<a href="{{ post.link }}" class="post-title linked">{{ post.title }} <span class="link-arrow">&rarr;</span></a>
 			{% else %}
 			<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 			{% endif %}
-			</h2>
+			</h1>
 			<div class="meta">
 				<span class="postDate">
 					<i class="fa fa-calendar"></i> <time class="time" dateTime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%b %-d, %Y" }}</time>

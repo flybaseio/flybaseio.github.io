@@ -3,13 +3,13 @@ layout: default
 ---
 <article>
 	<header>
-		<h2>
+		<h1>
 		{% if page.link %}
 		<a href="{{ page.link }}" class="post-title linked">{{ page.title }} <span class="link-arrow">&rarr;</span></a>
 		{% else %}
 		{{ page.title }}
 		{% endif %}
-		</h2>
+		</h1>
 		<div class="meta">
 			<span class="postDate">
 				<i class="fa fa-calendar"></i> <time class="time" dateTime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %-d, %Y" }}</time>

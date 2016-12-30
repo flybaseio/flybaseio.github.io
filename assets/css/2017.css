@@ -129,8 +129,8 @@ a:hover, a:active {
 
 .sidebar > section, .sidebar > nav {
     border-bottom: solid 2px rgba(210, 215, 217, 0.75);
-    margin: 0 0 3.5em 0;
-    padding: 0 0 3.5em 0;
+    margin: 0 0 2.5em 0;
+    padding: 0 0 2.5em 0;
 }
 
 /*
@@ -270,6 +270,7 @@ ul.inline > li, ol.inline > li {
 img {
   max-width: 100%;
   height: auto;
+  max-height: 400px;
 }
 
 /*
@@ -800,7 +801,7 @@ header p {
 header.major > :last-child {
 	border-bottom: solid 3px #f56a6a;
 	display: inline-block;
-	margin: 0 0 2em 0;
+	margin: 0 0 1em 0;
 	padding: 0 0.75em 0.5em 0;
 }
 
@@ -929,3 +930,33 @@ header.major h2{
 			background-color: rgb(228, 228, 228);
 			height: 0.15em;
 		}
+
+.homepage .day .daybreak{
+    margin-top: 2px;
+    border: 0;
+    color: rgb(228, 228, 228);
+	background-color: rgb(228, 228, 228);
+	height: 0.15em;
+}
+
+.homepage .day .article
+{
+    margin-bottom: 5px;
+}
+
+.homepage .article hr
+{
+    width: 75%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.homepage .article th
+{
+    padding: 0 0.5em 0 0.5em
+}
+
+.homepage .article td
+{
+    padding: 0 0.5em 0 0.5em;
+}

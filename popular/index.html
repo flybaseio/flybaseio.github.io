@@ -3,14 +3,33 @@ layout: default
 bodyclass: homepage
 title: Most Popular Posts
 ---
-<header class="post-header">
-	<h1 class="post-title">Most Popular Posts</h1>
-</header>
-<section class="archive-post-list">
-	<div id="mostpopularblock"></div>
-</section>
+<article>
+	<header class="post-header">
+		<h1 class="post-title">Most Popular Posts</h1>
+	</header>
+	<section class="archive-post-list" id="listposts">
+	</section>
+</article>
 <script>
 $(function(){
-//	var popular = new mostPopular().getPages( $("#mostpopularblock") );
+	var aside = $("#listposts");
+	popularRef = new Flybase( "74c8064f-cd6f-4c07-8baf-b1d241496eec", "dmblog", "mostpopular" );
+	popularRef.orderBy({"views":-1}).limit(20).on('value').then( function( data ){
+		if( data.count() ){
+			data.forEach( function(snapshot) {
+				var item = snapshot.value();
+				var ul = $("<ul />");
+				$('<li/>').attr("id",item._id).prepend(
+					$("<a>")
+						.attr("href",item.url)
+						.attr("title",item.title)
+						.attr("data-count",item.views)
+						.text(item.title)
+				).appendTo( ul );
+				aside.append( ul );
+			});
+		}
+	});
+
 });
 </script>

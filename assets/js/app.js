@@ -101,7 +101,7 @@ mostPopular.prototype.getPages = function( div_id ){
 		clickhere:"(click to load)",
 		loading:"(loading&hellip;)"
 	};
-	this.flybaseRef.orderBy({"views":-1}).limit(6).on('value').then( function( data ){
+	this.flybaseRef.orderBy({"views":-1}).limit(5).on('value').then( function( data ){
 		if( data.count() ){
 			var pages = [];
 			var aside = $(div_id);
