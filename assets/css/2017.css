@@ -126,6 +126,9 @@ a:hover, a:active {
 .sidebar p{
 	font-size: 12px !important;
 }
+.sidebar h2 {
+  font-size: 20px !important;
+}
 
 .sidebar > section, .sidebar > nav {
     border-bottom: solid 2px rgba(210, 215, 217, 0.75);
