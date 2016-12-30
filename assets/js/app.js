@@ -73,12 +73,15 @@ dmBlog.prototype.start = function(){
 		});
 	}
 
+//	new mostPopular().getPages( $("#placeholder") );
+/*
 	if ( this.url === "/") {
 		var page = getParameterByName("p");
 		if( page === "" || page === "1" ){
 			var popular = new mostPopular().getPages( $("#placeholder") );
 		}
 	}
+*/
 	return this;
 };
 
@@ -98,8 +101,7 @@ mostPopular.prototype.getPages = function( div_id ){
 		clickhere:"(click to load)",
 		loading:"(loading&hellip;)"
 	};
-	$('<aside id="popular"><header><h1>'+r.headline+"</h1></header></aside>").prependTo( div_id );
-	this.flybaseRef.orderBy({"views":-1}).limit(6).on('value',function( data ){
+	this.flybaseRef.orderBy({"views":-1}).limit(20).on('value',function( data ){
 		if( data.count() ){
 			var pages = [];
 			data.forEach( function(snapshot) {
@@ -107,10 +109,9 @@ mostPopular.prototype.getPages = function( div_id ){
 				pages[item._id] = item;
 			});
 
-			var aside = $("#popular");
-			var header = $("header",aside);
+			var aside = $(div_id);
 
-			var ul = $("<ul />").attr("style","display:none");
+			var ul = $("<ul />");//.attr("style","display:none");
 			for( var i in pages ){
 				var item = pages[i];
 				$('<li/>').attr("id",item._id).prepend(
@@ -122,9 +123,7 @@ mostPopular.prototype.getPages = function( div_id ){
 				).appendTo( ul );
 			}
 			aside.append( ul );
-			ul.slideDown(400);
-			header.removeClass("loading").addClass("loaded");
-			header.find("h1").html(r.headline);
+//			ul.slideDown(400);
 		}
 	});
 	return this;

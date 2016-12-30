@@ -7,7 +7,7 @@ layout: default
 		{% if page.link %}
 		<a href="{{ page.link }}" class="post-title linked">{{ page.title }} <span class="link-arrow">&rarr;</span></a>
 		{% else %}
-		<a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+		{{ page.title }}
 		{% endif %}
 		</h2>
 		<div class="meta">
@@ -16,7 +16,7 @@ layout: default
 			</span>
 			{% if page.tags.size > 0 %}
 			<span class="tag">
-				<i class="fa fa-tag"></i> 
+				<i class="fa fa-tag"></i>
 				{% for tag in page.tags %}
 				<a href="/tags/{{ tag | downcase | replace:' ','-'}}" class="tag">{{ tag | capitalize }}</a>
 				{% if forloop.last %}{% else %}, {% endif %}
@@ -72,7 +72,7 @@ layout: default
 {% endif %}
 {% if page.next.url %}
 			<div class="nav-next">
-				<span class="meta-nav">Next:</span> 
+				<span class="meta-nav">Next:</span>
 				<a href="{{page.next.url}}" rel="next">{{page.next.title}} </a>
 			</div>
 {% endif %}
@@ -90,5 +90,5 @@ layout: default
 <script type='text/javascript'>
 $(function(){
 	var popular = new mostPopular().updatePage("{{ page.url }}", "{{page.title}}");
-});	
+});
 </script>

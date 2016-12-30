@@ -1,0 +1,16 @@
+---
+layout: default
+bodyclass: homepage
+title: Most Popular Posts
+---
+<header class="post-header">
+	<h1 class="post-title">Most Popular Posts</h1>
+</header>
+<section class="archive-post-list">
+	<div id="mostpopularblock"></div>
+</section>
+<script>
+$(function(){
+	var popular = new mostPopular().getPages( $("#mostpopularblock") );
+});
+</script>

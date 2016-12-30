@@ -1,5 +1,5 @@
 /*
-	our functionality app, let's you manage having elements appear on certain pages dynamically, and also looks after the most popular pages widget on home page.	
+	our functionality app, let's you manage having elements appear on certain pages dynamically, and also looks after the most popular pages widget on home page.
 */
 $( document ).ready(function() {
 	var dm = new dmBlog();
@@ -8,7 +8,7 @@ $( document ).ready(function() {
 
 function hashCode( str ){
 	if (Array.prototype.reduce){
-		return str.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
+		return str.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);
 	}
 	var hash = 0;
 	if (str.length === 0) return hash;
@@ -26,7 +26,7 @@ function getParameterByName(name) {
 	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
-var dmBlog = function(){	
+var dmBlog = function(){
 	this.size = window.getComputedStyle(document.body,':after').getPropertyValue('content').replace(/\W/g, '');
 	this.url = document.location.pathname;
 	return this;
@@ -73,12 +73,16 @@ dmBlog.prototype.start = function(){
 		});
 	}
 
+/*
 	if ( this.url === "/") {
 		var page = getParameterByName("p");
 		if( page === "" || page === "1" ){
-			var popular = new mostPopular().getPages( $("#main") );
+*/
+			var popular = new mostPopular().getPages( $("#mostpopularblock") );
+/*
 		}
 	}
+*/
 	return this;
 };
 
@@ -92,13 +96,13 @@ var mostPopular = function(){
 };
 
 mostPopular.prototype.getPages = function( div_id ){
-	var _this = this;	
+	var _this = this;
 	var r={
 		headline:"Recently popular posts&hellip;",
 		clickhere:"(click to load)",
 		loading:"(loading&hellip;)"
 	};
-	$('<aside id="popular"><header><h1>'+r.headline+"</h1></header></aside>").prependTo( div_id );
+//	$('<aside id="popular"><header><h1>'+r.headline+"</h1></header></aside>").prependTo( div_id );
 	this.flybaseRef.orderBy({"views":-1}).limit(6).on('value',function( data ){
 		if( data.count() ){
 			var pages = [];
@@ -107,24 +111,21 @@ mostPopular.prototype.getPages = function( div_id ){
 				pages[item._id] = item;
 			});
 
-			var aside = $("#popular");
-			var header = $("header",aside);
+			var aside = $("#mostpopularblock");
 
-			var ul = $("<ul />").attr("style","display:none");
+			var ul = $("<ul />");//.attr("style","display:none");
 			for( var i in pages ){
 				var item = pages[i];
 				$('<li/>').attr("id",item._id).prepend(
 					$("<a>")
 						.attr("href",item.url)
 						.attr("title",item.title)
-						.attr("data-count",item.views)						
+						.attr("data-count",item.views)
 						.text(item.title)
 				).appendTo( ul );
 			}
 			aside.append( ul );
-			ul.slideDown(400);
-			header.removeClass("loading").addClass("loaded");
-			header.find("h1").html(r.headline);
+//			ul.slideDown(400);
 		}
 	});
 	return this;
@@ -151,7 +152,7 @@ mostPopular.prototype.getPopular = function() {
 			clickhere: "(click to load)",
 			loading: "(loading&hellip;)"
 		};
-}();	
+}();
 */
 
 mostPopular.prototype.updatePage = function(url, title){
