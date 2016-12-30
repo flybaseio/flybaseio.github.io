@@ -73,7 +73,7 @@ dmBlog.prototype.start = function(){
 		});
 	}
 
-//	new mostPopular().getPages( $("#placeholder") );
+	new mostPopular().getPages( $("#mostpopularblock") );
 /*
 	if ( this.url === "/") {
 		var page = getParameterByName("p");
@@ -101,62 +101,28 @@ mostPopular.prototype.getPages = function( div_id ){
 		clickhere:"(click to load)",
 		loading:"(loading&hellip;)"
 	};
-	this.flybaseRef.orderBy({"views":-1}).limit(20).on('value',function( data ){
+	this.flybaseRef.orderBy({"views":-1}).limit(6).on('value').then( function( data ){
 		if( data.count() ){
 			var pages = [];
+			var aside = $(div_id);
 			data.forEach( function(snapshot) {
 				var item = snapshot.value();
-				pages[item._id] = item;
-			});
-
-			var aside = $(div_id);
-
-			var ul = $("<ul />");//.attr("style","display:none");
-			for( var i in pages ){
-				var item = pages[i];
-				$('<li/>').attr("id",item._id).prepend(
+				var ul = $("<article />");
+				$('<p/>').attr("id",item._id).prepend(
 					$("<a>")
 						.attr("href",item.url)
 						.attr("title",item.title)
 						.attr("data-count",item.views)
 						.text(item.title)
 				).appendTo( ul );
-			}
-			aside.append( ul );
-//			ul.slideDown(400);
+				aside.append( ul );
+			});
 		}
 	});
 	return this;
 };
-/*
-mostPopular.prototype.getPopular = function() {
-		$('<aside id="popular"><header><h1>' + r.headline + "</h1></header></aside>").insertAfter("#welcome"), $.get("/data/twitterpopular.txt?" + Math.floor(400 + 2e3 * Math.random()), function(e) {
-			var t = $(e),
-				i = $("#popular"),
-				o = $("header", i);
-			i.append(t), t.slideDown(400), o.removeClass("loading").addClass("loaded"), o.find("h1").html(r.headline), n = !0
-		})
-	}
-
-	function t() {
-		$("#popular").find("a").each(function(e, t) {
-			var n = $(t);
-			n.text(n.text() + " (" + n.attr("data-count") + ")"), console.log(this)
-		})
-	}
-	var n = !1,
-		r = {
-			headline: "Recently popular posts&hellip;",
-			clickhere: "(click to load)",
-			loading: "(loading&hellip;)"
-		};
-}();
-*/
-
 mostPopular.prototype.updatePage = function(url, title){
-//	create a unique key from the url by stripping out all non-alphanumeric characters...
 	var key = url.replace(/[\/-]/g,'');
-
 	var _this = this;
 	var cnt = 0;
 	_this.flybaseRef.where({"key": key}).orderBy( {"views":-1} ).on('value').then( function( data ){
@@ -169,20 +135,12 @@ mostPopular.prototype.updatePage = function(url, title){
 					console.log( key + " updated" );
 				});
 			}else{
-				// clean up any dupes until we make this better...
 				_this.flybaseRef.deleteDocument(item._id, function(resp) {
 					console.log( item._id + " deleted");
 				});
 			}
 			first = false;
 		});
-/*
-		var item = data.first().value();
-		item.views = item.views + 1;
-		_this.flybaseRef.update(item._id,item, function(resp) {
-			console.log( key + " updated" );
-		});
-*/
 	},function(){
 		// no count, so never added before..
 		_this.flybaseRef.push({
