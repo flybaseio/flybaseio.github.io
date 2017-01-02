@@ -2,6 +2,8 @@
 	our functionality app, let's you manage having elements appear on certain pages dynamically, and also looks after the most popular pages widget on home page.
 */
 $( document ).ready(function() {
+//	var height = $('.main').height()
+//	$('.sidebar').attr('style', 'height: ' + height + 'px !important');
 	var dm = new dmBlog();
 	dm.start();
 });

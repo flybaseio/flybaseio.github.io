@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
 
 body {
-	background: #fff;
+	background: #fff; /*f5f6f7;*/
 	font: 18px/1.4 Helvetica, Arial, sans-serif;
 	color: #333;
 }
@@ -110,18 +110,24 @@ a:hover, a:active {
 	color: #000 !important;
 }
 .sidebar {
+/*
 	position: fixed;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	z-index: 1000;
 	display: block;
+*/
 	padding: 20px;
 	font-size:12px !important;
+/*
 	overflow-x: hidden;
-	overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-	background-color: #f5f6f7; /*#f8f8f8;*/
+	overflow-y: auto;
+	background-color: #f5f6f7;
 	border-right: 1px solid #ddd;
+	height:100% !important;
+	min-height:100% !important;
+*/
 }
 .sidebar p{
 	font-size: 12px !important;
@@ -135,6 +141,16 @@ a:hover, a:active {
     margin: 0 0 2.5em 0;
     padding: 0 0 2.5em 0;
 }
+
+section.social{
+	border-bottom: 0px;
+}
+
+section.social a {
+	font-size: 18px !important;
+	padding: 5px;
+}
+
 
 /*
 .sidebar ul a, .sidebar ul p{
@@ -165,7 +181,14 @@ a:hover, a:active {
 	background-color: #428bca;
 }
 .main {
+	background: #fff;
 	padding: 20px;
+/*
+	border-left: 1px solid #ddd;
+	height: 100%;
+	min-height: 100%;
+	padding-bottom: 100%;
+*/
 }
 @media (min-width: 768px) {
 	.main {
@@ -273,9 +296,24 @@ ul.inline > li, ol.inline > li {
 img {
   max-width: 100%;
   height: auto;
-  max-height: 400px;
 }
-
+/*
+.box-wrap {
+    padding: 4px;
+    border: 1px solid #807373;
+    background: #e5dcdc;
+    text-align: center;
+    border-radius: 3.125px;
+    max-width: 100%;
+}
+article img {
+    border: 1px solid #4f3f3f;
+    display: block;
+	width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+*/
 /*
 .box-wrap {
   background-color: #141a1f;
@@ -802,7 +840,7 @@ header p {
 }
 
 header.major > :last-child {
-	border-bottom: solid 3px #f56a6a;
+	border-bottom: solid 0px #f56a6a;
 	display: inline-block;
 	margin: 0 0 1em 0;
 	padding: 0 0.75em 0.5em 0;
@@ -962,4 +1000,146 @@ header.major h2{
 .homepage .article td
 {
     padding: 0 0.5em 0 0.5em;
+}
+
+#logoimg{
+	width:125px;
+	height: auto;
+}
+
+.main > .container {
+	width: 90%;
+}
+
+
+.post-wrapper {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+
+/* ======= Footer ======= */
+.footer {
+  background: #253340;
+  color: #fff;
+  padding-top: 20px;
+  font-size: 12px;
+  position: relative;
+  z-index: 20;
+}
+.footer p {
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+.footer .btn-cta,
+.footer a.btn-cta {
+  padding: 9px 10px;
+}
+.footer .footer-col.links .fa {
+  margin-right: 5px;
+}
+.footer .footer-col.links li {
+  margin-bottom: 10px;
+}
+.footer .footer-col.connect .social {
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.footer .footer-col.connect .social li {
+  margin-right: 10px;
+}
+.footer .footer-col.connect .social li a .fa {
+  color: #b3b3b3;
+  font-size: 22px;
+}
+.footer .footer-col.connect .social li a:hover .fa {
+  color: #497cb1;
+}
+.footer .footer-col.connect .btn-cta-primary {
+  background: #5d80a1;
+  border-color: #5d80a1;
+}
+.footer .footer-col.connect .btn-cta-primary:hover {
+  background: #4a6781;
+  border-color: #4a6781;
+}
+.footer .footer-col .title {
+  color: #fff;
+  font-weight: normal;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+.footer .footer-col p {
+  color: #fff;
+}
+.footer .footer-col a {
+  color: #6d8dab;
+}
+.footer .footer-col a:hover {
+  color: #8da6bd;
+}
+.footer .footer-col .navbar-form {
+  padding-left: 0;
+  padding-right: 0;
+}
+.footer .footer-col .navbar-form .form-control {
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+.footer .footer-col .navbar-form .form-control:focus {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.footer .has-divider {
+  border-top: 1px solid #2b3b4a;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.footer .download .download-list li {
+  margin-bottom: 15px;
+}
+.footer .download .download-list li .btn-ghost {
+  text-align: left;
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+  width: 230px;
+}
+.footer .download .download-list li .btn-ghost:hover {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.footer .contact p {
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+.footer .contact p a {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.footer .contact .fa {
+  margin-right: 10px;
+  font-size: 20px;
+}
+.footer .contact .email .fa {
+  font-size: 16px;
+}
+.footer .bottom-bar {
+  background: #1e1e1e;
+  color: #b3b3b3;
+  font-size: 14px;
+  padding: 10px 0;
+}
+.footer .bottom-bar .copyright {
+  line-height: 1.6;
 }

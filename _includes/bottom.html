@@ -1,9 +1,10 @@
 				<div class="content-break">
 					<i class="fa fa-rocket"></i>
 				</div>
-				<div style="text-align:center;">
+				<div class="well hidden-md hidden-sm hidden-xs text-center">
 					<p>Start changing the way you build apps <a href="https://app.flybase.io/signup" class="btn btn-primary raised round">Sign up for Flybase »</a></p>
 				</div>
+{% comment %}
 				<hr />
 				<div class="well">
 					<div class="text-center">
@@ -43,9 +44,53 @@
 						</div>
 					</div>
 				</div>
-			</section>
+{% endcomment %}
+			</div>
+		</section>
 	</div>
 </div>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="container">
+			<div class="row text-center">
+                <div class="footer-col links col-md-6 col-sm-12 col-xs-12">
+                    <div class="footer-col-inner">
+                        <ul class="list-unstyled list-inline">
+                            <li><a href="//flybase.io/">Home</a></li>
+                            <li><a href="//blog.flybase.io/">Our Blog</a></li>
+                            <li><a href="//flybase.io/contact/">Contact us</a></li>
+                        </ul>
+                    </div><!--//footer-col-inner-->
+                </div><!--//foooter-col-->
+                <div class="footer-col connect col-md-6 col-sm-12 col-xs-12">
+                    <div class="footer-col-inner">
+						<ul class="list-unstyled list-inline">
+							<li><a href="//flybase.io/getting-started/">Getting Started</a></li>
+                            <li><a href="//flybase.io/tutorial/">Tutorial</a></li>
+                            <li><a href="//docs.flybase.io/">Developer Docs</a></li>
+                        </ul>
+                    </div><!--//footer-col-inner-->
+                </div><!--//foooter-col-->
+			</div>
+        </div><!--//container-->
+    </div><!--//footer-content-->
+    <div class="bottom-bar">
+        <div class="container">
+			<div class="row text-center">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+					<small class="copyright">Copyright &copy; {{ site.time | date: '%Y' }} - <a href="//flybase.io/" target="_blank">Flybase</a> by Data McFly  (1059105 B.C. LTD)</small>
+				</div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+					<ul class="list-unstyled list-inline">
+						<li><small class="copyright"><a href="//flybase.io/terms/privacy-policy">Privacy Policy</a></small></li>
+						<li><small class="copyright"><a href="//flybase.io/terms/">Terms of Service</a></small></li>
+						<li><small class="copyright"><a href="//flybase.io/terms/service-level-agreement">Service Level Agreement</a></small></li>
+					</ul>
+				</div>
+            </div>
+        </div><!--//container-->
+    </div><!--//bottom-bar-->
+</footer><!--//footer-->
 <!-- scripts -->
 <script src="/assets/js/prism.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>

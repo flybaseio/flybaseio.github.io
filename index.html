@@ -3,6 +3,18 @@ layout: default
 bodyclass: homepage
 title: Home
 ---
+
+{% comment %}
+{% if page.url == "/" %}
+<div class="well well-sm hidden-md hidden-sm hidden-xs">
+	<p class="text-muted">
+		The <a href="http://blog.flybase.io">Flybase Blog</a> is the official online publication written by the
+		founders and developers of <a href="http://flybase.io">Flybase</a> about their real-time app platform,
+		related technologies, building startups, and whatever else may fit their fancy — <em>like robots</em>.
+	</p>
+</div>
+{% endif %}
+{% endcomment %}
 <div class="day">
 	<div class="articles">
 {% for post in paginator.posts %}
