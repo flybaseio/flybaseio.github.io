@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "David Heinemeier Hansson on why Writing software is hard" 
 date: 2017-01-02T19:37:28.541Z 
 link: https://m.signalvnoise.com/writing-software-is-hard-388d5e982ad9#.dtscuq21x 
