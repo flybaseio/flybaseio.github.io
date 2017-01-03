@@ -7,24 +7,22 @@ title: Archives
 	<header class="post-header">
 		<h1 class="post-title">Archives</h1>
 	</header>
-	<section class="archive-post-list">
+	<div class="entry" id="blog-archives">
 	{% for post in site.posts %}
 		{% assign currentDate = post.date | date: "%Y" %}
-		{% assign currentMonth = post.date | date: "%m" %}
 		{% if currentDate != myDate %}
-			<div style="text-align:center;">
-				<h1>{{ currentDate }}</h1>
-			</div>
-			{% assign myDate = currentDate %}
+		{% unless forloop.first %}</ul>{% endunless %}
+		<h2>{{ currentDate }}</h2>
+		{% assign myDate = currentDate %}
 		{% endif %}
-		{% if currentMonth != myMonth %}
-			{% unless forloop.first %}</ul>{% endunless %}
-			<h2><a href="/{{currentDate}}/{{currentMonth}}">{{ post.date | date: "%B" }}</a></h2>
-			<ul>
-			{% assign myMonth = currentMonth %}
-		{% endif %}
-		<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-		{% if forloop.last %}</ul>{% endif %}
+		<article data-keywords="">
+			<time class="time" dateTime="{{ post.date | date: "%Y-%m-%d" }}">
+				<span class="month">{{ post.date | date: "%b" }}</span>
+				<span class="day">{{ post.date | date: "%-d" }}</span>
+			</time>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+		</article>
+		{% if forloop.last %}{% endif %}
 	{% endfor %}
-	</section>
+	</div>
 </article>
