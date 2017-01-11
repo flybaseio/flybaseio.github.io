@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Turning amateur users into experts" 
 date: 2017-01-11T05:23:03.015Z 
 link: https://blog.intercom.com/turning-amateur-users-into-experts/ 
