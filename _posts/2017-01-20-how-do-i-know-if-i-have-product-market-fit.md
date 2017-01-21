@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "How do I know if I have product-market fit?" 
 date: 2017-01-21T02:23:05.045Z 
 link: http://betakit.com/ask-an-investor-how-do-i-know-if-i-have-product-market-fit/ 
