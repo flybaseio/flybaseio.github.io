@@ -16,7 +16,7 @@ bodyclass: "post"
 
 <br />
 <div class="well">
-	<p>We've just published an <a href="https://blog.flybase.io/2017/01/27/group-chat-twilio/">update</a> to this post that shows how to use the Flybase library, Twilio, Node and Heroku to quickly build a group chat app.</p>
+<p>We've just published an <a href="https://blog.flybase.io/2017/01/27/group-chat-twilio/">update</a> to this post that shows how to use the Flybase library, Twilio, Node and Heroku to quickly build a group chat app.</p>
 </div>
 
 ### Overview

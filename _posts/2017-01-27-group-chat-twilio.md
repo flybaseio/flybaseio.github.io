@@ -11,12 +11,12 @@ bodyclass: "post"
 ---
 
 <div class="box-wrap"><div class="box">
-	<img src="/images/posts/call-center.jpg" />
+<img src="/images/posts/call-center.jpg" />
 </div></div>
 
 <br />
 <div class="well">
-	<p>This is an update to our original <a href="https://blog.flybase.io/2015/03/31/group-chat-twilio/">Post</a> about building a group chat tool. Some things remain the same, but we've updated the library to Flybase (finally) and also removed the ngrok section for Heroku.</p>
+<p>This is an update to our original <a href="https://blog.flybase.io/2015/03/31/group-chat-twilio/">Post</a> about building a group chat tool. Some things remain the same, but we've updated the library to Flybase (finally) and also removed the ngrok section for Heroku.</p>
 </div>
 
 ### Overview
