@@ -4,7 +4,7 @@ title: "Build a real-time SMS group chat tool with Flybase, Twilio, Node.js and 
 tags:
 - "code"
 - "twilio"
-date: "2015-03-31 13:52:13"
+date: "2017-01-27 13:52:13"
 image: "http://blog.flybase.io/images/posts/call-center.jpg"
 ogtype: "article"
 bodyclass: "post"
