@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Build a real-time SMS group chat tool with Data McFly, Twilio and Node.js"
-tags: 
+tags:
 - "code"
 - "twilio"
 date: "2015-03-31 13:52:13"
@@ -13,6 +13,11 @@ bodyclass: "post"
 <div class="box-wrap"><div class="box">
 	<img src="/images/posts/call-center.jpg" />
 </div></div>
+
+<div class="well">
+	<p>There is an <a href="https://blog.flybase.io/2017/01/27/group-chat-twilio/">update</a> to this post that shows how to use the Flybase library, Twilio, Node and Heroku to quickly build a group chat app.
+</div>
+
 
 ### Overview
 
@@ -26,7 +31,7 @@ You will also be able to send and receive messages from a page on the site in re
 
 We'll use [Data McFly](http://datamcfly.com/) to handle the data-storage and real-time aspects of the app, Twilio to handle the actual SMS work, and Node.js for the system itself.
 
-We're going to build this particular app for one single group, but it wouldn't be hard to extend it for multiple groups. 
+We're going to build this particular app for one single group, but it wouldn't be hard to extend it for multiple groups.
 
 ### Ingredients
 
@@ -76,7 +81,7 @@ Let's create our `package.json` file:
 		"moment": "~2.5.1",
 		"less-middleware": "~0.2.1-beta",
 		"body-parser" : "~1.4.2",
-		"method-override" : "~2.0.2"	
+		"method-override" : "~2.0.2"
 	},
 	"engines": {
 		"node": "0.10.26"
@@ -124,7 +129,7 @@ console.log( config.datamcfly.api_key );
 
 Replace `ACCOUNTSID`, `AUTHTOKEN` and `YOUR-NUMBER` with your Twilio credentials, and a phone number in your Twilio account that you'll be using.
 
-Then, replace `YOUR-API-KEY`, and `YOUR-DATAMCFLY-APP`  with your Data McFly API Key to use. 
+Then, replace `YOUR-API-KEY`, and `YOUR-DATAMCFLY-APP`  with your Data McFly API Key to use.
 
 
 At the beginning of our `app.js` file we’ll need to require express and initialize it into a variable called app. We’re also going to use the [bodyParser middleware](https://github.com/expressjs/body-parser) to make it easy to use the data we’ll be getting in our POST request.
@@ -144,7 +149,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({	extended: true	}));
 app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
- 
+
 var port = process.env.PORT || 8080; // set our port
 
 var twilio = require('twilio');
@@ -176,7 +181,7 @@ We’re going to add a route for `/message` that responds with some [TwiML](http
 app.post('/message', function (request, response) {
 	var d = new Date();
 	var date = d.toLocaleString();
-		
+
 	groupRef.where( {"memberNumber":request.param('From')} ).limit(1).on( "value", function ( data ){
 		if( data.count() ){
 			data.forEach( function( snapshot ){
@@ -205,13 +210,13 @@ app.post('/message', function (request, response) {
 });
 ```
 
-This will listen for any incoming sms messages and store them inside your Data McFly app, specifically inside the `messages` collection. 
+This will listen for any incoming sms messages and store them inside your Data McFly app, specifically inside the `messages` collection.
 
 As part of storing the message, we perform a look up to find the `groups` member with the same phone number the message was sent from, we then use this lookup to verify the member was part of the group, and also to get the member's name.
 
 If no member was found, then no message gets sent.
 
-Once a message has been received, we use the Twilio node library to initialize a new `TwimlResponse`. We then use the [Message verb](https://www.twilio.com/docs/api/twiml/sms/message) to set what we want to respond to the message with. In this case we’ll just say “Message received”. 
+Once a message has been received, we use the Twilio node library to initialize a new `TwimlResponse`. We then use the [Message verb](https://www.twilio.com/docs/api/twiml/sms/message) to set what we want to respond to the message with. In this case we’ll just say “Message received”.
 
 Then we’ll set the content-type of our response to `text/xml` and send the string representation of the TwimlResponse we built.
 
@@ -223,12 +228,12 @@ As part of our `app.js` code, we also want to add some asynchronous listeners to
 //	when a new message is added to the Data McFly app, send it via Twilio...
 messagesRef.on("added", function (data ){
 	var snapshot = data.value();
-	sendMessage( 
+	sendMessage(
 		snapshot.groupNumber,
 		snapshot.fromName,
 		snapshot.fromNumber,
 		snapshot.message
-	);	
+	);
 });
 
 groupRef.on("added", function ( data ){
@@ -275,7 +280,7 @@ function sendMessage( group_number, from_name, from_number, message ){
 			data.forEach( function( snapshot ){
 				var member = snapshot.value();
 				client.sendMessage( {
-					to:member.memberNumber, 
+					to:member.memberNumber,
 					from:group_number,
 					body:msg
 				}, function( err, data ) {
@@ -315,7 +320,7 @@ app.get('*', auth, function(req, res) {
 		app_name:config.datamcfly.app_name,
 		group_number:config.twilio.from_number
 	});
-}); 
+});
 
 var server = app.listen(port, function() {
 	console.log('Listening on port %d', server.address().port);
@@ -362,7 +367,7 @@ First, let's create our view, in the `/views` folder, create a file called `inde
 	<script src="https://cdn.datamcfly.com/DataMcFly.js?https://cdn.datamcfly.com/DataMcFly.js?20150217"></script>
 	<script src="https://cdn.datamcfly.com/libs/phone.js"></script>
 	<script src="/js/group.js"></script>
-	
+
 	<title>Group Chat, powered by Data McFly and Twilio</title>
 </head>
 <body>
@@ -414,7 +419,7 @@ First, let's create our view, in the `/views` folder, create a file called `inde
 </html>
 ```
 
-This will display out control panel, which will be split into two panes, the left side for viewing group members, the right side for viewing the chat log. 
+This will display out control panel, which will be split into two panes, the left side for viewing group members, the right side for viewing the chat log.
 
 At the bottom of the page, we're initializing our `groupManager` class. We'll create that file shortly.
 
@@ -458,7 +463,7 @@ var groupManager = function(api_key, app_name, group_number) {
 
 //	reference to our group collection...
 	this.groupRef = new DataMcFly(api_key, app_name, "groups");
-	
+
 	this.group_members = [];
 };
 ```
@@ -530,7 +535,7 @@ groupManager.prototype.start = function(){
 		_this.displayChatMessage( message );
 	});
 
-//	listen for outgoing chat messages	
+//	listen for outgoing chat messages
 	$('#msg_form').submit( function(e){
 		e.preventDefault();
 		var message = {
@@ -560,7 +565,7 @@ The other side of our `groupManager` class is the actual chatting side of things
 
 We have two functions left, one is to display all members of a group, and the other displays chat messages.
 
-For our groups, we stored information in a class-wide variable called `group_members`, this lets us quickly add, update or remove members as we receive notifications about it. 
+For our groups, we stored information in a class-wide variable called `group_members`, this lets us quickly add, update or remove members as we receive notifications about it.
 
 ```javascript
 //	Display group members
