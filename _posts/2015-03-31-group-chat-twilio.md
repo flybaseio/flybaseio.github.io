@@ -14,6 +14,7 @@ bodyclass: "post"
 	<img src="/images/posts/call-center.jpg" />
 </div></div>
 
+<br /><br />
 <div class="well">
 	<p>There is an <a href="https://blog.flybase.io/2017/01/27/group-chat-twilio/">update</a> to this post that shows how to use the Flybase library, Twilio, Node and Heroku to quickly build a group chat app.
 </div>
