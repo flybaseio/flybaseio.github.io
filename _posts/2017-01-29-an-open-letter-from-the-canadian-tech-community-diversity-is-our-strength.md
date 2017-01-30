@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Betakit's Open Letter from the Canadian Tech Community" 
 date: 2017-01-30T05:35:30.645Z 
 link: http://betakit.com/an-open-letter-from-the-canadian-tech-community-diversity-is-our-strength/ 
