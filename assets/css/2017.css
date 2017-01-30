@@ -328,6 +328,23 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.box-wrap{
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.box-wrap .box {
+    padding: 20px;
+}
+.box-wrap .box img {
+	margin: 0 auto;
+	width: 90%;
+}
+
 /*
 .box-wrap {
     padding: 4px;
