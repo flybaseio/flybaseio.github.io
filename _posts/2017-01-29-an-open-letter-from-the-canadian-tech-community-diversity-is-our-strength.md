@@ -14,6 +14,7 @@ bodyclass: "post"
 <div class="box-wrap"><div class="box">
 	<img src="/images/posts/canadaflag.png" />
 </div></div>
+<br />
 
 > The Canadian tech community comprises many different nationalities, religions, sexual orientations, gender identities, mental and physical abilities, and perspectives. We believe that this diversity is a source of strength and opportunity.
 >
