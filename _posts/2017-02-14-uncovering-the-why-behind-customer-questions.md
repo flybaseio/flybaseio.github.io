@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Uncovering the why behind customer questions" 
 date: 2017-02-15T04:44:53.119Z 
 link: https://blog.intercom.com/how-to-uncover-the-why/ 
