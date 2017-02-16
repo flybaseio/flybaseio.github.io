@@ -91,7 +91,7 @@ Delete the `projects` folder, but keep the other folders.
 
 We need to start with our `index.html` file, this is the skeleton of our app. Open `index.html` in a text editor and copy the following file:
 
-```html
+```javascript
 <!doctype html>
 <html lang="en" ng-app="myApp">
 <head>
@@ -491,7 +491,7 @@ It works by grabbing all food and exercise entries for the logged in user on the
 
 Now, let's set up our dashboard interface, open `home/home.html`:
 
-```html
+```javascript
 <div class=" text-center">
 	<ul class="list-unstyled list-inline">
 		<li>
@@ -725,7 +725,7 @@ angular.module('FoodCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 
 #### 2. `food/list.html`:
 
-```html
+```javascript
 <a class="btn btn-primary" href="#/dashboard">Home</a>
 <h3>Food list</h3>
 <table class="table table-striped table-bordered table-hover">
@@ -763,7 +763,7 @@ angular.module('FoodCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 
 #### 3. `food/form.html`:
 
-```html
+```javascript
 <a class="btn btn-primary" href="#/dashboard">Home</a>
 <h3 ng-show="food._id">Edit "{{food.name}}"</h3>
 <h3 ng-hide="food._id">Add Food</h3>
@@ -946,7 +946,7 @@ angular.module('ExerciseCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 
 #### 2. `exercise/list.html`:
 
-```html
+```javascript
 <a class="btn btn-primary" href="#/dashboard">Home</a>
 <h3>Exercise list</h3>
 <table class="table table-striped table-bordered table-hover">
@@ -984,7 +984,7 @@ angular.module('ExerciseCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 
 #### 3. `exercise/form.html`:
 
-```html
+```javascript
 <a class="btn btn-primary" href="#/dashboard">Home</a>
 <h3 ng-show="exercise._id">Edit "{{exercise.name}}"</h3>
 <h3 ng-hide="exercise._id">Add Exercise</h3>
@@ -1143,7 +1143,7 @@ angular.module('ReportCtrl', ['ngRoute'])
 
 #### 2. `report/report.html`:
 
-```html
+```javascript
 <a class="btn btn-primary" href="#/dashboard">Home</a>
 <div class="text-center">
 	<h4>Your daily average is {{average}} calories.</h4>
