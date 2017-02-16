@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "SideGig.me - Cloning TaskRabbit with Flybase and Angular.js"
-tags: 
+tags:
 - "code"
 date: "2015-07-15 09:14:40"
 image: "http://blog.flybase.io/images/posts/sidegig.png"
@@ -30,7 +30,7 @@ You can easily take this and build on it to use Stripe.com for payments, or to a
 
 And it's using absolutely no backend code! The entire site is hosted on Github Pages and was built in less than a day.
 
-You can check it out here at [SideGig.Me](http://sidegig.me/), and you can view the repo [here](https://github.com/DataMcFly/sidegig). Play with the test site, download the repo, see how easy it was to build what we've built.
+You can check it out here at [SideGig](http://sidegig.flybase.io/), and you can view the repo [here](https://github.com/DataMcFly/sidegig). Play with the test site, download the repo, see how easy it was to build what we've built.
 
 One thing we did do here that could have been built in Node via the _Thin servers_ part was we decided to make use of our Zapier channel to handle emails.
 

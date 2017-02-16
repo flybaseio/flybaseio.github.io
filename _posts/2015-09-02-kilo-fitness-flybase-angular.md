@@ -2,7 +2,7 @@
 layout: "post"
 title: "Cloning getkilo.com with Flybase and Angular.js"
 date: "2015-09-02 18:00"
-tags: 
+tags:
 - "code"
 image: "http://blog.flybase.io/images/posts/fitness.jpg"
 ogtype: "article"
@@ -19,7 +19,7 @@ I talked with him back in June when we were both at [Future Insights Live](https
 
 We'll build this using the [client-side only](https://github.com/flybaseio/fit-stack/tree/client-side) branch of the [FIT Stack](https://github.com/flybaseio/fit-stack/blob/master/README.md), so it will be built using Flybase and Angular.js.
 
-The FIT Stack is our _pre-built_ `seed` app for building rapid MVPs with. Using Flybase, Angular.js (for the _Interface_) and Node.js for the micro (or _Thin_) services if needed. 
+The FIT Stack is our _pre-built_ `seed` app for building rapid MVPs with. Using Flybase, Angular.js (for the _Interface_) and Node.js for the micro (or _Thin_) services if needed.
 
 With Flybase, Angular.js, and the [Angular Fly](https://github.com/flybaseio/angularfly) helper library, it's possible to build pretty advanced apps easily
 
@@ -39,20 +39,21 @@ All you need is a [Flybase](http://flybase.io) account. This entire app will be 
 
 To start, clone the `client-side`  only branch of the fit stack repo into a new folder:
 
-{% highlight javascript %}{% raw %}
+```javascript
 git clone https://github.com/flybaseio/fit-stack -b client-side --single-branch getkilo
-{% endraw %}{% endhighlight %}
+```
+
 This will create a new folder called `getkilo`,  mirroring the content in the `client-side` branch of the FIT stack repo.
 
 You'll need bower installed if you haven't already installed it:
 
-{% highlight javascript %}{% raw %}
+```javascript
 npm install -g bower serve
-{% endraw %}{% endhighlight %}
+```
 
 Most of our modules are pre-built, one change we want is we want to add `moment` to our bower.json file:
 
-{% highlight javascript %}{% raw %}
+```javascript
 {
   "name": "fit-stack",
   "version": "1.0.0",
@@ -70,13 +71,13 @@ Most of our modules are pre-built, one change we want is we want to add `moment`
     "angular": "1.4.5"
   }
 }
-{% endraw %}{% endhighlight %}
+```
 
 Now you'll want to run bower and install our libraries:
 
-{% highlight javascript %}{% raw %}
+```javascript
 bower install
-{% endraw %}{% endhighlight %}
+```
 
 This will install our `bower_components` inside the `app/` folder. This is the main folder we'll use.
 
@@ -90,7 +91,7 @@ Delete the `projects` folder, but keep the other folders.
 
 We need to start with our `index.html` file, this is the skeleton of our app. Open `index.html` in a text editor and copy the following file:
 
-{% highlight html %}{% raw %}
+```html
 <!doctype html>
 <html lang="en" ng-app="myApp">
 <head>
@@ -102,7 +103,7 @@ We need to start with our `index.html` file, this is the skeleton of our app. Op
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<base ng-href="/">
-	
+
 	<!-- CSS -->
 	<link ng-href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 	<link ng-href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
@@ -123,7 +124,7 @@ We need to start with our `index.html` file, this is the skeleton of our app. Op
 	<script src="bower_components/moment/min/moment.min.js"></script>
 	<script src="bower_components/flybase/flybase.js"></script>
 	<script src="bower_components/angularfly/angularfly.js"></script>
-		
+
 	<!-- ANGULAR STUFF -->
 	<script src="config.js"></script>
 <!-- SERVICES -->
@@ -139,11 +140,11 @@ We need to start with our `index.html` file, this is the skeleton of our app. Op
 	<script src="app.js"></script>
 </body>
 </html>
-{% endraw %}{% endhighlight %}
+```
 
 Our `index.html` file gives us a good starting point, now open `config.js` and add your Flybase API Key and app name:
 
-{% highlight javascript %}{% raw %}
+```javascript
 'use strict';
 
 // Declare app level module which depends on filters, and services
@@ -151,7 +152,7 @@ angular.module('myApp.config', [])
 .constant('version', '1.0.1')
 .constant('loginRedirectPath', '/login')
 .constant('FLYBASE_CONFIG',{
-	API_KEY:'YOUR-API-KEY', 
+	API_KEY:'YOUR-API-KEY',
 	DB_NAME:'kilo'
 })
 // double check that the app has been configured before running it and blowing up space and time
@@ -163,21 +164,21 @@ angular.module('myApp.config', [])
 		}, 250);
 	}
 }]);
-{% endraw %}{% endhighlight %}
+```
 
 Until you replace `YOUR-API-KEY` with your actual API Key, your app won't run.
 
 Now open `app.js` and copy the following code in:
 
-{% highlight javascript %}{% raw %}
+```javascript
 'use strict';
 
 angular.module('myApp', [
 	'myApp.config',
 	'myApp.models',
 	"UserCtrl",
-	'MainCtrl', 
-	'FoodCtrl', 
+	'MainCtrl',
+	'FoodCtrl',
 	'ExerciseCtrl',
 	'ReportCtrl',
 	'myApp.directives'
@@ -220,7 +221,7 @@ randomBackground();
 		d.documentElement.className += ' no-touch';
 	}
 })(document, window);
-{% endraw %}{% endhighlight %}
+```
 
 Just as how `index.html` is your skeleton, `app.js` is your brains, it tells our app how to get started.
 
@@ -228,7 +229,7 @@ One function you may notice is the `randomBackground()` function, this generates
 
 Now, we need to build our models, open `components/models.js` and add the following code:
 
-{% highlight javascript %}{% raw %}
+```javascript
 angular.module('myApp.models', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 .factory('$localstorage', ['$window', function($window) {
 	return {
@@ -288,7 +289,7 @@ angular.module('myApp.models', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 .factory('Login', function ( $loginMcFly ) {
 	return $loginMcFly();
 });
-{% endraw %}{% endhighlight %}
+```
 
 The `$localstorage` and `$cipherFactory` factory factory objects are used for account related purposes, the other four factory objects are:
 
@@ -303,25 +304,25 @@ Now, we can get started with building our app.
 
 Open `home/home.js` in a text editor:
 
-{% highlight javascript %}{% raw %}
+```javascript
 angular.module('MainCtrl', ['ngRoute'])
 .controller('MainController', function($scope,$timeout,$location,foods,exercises,Food,Exercise,login,me) {
 	$scope.currentUser = me;
-	
-	$scope.today = moment().format("YYYY-MM-DD"); 
+
+	$scope.today = moment().format("YYYY-MM-DD");
 
 	$scope.todayverbose = moment($scope.today).format("dddd, MMMM Do YYYY");
 	$scope.todayshort = moment($scope.today).format("ddd, MMM Do");
 
 	$scope.daybefore = moment($scope.today).subtract(1, 'day').format("YYYY-MM-DD");
 	$scope.dayafter = moment($scope.today).add(1, 'day').format("YYYY-MM-DD");
-	
+
 	if( !login.isLoggedIn() ){
 		console.log("bye");
 		$location.path('/login');
 	}
 	$scope.token = login._getToken();
-	
+
 	$scope.foods = foods;
 	$scope.exercises = exercises;
 
@@ -358,20 +359,20 @@ angular.module('MainCtrl', ['ngRoute'])
 .controller('ViewController', function($scope,$timeout,$location,$route,foods,exercises,Food,Exercise,login,me) {
 	$scope.currentUser = me;
 
-	$scope.today = $route.current.params.date;	
+	$scope.today = $route.current.params.date;
 
 	$scope.todayverbose = moment($scope.today).format("dddd, MMMM Do YYYY");
 	$scope.todayshort = moment($scope.today).format("ddd, MMM Do");
 
 	$scope.daybefore = moment($scope.today).subtract(1, 'day').format("YYYY-MM-DD");
 	$scope.dayafter = moment($scope.today).add(1, 'day').format("YYYY-MM-DD");
-	
+
 	if( !login.isLoggedIn() ){
 		console.log("bye");
 		$location.path('/login');
 	}
 	$scope.token = login._getToken();
-	
+
 	$scope.foods = foods;
 	$scope.exercises = exercises;
 
@@ -421,7 +422,7 @@ angular.module('MainCtrl', ['ngRoute'])
 				}
 			},
 			foods:function(Food, Login){
-				var today = moment().format("YYYY-MM-DD"); 
+				var today = moment().format("YYYY-MM-DD");
 				var login = new Login();
 				if( login.isLoggedIn() ){
 					var token = login._getToken();
@@ -482,7 +483,7 @@ angular.module('MainCtrl', ['ngRoute'])
 		templateUrl: 'home/more.html'
 	});
 }]);
-{% endraw %}{% endhighlight %}
+```
 
 This is the file that tells our `#/dashboard` route how to behave, and also handles displaying our daily reports.
 
@@ -490,7 +491,7 @@ It works by grabbing all food and exercise entries for the logged in user on the
 
 Now, let's set up our dashboard interface, open `home/home.html`:
 
-{% highlight html %}{% raw %}
+```html
 <div class=" text-center">
 	<ul class="list-unstyled list-inline">
 		<li>
@@ -515,7 +516,7 @@ Now, let's set up our dashboard interface, open `home/home.html`:
 </div>
 <div ng-hide="activity.length > 0">
 	<p>Looks like you haven't made any entries yet for <strong>{{todayverbose}}</strong>. Let's change that!</p>
-	
+
 	<p>You can add a food by pressing the New Food button, add an exercise by pressing the New Exercise button, or switch to a different date with the Next/Prev buttons.</p>
 </div>
 <div ng-show="activity.length > 0">
@@ -539,17 +540,17 @@ Now, let's set up our dashboard interface, open `home/home.html`:
 			{{food.time}}
 		</td>
 	</tr>
-	</tbody> 
+	</tbody>
 	</table>
 	<hr />
 </div>
-{% endraw %}{% endhighlight %}
+```
 
 This page is used both by our `#/dashboard` route and our `#/view/DATE` route since it looks the same, the only difference is the actual date displayed.
 
 Finally, let's set up our `#/more` route, create a new file called `home/more.html`:
 
-{% highlight javascript %}{% raw %}
+```javascript
 <a class="btn btn-primary" href="#/dashboard">Home</a>
 <div class="list-group">
 	<a class="list-group-item" ng-href="#/report">Daily Totals</a>
@@ -557,7 +558,7 @@ Finally, let's set up our `#/more` route, create a new file called `home/more.ht
 	<a class="list-group-item" ng-href="#/exercise">Exercises History</a>
 	<a class="list-group-item" ng-href="#/logout">Logout</a>
 </div>
-{% endraw %}{% endhighlight %}
+```
 
 This page is our `more options` page that a user can push to view food history, exercise history, get a daily report, edit settings and logout.
 
@@ -567,7 +568,7 @@ Create a new folder called `food`, and inside this folder, we want to create thr
 
 #### 1. `food/food.js`:
 
-{% highlight javascript %}{% raw %}
+```javascript
 angular.module('FoodCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 /* Controllers */
 .controller('FoodListCtrl', function($scope, $rootScope, $timeout, $location, $route, foods,login,Food,me) {
@@ -598,7 +599,7 @@ angular.module('FoodCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 
 	var foodCopy = angular.copy(food);
 
-	$scope.today = moment().format("YYYY-MM-DD"); 
+	$scope.today = moment().format("YYYY-MM-DD");
 
 	$scope.todayverbose = moment($scope.today).format("dddd, MMMM Do YYYY");
 	$scope.todayshort = moment($scope.today).format("ddd, MMM Do");
@@ -608,10 +609,10 @@ angular.module('FoodCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 
 	$scope.food = food;
 	$scope.food.date = new Date( moment($scope.food.date).add(1, 'day').format("YYYY-MM-DD") );
-	
+
 	$scope.save = function(){
 		$scope.food.userId = $scope.token;
-		$scope.food.date = moment( $scope.food.date ).format("YYYY-MM-DD"); 
+		$scope.food.date = moment( $scope.food.date ).format("YYYY-MM-DD");
 
 		$scope.food.$saveOrUpdate().then(function(returnData){
 			$location.path('/food');
@@ -692,7 +693,7 @@ angular.module('FoodCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 		}
 	}).when('/food/new', {
 		templateUrl: 'food/form.html?a=1',
-		controller:'FoodFormCtrl', 
+		controller:'FoodFormCtrl',
 		resolve:{
 			food:function(Food){
 				return new Food();
@@ -718,13 +719,13 @@ angular.module('FoodCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 				}
 			}
 		}
-	});	
+	});
 }]);
-{% endraw %}{% endhighlight %}
+```
 
 #### 2. `food/list.html`:
 
-{% highlight html %}{% raw %}
+```html
 <a class="btn btn-primary" href="#/dashboard">Home</a>
 <h3>Food list</h3>
 <table class="table table-striped table-bordered table-hover">
@@ -753,16 +754,16 @@ angular.module('FoodCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 		<a class="btn btn-primary" ng-href="#/food/edit/{{food.$id()}}">Edit</a>
 	</td>
 </tr>
-</tbody> 
+</tbody>
 </table>
 <div class="well">
 	<a class="btn btn-default" ng-href="#/food/new">New food</a>
 </div>
-{% endraw %}{% endhighlight %}
+```
 
 #### 3. `food/form.html`:
 
-{% highlight html %}{% raw %}
+```html
 <a class="btn btn-primary" href="#/dashboard">Home</a>
 <h3 ng-show="food._id">Edit "{{food.name}}"</h3>
 <h3 ng-hide="food._id">Add Food</h3>
@@ -799,7 +800,7 @@ angular.module('FoodCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 		<a class="btn btn-danger" ng-click="remove()" ng-disabled="!food.$id()">Remove</a>
 	</div>
 </form>
-{% endraw %}{% endhighlight %}
+```
 
 The food form will also perform a query for any previously entered entries and display the food as options in a datalist, this is handy for not having to remember every entry.
 
@@ -809,7 +810,7 @@ Create a new folder called `exercise`, and inside this folder, we want to create
 
 #### 1. `exercise/exercise.js`:
 
-{% highlight javascript %}{% raw %}
+```javascript
 angular.module('ExerciseCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 /* Controllers */
 .controller('ExerciseListCtrl', function($scope, $rootScope, $timeout, $location, $route, exercises,login,Exercise,me) {
@@ -840,7 +841,7 @@ angular.module('ExerciseCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 	var exerciseCopy = angular.copy(exercise);
 
 
-	$scope.today = moment().format("YYYY-MM-DD"); 
+	$scope.today = moment().format("YYYY-MM-DD");
 
 	$scope.todayverbose = moment($scope.today).format("dddd, MMMM Do YYYY");
 	$scope.todayshort = moment($scope.today).format("ddd, MMM Do");
@@ -853,7 +854,7 @@ angular.module('ExerciseCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 
 	$scope.save = function(){
 		$scope.exercise.userId = $scope.token;
-		$scope.exercise.date = moment( $scope.exercise.date ).format("YYYY-MM-DD"); 
+		$scope.exercise.date = moment( $scope.exercise.date ).format("YYYY-MM-DD");
 
 		$scope.exercise.$saveOrUpdate().then(function(returnData){
 			$location.path('/exercise');
@@ -922,7 +923,7 @@ angular.module('ExerciseCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 		}
 	}).when('/exercise/new', {
 		templateUrl: 'exercise/form.html?a=1',
-		controller:'ExerciseFormCtrl', 
+		controller:'ExerciseFormCtrl',
 		resolve:{
 			exercise:function(Exercise){
 				return new Exercise();
@@ -939,13 +940,13 @@ angular.module('ExerciseCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 				}
 			}
 		}
-	});	
+	});
 }]);
-{% endraw %}{% endhighlight %}
+```
 
 #### 2. `exercise/list.html`:
 
-{% highlight html %}{% raw %}
+```html
 <a class="btn btn-primary" href="#/dashboard">Home</a>
 <h3>Exercise list</h3>
 <table class="table table-striped table-bordered table-hover">
@@ -974,16 +975,16 @@ angular.module('ExerciseCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 		<a class="btn btn-primary" ng-href="#/exercise/edit/{{exercise.$id()}}">Edit</a>
 	</td>
 </tr>
-</tbody> 
+</tbody>
 </table>
 <div class="well">
 	<a class="btn btn-default" ng-href="#/exercise/new">New exercise</a>
 </div>
-{% endraw %}{% endhighlight %}
+```
 
 #### 3. `exercise/form.html`:
 
-{% highlight html %}{% raw %}
+```html
 <a class="btn btn-primary" href="#/dashboard">Home</a>
 <h3 ng-show="exercise._id">Edit "{{exercise.name}}"</h3>
 <h3 ng-hide="exercise._id">Add Exercise</h3>
@@ -1013,7 +1014,7 @@ angular.module('ExerciseCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 		<a class="btn btn-danger" ng-click="remove()" ng-disabled="!exercise.$id()">Remove</a>
 	</div>
 </form>
-{% endraw %}{% endhighlight %}
+```
 
 The exercise section may look similar to the food section, this is because they are pretty similar in form and function.
 
@@ -1023,17 +1024,17 @@ We want to create a report page that will let users view an overall total in a d
 
 #### 1. `report/report.js`:
 
-{% highlight javascript %}{% raw %}
+```javascript
 angular.module('ReportCtrl', ['ngRoute'])
 .controller('ReportController', function($scope,$timeout,$location,foods,exercises,Food,Exercise,login,me) {
 	$scope.currentUser = me;
-	
+
 	if( !login.isLoggedIn() ){
 		console.log("bye");
 //		$location.path('/login');
 	}
 	$scope.token = login._getToken();
-	
+
 	$scope.foods = foods;
 	$scope.exercises = exercises;
 
@@ -1094,9 +1095,9 @@ angular.module('ReportCtrl', ['ngRoute'])
 		$scope.report.push( $scope.temp[i] );
 	}
 	$scope.average = $scope.average / $scope.avgc;
-	
+
 	$scope.cLeft = (2000 - $scope.cUsed) + $scope.cBurned;
-	$scope.tagline = 'To the moon and back!';	
+	$scope.tagline = 'To the moon and back!';
 
 	var Ref = Food.flybase();
 
@@ -1138,11 +1139,11 @@ angular.module('ReportCtrl', ['ngRoute'])
 		}
 	});
 }]);
-{% endraw %}{% endhighlight %}
+```
 
 #### 2. `report/report.html`:
 
-{% highlight html %}{% raw %}
+```html
 <a class="btn btn-primary" href="#/dashboard">Home</a>
 <div class="text-center">
 	<h4>Your daily average is {{average}} calories.</h4>
@@ -1167,19 +1168,19 @@ angular.module('ReportCtrl', ['ngRoute'])
 		<a class="btn btn-default" ng-href="#/view/{{food.date}}">View</a>
 	</td>
 </tr>
-</tbody> 
+</tbody>
 </table>
-{% endraw %}{% endhighlight %}
+```
 
 We perform a query and then build an array on our food and exercises to store totals by day, then we output our array, sorted by date.
 
 ### Testing and deploying
 
-You can test your app locally by using `serve` (which you installed with bower in the first step), go to your `app/` folder and type: 
+You can test your app locally by using `serve` (which you installed with bower in the first step), go to your `app/` folder and type:
 
-{% highlight javascript %}{% raw %}
+```javascript
 serve
-{% endraw %}{% endhighlight %}
+```
 
 Now open your browser and go to `http://localhost:3000/` and you will see your kilo app.
 
