@@ -1,7 +1,7 @@
 ---
 layout: post 
 published: true 
-title: "Seth Godin: "Drawing a line in the sand"" 
+title: "Seth Godin: Drawing a line in the sand" 
 date: 2017-02-23T19:33:04.967Z 
 link: http://sethgodin.typepad.com/seths_blog/2017/02/drawing-a-line-in-the-sand.html 
 tags:
