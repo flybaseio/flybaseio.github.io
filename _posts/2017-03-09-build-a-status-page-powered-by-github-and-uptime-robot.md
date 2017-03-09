@@ -22,7 +22,7 @@ We built our own status page for Flybase, you can see it [here](http://status.fl
 
 It was built as a static HTML page on Github Pages. It uses Github Issues to report any incidents and [Uptime Robot](http://uptimerobot.com) to monitor our sites.
 
-_This is based on the [statuspage](https://github.com/jayfk/statuspage) repo created by @pyupio, but simplified, as I wanted this to be pretty much automated._
+_This is based on the [statuspage](https://github.com/jayfk/statuspage) repo created by @pyupio, but simplified, as I wanted this to be pretty much automated, plus we already use Uptime Robot for monitoring, so combining Uptime Robot with Github Issues works great._
 
 To get started, you'll want two things:
 
