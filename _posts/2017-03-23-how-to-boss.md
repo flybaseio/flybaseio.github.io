@@ -1,11 +1,12 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "How to Boss" 
 date: 2017-03-23T18:23:04.270Z 
 link: https://medium.com/@cameronmoll/how-to-boss-an-uncanny-observation-from-bruce-springsteen-93cbfd8342c9#.u04sjr503 
 tags:
   - links
+  - startups
 ogtype: article 
 bodyclass: post 
 ---
