@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Don’t “empower” anybody." 
 date: 2017-04-24T18:59:52.846Z 
 link: https://m.signalvnoise.com/dont-empower-anybody-8302afec81bc 
