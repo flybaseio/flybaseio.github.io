@@ -1,9 +1,9 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Getting Your Idea Going: How to Validate a Business Idea the Right Way" 
 date: 2017-05-20T16:21:42.027Z 
-link: https://www.startups.co/articles/getting-your-idea-going-how-to-validate-your-idea?utm_campaign=Startups%20Daily%20-%20Weekend%20Edition&utm_source=hs_email&utm_medium=email&utm_content=52179735&_hsenc=p2ANqtz-80ecG1o4TqSbbiAZQio_bHtSO3AYCZh9cPJXxE-NuHeC0cU4q96OuwZpmooeEvcwU2yoUUkxrRdFaaL14Qv_YPgNcSiQ&_hsmi=52180098 
+link: https://www.startups.co/articles/getting-your-idea-going-how-to-validate-your-idea
 tags:
   - links
 ogtype: article 
