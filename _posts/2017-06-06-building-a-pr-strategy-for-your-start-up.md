@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Lyndon Johnson on Building a PR strategy for your start up" 
 date: 2017-06-06T16:07:58.280Z 
 link: http://www.startupcan.ca/podcasts/ 
