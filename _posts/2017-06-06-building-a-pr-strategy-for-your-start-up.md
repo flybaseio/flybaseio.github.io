@@ -12,6 +12,8 @@ bodyclass: post
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/326377334&amp;color=e21836"></iframe>
 
+<br /><br />
+
 > Scared of saying the wrong thing, resulting in unwanted spotlight from an unintentional blunder? The chances of showing up on the trend list on Twitter are lower than you think. PR specialist Lyndon Johnson warns entrepreneurs about being too risk averse, and the real damages done by acting without caution.  
 > 
 > > “Blunders are strange. People think there’s a huge risk in doing something that will embarrass the company or individuals or upset customers. The blunder I see more often than not is people trying to activate relationships before they’ve built them, to the point where they’re randomly shouting at people, ‘do this, help me, buy this product’ before they have the relationship in place.”  
