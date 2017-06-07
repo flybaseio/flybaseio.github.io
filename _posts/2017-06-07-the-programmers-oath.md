@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "The Programmer’s Oath" 
 date: 2017-06-07T19:22:41.343Z 
 link: https://medium.freecodecamp.com/the-programmers-oath-db782efd958b 
