@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
-<article>
+<article itemscope itemType="http://schema.org/BlogPosting">
 	<header>
-		<h1>
+		<h1 itemprop="headline">
 		{% if page.link %}
 		<a href="{{ page.link }}" class="post-title linked">{{ page.title }} <span class="link-arrow">&rarr;</span></a>
 		{% else %}
@@ -12,7 +12,7 @@ layout: default
 		</h1>
 		<div class="meta">
 			<span class="postDate">
-				<i class="fa fa-calendar"></i> <time class="time" dateTime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+				<i class="fa fa-calendar"></i> <time itemprop="datePublished" class="time" dateTime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %-d, %Y" }}</time>
 			</span>
 			{% if page.tags.size > 0 %}
 			<span class="tag">
@@ -26,7 +26,7 @@ layout: default
 			<a class="permalink" title="Permalink to {{page.title}}" href="{{ page.url }}"><i class="fa fa-anchor"></i></a>
 		</div>
 	</header>
-	<div class="entry">
+	<div class="entry" itemprop="articleBody">
 		{{ content }}
 		<br />
 		<div class="content-break">
