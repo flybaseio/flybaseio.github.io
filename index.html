@@ -27,9 +27,9 @@ title: Home
 		<div class="day"><div class="articles">
 	{% endif %}
 {% endcomment %}
-	<article itemscope itemType="http://schema.org/BlogPosting">
+	<article>
 		<header>
-			<h1 itemprop="headline">
+			<h1>
 			{% if post.link %}
 			<a href="{{ post.link }}" class="post-title linked">{{ post.title }} <span class="link-arrow">&rarr;</span></a>
 			{% else %}
@@ -38,7 +38,7 @@ title: Home
 			</h1>
 			<div class="meta">
 				<span class="postDate">
-					<i class="fa fa-calendar"></i> <time itemprop="datePublished" class="time" dateTime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+					<i class="fa fa-calendar"></i> <time class="time" dateTime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%b %-d, %Y" }}</time>
 				</span>
 				{% if post.tags.size > 0 %}
 				<span class="tag">
@@ -52,7 +52,7 @@ title: Home
 				<a class="permalink" title="Permalink to {{post.title}}" href="{{ post.url }}"><i class="fa fa-anchor"></i></a>
 			</div>
 		</header>
-		<div class="entry" itemprop="articleBody">
+		<div class="entry">
 			{{ post.content }}
 		</div>
 	</article>
