@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true
 title: "Building Production-Ready CSS Grid Layouts Today" 
 date: 2017-06-15T21:59:49.979Z 
 link: https://www.smashingmagazine.com/2017/06/building-production-ready-css-grid-layout/ 
