@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "Scaling Growth" 
 date: 2017-06-22T17:50:06.463Z 
 link: http://blog.ycombinator.com/scaling-growth-panel/ 
@@ -28,4 +28,4 @@ bodyclass: post
 > 
 > **Eventually, the whole company is a growth team:** At Airbnb today, every big team uses data to fuel decisions. That’s the goal. The growth team should not only be collaborating across the business, but you should start to see most areas join in on a cadence of experimentation.
 
-Definitely click the link and watch this video, it's great.
+Definitely click the [link](http://blog.ycombinator.com/scaling-growth-panel/) and watch this video, it's great, and covers a lot in the 34 minutes.
