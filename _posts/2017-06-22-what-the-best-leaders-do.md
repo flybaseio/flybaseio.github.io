@@ -1,6 +1,6 @@
 ---
 layout: post 
-published: false 
+published: true 
 title: "What the best leaders do" 
 date: 2017-06-22T18:59:06.147Z 
 link: https://m.signalvnoise.com/what-the-best-leaders-do-2848c214a7ff 
